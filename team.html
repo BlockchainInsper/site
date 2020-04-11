@@ -1,0 +1,32 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="js/loadMembers.js"></script>
+
+<body onload="loadSite()">
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+    <div style="max-height: 1000px; max-width: 1000px;" id="teste">
+
+
+    </div>
+</body>
+
+
+<script>
+    function loadSite() {
+        let diivv = loadMembers()
+        console.log(diivv);
+
+        document.getElementById("teste").appendChild(diivv)
+    }
+    
+
+
+</script>
+
+</html>
