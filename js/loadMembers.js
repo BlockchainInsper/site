@@ -12,12 +12,16 @@ function loadMembers() {
     $.getJSON("js/config/members.json", function (json) {
         $.get("https://api.github.com/orgs/BlockchainInsper/public_members", function (data) {
 
+            
 
+            for (let index = 0; index < data.length; index++) {
 
             for (let index = 0; index < data.length; index++) {
 
 
 
+                let { login, avatar_url } = data[index]
+                position = "Tech Member"
 
                 let { login, avatar_url } = data[index]
                 position = "Tech Member"
@@ -51,7 +55,7 @@ function loadMembers() {
                 members.appendChild(user.firstChild)
 
 
-            }
+               
 
 
 
@@ -87,8 +91,16 @@ function loadMembers() {
 
 
 
+                let user = document.createElement("div");
+                user.innerHTML = template
+                members.appendChild(user.firstChild)
 
 
+            }
+
+
+
+        });
     });
 
 
