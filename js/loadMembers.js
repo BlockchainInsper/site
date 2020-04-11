@@ -1,3 +1,4 @@
+
 function imageExists(image_url) {
 
     var http = new XMLHttpRequest();
@@ -21,6 +22,7 @@ function loadMembers() {
     members.id = "members"
 
 
+
     $.getJSON("js/config/members.json", function (json) {
         $.get("https://api.github.com/orgs/BlockchainInsper/public_members", function (data) {
             //response = JSON.parse() 
@@ -29,6 +31,7 @@ function loadMembers() {
 
             for (let index = 0; index < data.length; index++) {
 
+             let template;
 
 
 
@@ -37,6 +40,7 @@ function loadMembers() {
 
                 if (json[login]==undefined){
                     template = `<div id="${login}" class="box";">
+
                                     <div class="image-round">
                                         <img src="${avatar_url}" alt="Person 1">
                                     </div>
@@ -53,7 +57,7 @@ function loadMembers() {
                                 </div>`
                 }
 
-                let template;
+               
 
 
 
@@ -78,5 +82,3 @@ function loadMembers() {
 
 
     return members;
-
-}
