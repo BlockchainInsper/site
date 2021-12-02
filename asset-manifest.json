@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a67c64bb.chunk.css",
-    "main.js": "/static/js/main.67bc9b68.chunk.js",
-    "main.js.map": "/static/js/main.67bc9b68.chunk.js.map",
+    "main.css": "/static/css/main.0554957a.chunk.css",
+    "main.js": "/static/js/main.f7d7fec8.chunk.js",
+    "main.js.map": "/static/js/main.f7d7fec8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d73666b2.js",
     "runtime-main.js.map": "/static/js/runtime-main.d73666b2.js.map",
-    "static/js/2.6a6ba4b0.chunk.js": "/static/js/2.6a6ba4b0.chunk.js",
-    "static/js/2.6a6ba4b0.chunk.js.map": "/static/js/2.6a6ba4b0.chunk.js.map",
+    "static/js/2.5d29b16c.chunk.js": "/static/js/2.5d29b16c.chunk.js",
+    "static/js/2.5d29b16c.chunk.js.map": "/static/js/2.5d29b16c.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.a67c64bb.chunk.css.map": "/static/css/main.a67c64bb.chunk.css.map",
-    "static/js/2.6a6ba4b0.chunk.js.LICENSE.txt": "/static/js/2.6a6ba4b0.chunk.js.LICENSE.txt",
+    "static/css/main.0554957a.chunk.css.map": "/static/css/main.0554957a.chunk.css.map",
+    "static/js/2.5d29b16c.chunk.js.LICENSE.txt": "/static/js/2.5d29b16c.chunk.js.LICENSE.txt",
     "static/media/ambev.2f5f67dd.jpeg": "/static/media/ambev.2f5f67dd.jpeg",
     "static/media/ambev.6a765a10.jfif": "/static/media/ambev.6a765a10.jfif",
     "static/media/arteAgro.f232cae3.png": "/static/media/arteAgro.f232cae3.png",
@@ -18,10 +18,8 @@
     "static/media/blockchainberkeley.0b66e30a.png": "/static/media/blockchainberkeley.0b66e30a.png",
     "static/media/blockmaster.4d8f4d23.jpg": "/static/media/blockmaster.4d8f4d23.jpg",
     "static/media/bruno.34122a46.jpeg": "/static/media/bruno.34122a46.jpeg",
-    "static/media/business.547d4a65.jpg": "/static/media/business.547d4a65.jpg",
     "static/media/coins.072a326e.jfif": "/static/media/coins.072a326e.jfif",
     "static/media/felipe.b7224a86.jpeg": "/static/media/felipe.b7224a86.jpeg",
-    "static/media/finance.8e67f471.jpg": "/static/media/finance.8e67f471.jpg",
     "static/media/fundo.7b916daa.png": "/static/media/fundo.7b916daa.png",
     "static/media/gaugecash.33093a87.jpg": "/static/media/gaugecash.33093a87.jpg",
     "static/media/gcb.3f537b98.jfif": "/static/media/gcb.3f537b98.jfif",
@@ -35,13 +33,12 @@
     "static/media/overlay.088e633e.png": "/static/media/overlay.088e633e.png",
     "static/media/portaldobtc.9e6f584d.webp": "/static/media/portaldobtc.9e6f584d.webp",
     "static/media/precatorios.4eb93101.jpeg": "/static/media/precatorios.4eb93101.jpeg",
-    "static/media/tech.9abf3198.jpg": "/static/media/tech.9abf3198.jpg",
     "static/media/ulrich.39a00847.jpg": "/static/media/ulrich.39a00847.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.d73666b2.js",
-    "static/js/2.6a6ba4b0.chunk.js",
-    "static/css/main.a67c64bb.chunk.css",
-    "static/js/main.67bc9b68.chunk.js"
+    "static/js/2.5d29b16c.chunk.js",
+    "static/css/main.0554957a.chunk.css",
+    "static/js/main.f7d7fec8.chunk.js"
   ]
 }
