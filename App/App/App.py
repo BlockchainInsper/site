@@ -4508,9 +4508,2044 @@ def fundo():
     )
 
 
+def parceiros():
+    return rx.fragment(
+        rx.box(
+            rx.box(
+                rx.box(
+                    rx.box(
+                        rx.box(
+                            rx.el.button(
+                                rx.el.svg(
+                                    rx.el.svg.path(
+                                        fill="currentColor",
+                                        d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z",
+                                    ),
+                                    viewbox="0 0 24 24",
+                                    focusable="false",
+                                    class_name="chakra-icon css-bokek7",
+                                    aria_hidden="true",
+                                ),
+                                type="button",
+                                class_name="chakra-button css-f59olw",
+                                aria_label="Toggle Navigation",
+                            ),
+                            class_name="css-1twb9xo",
+                        ),
+                        rx.box(
+                            rx.el.a(
+                                rx.image(
+                                    src="/static/media/logo-dark.537e082d.svg",
+                                    class_name="chakra-image css-v7v99c",
+                                ),
+                                class_name="chakra-link css-f4h6uy",
+                                href="/",
+                            ),
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.el.a(
+                                            "Processo Seletivo",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/ps",
+                                            id="popover-trigger-3",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-3",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Time",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/members/actual",
+                                            id="popover-trigger-5",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-5",
+                                        ),
+                                        rx.box(
+                                            rx.box(
+                                                rx.box(
+                                                    rx.el.a(
+                                                        rx.box(
+                                                            rx.box(
+                                                                rx.text(
+                                                                    "Alumni",
+                                                                    class_name="chakra-text css-cugd40",
+                                                                ),
+                                                                rx.text(
+                                                                    "Conhe\u00e7a nossos ex-membros",
+                                                                    class_name="chakra-text css-itvw0n",
+                                                                ),
+                                                                class_name="css-0",
+                                                            ),
+                                                            rx.box(
+                                                                rx.el.svg(
+                                                                    rx.el.svg.path(
+                                                                        fill="currentColor",
+                                                                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z",
+                                                                    ),
+                                                                    viewbox="0 0 24 24",
+                                                                    focusable="false",
+                                                                    class_name="chakra-icon css-1b471nl",
+                                                                ),
+                                                                class_name="css-2gz105",
+                                                            ),
+                                                            class_name="chakra-stack css-84zodg",
+                                                        ),
+                                                        class_name="chakra-link css-v8ajqy",
+                                                        href="#/members/alumni",
+                                                        role="group",
+                                                    ),
+                                                    class_name="chakra-stack css-n21gh5",
+                                                ),
+                                                id="popover-content-5",
+                                                tabindex="-1",
+                                                role="tooltip",
+                                                class_name="chakra-popover__content css-c440zk",
+                                                transform_origin="var(--popper-transform-origin)",
+                                                opacity="0",
+                                                visibility="hidden",
+                                                transform="scale(0.95) translateZ(0px)",
+                                            ),
+                                            class_name="chakra-popover__popper css-1qq679y",
+                                            visibility="hidden",
+                                            position="absolute",
+                                            min_width="max-content",
+                                            inset="0px auto auto 0px",
+                                            margin="0px",
+                                            transform="translate(298.4px, 52.8px)",
+                                            __popper_transform_origin="top left",
+                                            custom_attrs={
+                                                "data-popper-placement": "bottom-start"
+                                            },
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "N\u00facleos",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/areas",
+                                            id="popover-trigger-7",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-7",
+                                        ),
+                                        rx.box(
+                                            rx.box(
+                                                rx.box(
+                                                    rx.el.a(
+                                                        rx.box(
+                                                            rx.box(
+                                                                rx.text(
+                                                                    "Projetos",
+                                                                    class_name="chakra-text css-cugd40",
+                                                                ),
+                                                                rx.text(
+                                                                    "Conhe\u00e7a alguns dos nossos melhores projetos",
+                                                                    class_name="chakra-text css-itvw0n",
+                                                                ),
+                                                                class_name="css-0",
+                                                            ),
+                                                            rx.box(
+                                                                rx.el.svg(
+                                                                    rx.el.svg.path(
+                                                                        fill="currentColor",
+                                                                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z",
+                                                                    ),
+                                                                    viewbox="0 0 24 24",
+                                                                    focusable="false",
+                                                                    class_name="chakra-icon css-1b471nl",
+                                                                ),
+                                                                class_name="css-2gz105",
+                                                            ),
+                                                            class_name="chakra-stack css-84zodg",
+                                                        ),
+                                                        class_name="chakra-link css-v8ajqy",
+                                                        href="#/projects",
+                                                        role="group",
+                                                    ),
+                                                    class_name="chakra-stack css-n21gh5",
+                                                ),
+                                                id="popover-content-7",
+                                                tabindex="-1",
+                                                role="tooltip",
+                                                class_name="chakra-popover__content css-c440zk",
+                                                transform_origin="var(--popper-transform-origin)",
+                                                opacity="0",
+                                                visibility="hidden",
+                                                transform="scale(0.95) translateZ(0px)",
+                                            ),
+                                            class_name="chakra-popover__popper css-1qq679y",
+                                            visibility="hidden",
+                                            min_width="max-content",
+                                            margin="0px",
+                                            __popper_transform_origin="top left",
+                                            position="absolute",
+                                            inset="0px auto auto 0px",
+                                            transform="translate(360.8px, 52.8px)",
+                                            custom_attrs={
+                                                "data-popper-placement": "bottom-start"
+                                            },
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Fundo",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/fund",
+                                            id="popover-trigger-9",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-9",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Parceiros",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/partnerships",
+                                            id="popover-trigger-11",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-11",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Aprenda",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/learn",
+                                            id="popover-trigger-13",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-13",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Contato",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/contact",
+                                            id="popover-trigger-15",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-15",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    class_name="chakra-stack css-nd8846",
+                                ),
+                                class_name="css-1ynfsgs",
+                            ),
+                            class_name="css-1ef8uzr",
+                        ),
+                        rx.box(
+                            rx.el.button(
+                                rx.el.svg(
+                                    rx.el.a(
+                                        rx.el.svg.circle(cx="12", cy="12", r="5"),
+                                        rx.el.svg.path(d="M12 1v2"),
+                                        rx.el.svg.path(d="M12 21v2"),
+                                        rx.el.svg.path(d="M4.22 4.22l1.42 1.42"),
+                                        rx.el.svg.path(d="M18.36 18.36l1.42 1.42"),
+                                        rx.el.svg.path(d="M1 12h2"),
+                                        rx.el.svg.path(d="M21 12h2"),
+                                        rx.el.svg.path(d="M4.22 19.78l1.42-1.42"),
+                                        rx.el.svg.path(d="M18.36 5.64l1.42-1.42"),
+                                        stroke_linejoin="round",
+                                        stroke_linecap="round",
+                                        stroke_width="2",
+                                        fill="none",
+                                        stroke="currentColor",
+                                    ),
+                                    viewbox="0 0 24 24",
+                                    focusable="false",
+                                    class_name="chakra-icon css-onkibi",
+                                ),
+                                type="button",
+                                class_name="chakra-button css-73pxpg",
+                            ),
+                            class_name="chakra-stack css-uiyb8i",
+                        ),
+                        class_name="css-1553k70",
+                    ),
+                    rx.box(
+                        rx.box(
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Processo Seletivo",
+                                        class_name="chakra-text css-13xtz7x",
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/ps",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Time", class_name="chakra-text css-13xtz7x"
+                                    ),
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            fill="currentColor",
+                                            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z",
+                                        ),
+                                        viewbox="0 0 24 24",
+                                        focusable="false",
+                                        class_name="chakra-icon css-1twc07j",
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/members/actual",
+                                ),
+                                rx.box(
+                                    rx.box(
+                                        rx.el.a(
+                                            "Alumni",
+                                            class_name="chakra-link css-1i05af6",
+                                            href="#/members/alumni",
+                                        ),
+                                        class_name="chakra-stack css-1xmht12",
+                                    ),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "N\u00facleos",
+                                        class_name="chakra-text css-13xtz7x",
+                                    ),
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            fill="currentColor",
+                                            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z",
+                                        ),
+                                        viewbox="0 0 24 24",
+                                        focusable="false",
+                                        class_name="chakra-icon css-1twc07j",
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/areas",
+                                ),
+                                rx.box(
+                                    rx.box(
+                                        rx.el.a(
+                                            "Projetos",
+                                            class_name="chakra-link css-1i05af6",
+                                            href="#/projects",
+                                        ),
+                                        class_name="chakra-stack css-1xmht12",
+                                    ),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Fundo", class_name="chakra-text css-13xtz7x"
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/fund",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Parceiros",
+                                        class_name="chakra-text css-13xtz7x",
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/partnerships",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Aprenda", class_name="chakra-text css-13xtz7x"
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/learn",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Contato", class_name="chakra-text css-13xtz7x"
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/contact",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            class_name="chakra-stack css-1delute",
+                        ),
+                        class_name="chakra-collapse",
+                        overflow="hidden",
+                        display="none",
+                        opacity="0",
+                        height="0px",
+                    ),
+                    class_name="css-0",
+                ),
+                rx.box(
+                    rx.box(
+                        rx.heading(
+                            "Parceiros",
+                            class_name="chakra-heading css-1f48gq8",
+                            as_="h2",
+                            size="6",
+                        ),
+                        rx.text(
+                            "Aqui voc\u00ea encontrar\u00e1 todos os parceiros da Blockchain Insper",
+                            class_name="chakra-text css-qx8l5f",
+                        ),
+                        class_name="css-9sg3e1",
+                    ),
+                    class_name="css-0",
+                ),
+                rx.box(
+                    rx.list(
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/insper.f3f3d55a.png",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Insper",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://www.insper.edu.br/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/mercadobtc.015a99b6.jpg",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Mercado Bitcoin",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://www.mercadobitcoin.com.br/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/ambev.6a765a10.jfif",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Ambev",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://www.ambev.com.br/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/itau.4d5bdeb4.webp",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Ita\u00fa",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://www.itau.com.br/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/dotz.cfd1cd74.png",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Dotz",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://www.dotz.com.br/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/gcb.3f537b98.jfif",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "GCB Investimentos",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://gcbinvestimentos.com/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="data:image/png;base64,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",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Peer BR",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://peerbr.com/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/coins.072a326e.jfif",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Coins",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://coins.com.br/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/ulrich.39a00847.jpg",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Fernando Ulrich",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://www.linkedin.com/in/fernando-ulrich-aa805821/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/blockchainberkeley.0b66e30a.png",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Blockchain Berkeley",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://blockchain.berkeley.edu/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/beetech.b984b850.jpeg",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "BeeTech",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://beetech.global/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/blockmaster.4d8f4d23.jpg",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Block Master",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://www.blockmaster.com.br/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="data:image/png;base64,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",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "iCoLab",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://icolab.org.br/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="data:image/png;base64,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",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Mar Ventures",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://www.mar.ventures/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        rx.el.li(
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.image(
+                                            src="/static/media/portaldobtc.9e6f584d.webp",
+                                            class_name="chakra-image css-1gqsic3",
+                                        ),
+                                        class_name="css-ox58qu",
+                                    ),
+                                    rx.box(
+                                        rx.heading(
+                                            "Portal do Bitcoin",
+                                            class_name="chakra-heading css-mr4omx",
+                                            as_="h2",
+                                            size="6",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.button(
+                                                "Mais informa\u00e7\u00f5es",
+                                                type="button",
+                                                class_name="chakra-button css-asn4yg",
+                                            ),
+                                            target="_blank",
+                                            rel="noopener noreferrer",
+                                            class_name="chakra-link css-f4h6uy",
+                                            href="https://portaldobitcoin.uol.com.br/",
+                                        ),
+                                        class_name="chakra-stack css-160hj0l",
+                                    ),
+                                    role="group",
+                                    class_name="css-1re1swf",
+                                ),
+                                class_name="css-x5opt7",
+                            ),
+                            class_name="chakra-wrap__listitem css-1yp4ln",
+                        ),
+                        class_name="chakra-wrap__list css-krk3di",
+                    ),
+                    class_name="chakra-wrap css-1qn7hqg",
+                ),
+                rx.box(
+                    rx.box(
+                        rx.box(
+                            rx.image(
+                                src="/static/media/logo-dark.537e082d.svg",
+                                class_name="chakra-image css-v7v99c",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 640 512",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="Discord",
+                                    href="https://discord.gg/jdK5yB48Mm",
+                                ),
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 448 512",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="LinkedIn",
+                                    href="https://www.linkedin.com/company/blockchain-insper",
+                                ),
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 448 512",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="Instagram",
+                                    href="https://www.instagram.com/blockchainsper/",
+                                ),
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 496 512",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="GitHub",
+                                    href="https://github.com/BlockchainInsper",
+                                ),
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(fill="none", d="M0 0h24v24H0z"),
+                                        rx.el.svg.path(
+                                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 24 24",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="Email",
+                                    href="mailto:blockchainsper@gmail.com",
+                                ),
+                                role="group",
+                                class_name="chakra-button__group css-1bdsol1",
+                            ),
+                            class_name="chakra-stack css-3ivhej",
+                        ),
+                        rx.text(
+                            "\u00a9 2025 Blockchain Insper. All rights reserved.",
+                            class_name="chakra-text css-1kfduyp",
+                        ),
+                        class_name="chakra-stack css-n21gh5",
+                    ),
+                    role="contentinfo",
+                    class_name="css-1xi056f",
+                ),
+                id="root",
+            )
+        )
+    )
+
+
+def aprenda():
+    return rx.fragment(
+        rx.box(
+            rx.box(
+                rx.box(
+                    rx.box(
+                        rx.box(
+                            rx.el.button(
+                                rx.el.svg(
+                                    rx.el.svg.path(
+                                        fill="currentColor",
+                                        d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z",
+                                    ),
+                                    viewbox="0 0 24 24",
+                                    focusable="false",
+                                    class_name="chakra-icon css-bokek7",
+                                    aria_hidden="true",
+                                ),
+                                type="button",
+                                class_name="chakra-button css-f59olw",
+                                aria_label="Toggle Navigation",
+                            ),
+                            class_name="css-1twb9xo",
+                        ),
+                        rx.box(
+                            rx.el.a(
+                                rx.image(
+                                    src="/static/media/logo-dark.537e082d.svg",
+                                    class_name="chakra-image css-v7v99c",
+                                ),
+                                class_name="chakra-link css-f4h6uy",
+                                href="/",
+                            ),
+                            rx.box(
+                                rx.box(
+                                    rx.box(
+                                        rx.el.a(
+                                            "Processo Seletivo",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/ps",
+                                            id="popover-trigger-3",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-3",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Time",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/members/actual",
+                                            id="popover-trigger-5",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-5",
+                                        ),
+                                        rx.box(
+                                            rx.box(
+                                                rx.box(
+                                                    rx.el.a(
+                                                        rx.box(
+                                                            rx.box(
+                                                                rx.text(
+                                                                    "Alumni",
+                                                                    class_name="chakra-text css-cugd40",
+                                                                ),
+                                                                rx.text(
+                                                                    "Conhe\u00e7a nossos ex-membros",
+                                                                    class_name="chakra-text css-itvw0n",
+                                                                ),
+                                                                class_name="css-0",
+                                                            ),
+                                                            rx.box(
+                                                                rx.el.svg(
+                                                                    rx.el.svg.path(
+                                                                        fill="currentColor",
+                                                                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z",
+                                                                    ),
+                                                                    viewbox="0 0 24 24",
+                                                                    focusable="false",
+                                                                    class_name="chakra-icon css-1b471nl",
+                                                                ),
+                                                                class_name="css-2gz105",
+                                                            ),
+                                                            class_name="chakra-stack css-84zodg",
+                                                        ),
+                                                        class_name="chakra-link css-v8ajqy",
+                                                        href="#/members/alumni",
+                                                        role="group",
+                                                    ),
+                                                    class_name="chakra-stack css-n21gh5",
+                                                ),
+                                                id="popover-content-5",
+                                                tabindex="-1",
+                                                role="tooltip",
+                                                class_name="chakra-popover__content css-c440zk",
+                                                transform_origin="var(--popper-transform-origin)",
+                                                opacity="0",
+                                                visibility="hidden",
+                                                transform="scale(0.95) translateZ(0px)",
+                                            ),
+                                            class_name="chakra-popover__popper css-1qq679y",
+                                            visibility="hidden",
+                                            position="absolute",
+                                            min_width="max-content",
+                                            inset="0px auto auto 0px",
+                                            margin="0px",
+                                            transform="translate(298.4px, 52.8px)",
+                                            __popper_transform_origin="top left",
+                                            custom_attrs={
+                                                "data-popper-placement": "bottom-start"
+                                            },
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "N\u00facleos",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/areas",
+                                            id="popover-trigger-7",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-7",
+                                        ),
+                                        rx.box(
+                                            rx.box(
+                                                rx.box(
+                                                    rx.el.a(
+                                                        rx.box(
+                                                            rx.box(
+                                                                rx.text(
+                                                                    "Projetos",
+                                                                    class_name="chakra-text css-cugd40",
+                                                                ),
+                                                                rx.text(
+                                                                    "Conhe\u00e7a alguns dos nossos melhores projetos",
+                                                                    class_name="chakra-text css-itvw0n",
+                                                                ),
+                                                                class_name="css-0",
+                                                            ),
+                                                            rx.box(
+                                                                rx.el.svg(
+                                                                    rx.el.svg.path(
+                                                                        fill="currentColor",
+                                                                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z",
+                                                                    ),
+                                                                    viewbox="0 0 24 24",
+                                                                    focusable="false",
+                                                                    class_name="chakra-icon css-1b471nl",
+                                                                ),
+                                                                class_name="css-2gz105",
+                                                            ),
+                                                            class_name="chakra-stack css-84zodg",
+                                                        ),
+                                                        class_name="chakra-link css-v8ajqy",
+                                                        href="#/projects",
+                                                        role="group",
+                                                    ),
+                                                    class_name="chakra-stack css-n21gh5",
+                                                ),
+                                                id="popover-content-7",
+                                                tabindex="-1",
+                                                role="tooltip",
+                                                class_name="chakra-popover__content css-c440zk",
+                                                transform_origin="var(--popper-transform-origin)",
+                                                opacity="0",
+                                                visibility="hidden",
+                                                transform="scale(0.95) translateZ(0px)",
+                                            ),
+                                            class_name="chakra-popover__popper css-1qq679y",
+                                            visibility="hidden",
+                                            min_width="max-content",
+                                            margin="0px",
+                                            __popper_transform_origin="top left",
+                                            position="absolute",
+                                            inset="0px auto auto 0px",
+                                            transform="translate(360.8px, 52.8px)",
+                                            custom_attrs={
+                                                "data-popper-placement": "bottom-start"
+                                            },
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Fundo",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/fund",
+                                            id="popover-trigger-9",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-9",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Parceiros",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/partnerships",
+                                            id="popover-trigger-11",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-11",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Aprenda",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/learn",
+                                            id="popover-trigger-13",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-13",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    rx.box(
+                                        rx.el.a(
+                                            "Contato",
+                                            class_name="chakra-link css-p92xmu",
+                                            href="#/contact",
+                                            id="popover-trigger-15",
+                                            aria_haspopup="dialog",
+                                            aria_expanded="false",
+                                            aria_controls="popover-content-15",
+                                        ),
+                                        class_name="css-0",
+                                    ),
+                                    class_name="chakra-stack css-nd8846",
+                                ),
+                                class_name="css-1ynfsgs",
+                            ),
+                            class_name="css-1ef8uzr",
+                        ),
+                        rx.box(
+                            rx.el.button(
+                                rx.el.svg(
+                                    rx.el.a(
+                                        rx.el.svg.circle(cx="12", cy="12", r="5"),
+                                        rx.el.svg.path(d="M12 1v2"),
+                                        rx.el.svg.path(d="M12 21v2"),
+                                        rx.el.svg.path(d="M4.22 4.22l1.42 1.42"),
+                                        rx.el.svg.path(d="M18.36 18.36l1.42 1.42"),
+                                        rx.el.svg.path(d="M1 12h2"),
+                                        rx.el.svg.path(d="M21 12h2"),
+                                        rx.el.svg.path(d="M4.22 19.78l1.42-1.42"),
+                                        rx.el.svg.path(d="M18.36 5.64l1.42-1.42"),
+                                        stroke_linejoin="round",
+                                        stroke_linecap="round",
+                                        stroke_width="2",
+                                        fill="none",
+                                        stroke="currentColor",
+                                    ),
+                                    viewbox="0 0 24 24",
+                                    focusable="false",
+                                    class_name="chakra-icon css-onkibi",
+                                ),
+                                type="button",
+                                class_name="chakra-button css-73pxpg",
+                            ),
+                            class_name="chakra-stack css-uiyb8i",
+                        ),
+                        class_name="css-1553k70",
+                    ),
+                    rx.box(
+                        rx.box(
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Processo Seletivo",
+                                        class_name="chakra-text css-13xtz7x",
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/ps",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Time", class_name="chakra-text css-13xtz7x"
+                                    ),
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            fill="currentColor",
+                                            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z",
+                                        ),
+                                        viewbox="0 0 24 24",
+                                        focusable="false",
+                                        class_name="chakra-icon css-1twc07j",
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/members/actual",
+                                ),
+                                rx.box(
+                                    rx.box(
+                                        rx.el.a(
+                                            "Alumni",
+                                            class_name="chakra-link css-1i05af6",
+                                            href="#/members/alumni",
+                                        ),
+                                        class_name="chakra-stack css-1xmht12",
+                                    ),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "N\u00facleos",
+                                        class_name="chakra-text css-13xtz7x",
+                                    ),
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            fill="currentColor",
+                                            d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z",
+                                        ),
+                                        viewbox="0 0 24 24",
+                                        focusable="false",
+                                        class_name="chakra-icon css-1twc07j",
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/areas",
+                                ),
+                                rx.box(
+                                    rx.box(
+                                        rx.el.a(
+                                            "Projetos",
+                                            class_name="chakra-link css-1i05af6",
+                                            href="#/projects",
+                                        ),
+                                        class_name="chakra-stack css-1xmht12",
+                                    ),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Fundo", class_name="chakra-text css-13xtz7x"
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/fund",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Parceiros",
+                                        class_name="chakra-text css-13xtz7x",
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/partnerships",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Aprenda", class_name="chakra-text css-13xtz7x"
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/learn",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.text(
+                                        "Contato", class_name="chakra-text css-13xtz7x"
+                                    ),
+                                    class_name="chakra-link css-ryc07z",
+                                    href="#/contact",
+                                ),
+                                rx.box(
+                                    rx.box(class_name="chakra-stack css-1xmht12"),
+                                    class_name="chakra-collapse",
+                                    overflow="hidden",
+                                    display="none",
+                                    opacity="0",
+                                    height="0px",
+                                ),
+                                class_name="chakra-stack css-egoftb",
+                            ),
+                            class_name="chakra-stack css-1delute",
+                        ),
+                        class_name="chakra-collapse",
+                        overflow="hidden",
+                        display="none",
+                        opacity="0",
+                        height="0px",
+                    ),
+                    class_name="css-0",
+                ),
+                rx.box(
+                    rx.heading(
+                        "Pilares do Conhecimento",
+                        class_name="css-1kiqah5",
+                        as_="h1",
+                        size="8",
+                    ),
+                    rx.box(
+                        rx.box(
+                            rx.box(
+                                rx.box(
+                                    rx.el.svg(
+                                        rx.el.svg.circle(
+                                            fill="#FFF59D", cx="24", cy="22", r="20"
+                                        ),
+                                        rx.el.svg.path(
+                                            fill="#FBC02D",
+                                            d="M37,22c0-7.7-6.6-13.8-14.5-12.9c-6,0.7-10.8,5.5-11.4,11.5c-0.5,4.6,1.4,8.7,4.6,11.3 c1.4,1.2,2.3,2.9,2.3,4.8V37h12v-0.1c0-1.8,0.8-3.6,2.2-4.8C35.1,29.7,37,26.1,37,22z",
+                                        ),
+                                        rx.el.svg.path(
+                                            fill="#FFF59D",
+                                            d="M30.6,20.2l-3-2c-0.3-0.2-0.8-0.2-1.1,0L24,19.8l-2.4-1.6c-0.3-0.2-0.8-0.2-1.1,0l-3,2 c-0.2,0.2-0.4,0.4-0.4,0.7s0,0.6,0.2,0.8l3.8,4.7V37h2V26c0-0.2-0.1-0.4-0.2-0.6l-3.3-4.1l1.5-1l2.4,1.6c0.3,0.2,0.8,0.2,1.1,0 l2.4-1.6l1.5,1l-3.3,4.1C25.1,25.6,25,25.8,25,26v11h2V26.4l3.8-4.7c0.2-0.2,0.3-0.5,0.2-0.8S30.8,20.3,30.6,20.2z",
+                                        ),
+                                        rx.el.svg.circle(
+                                            fill="#5C6BC0", cx="24", cy="44", r="3"
+                                        ),
+                                        rx.el.svg.path(
+                                            fill="#9FA8DA",
+                                            d="M26,45h-4c-2.2,0-4-1.8-4-4v-5h12v5C30,43.2,28.2,45,26,45z",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.svg.path(
+                                                d="M30,41l-11.6,1.6c0.3,0.7,0.9,1.4,1.6,1.8l9.4-1.3C29.8,42.5,30,41.8,30,41z"
+                                            ),
+                                            rx.el.svg.polygon(
+                                                points="18,38.7 18,40.7 30,39 30,37"
+                                            ),
+                                            fill="#5C6BC0",
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        version="1",
+                                        viewbox="0 0 48 48",
+                                        enable_background="new 0 0 48 48",
+                                        focusable="false",
+                                        class_name="chakra-icon css-n17ngm",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="css-1motzux",
+                                ),
+                                rx.text(
+                                    "Aprender a conhecer",
+                                    class_name="chakra-text css-35ezg3",
+                                ),
+                                rx.text(
+                                    "Esse aprendizado pretende que cada pessoa possa conhecer o mundo que a rodeia, conseguindo assim viver dignamente, desenvolver capacidades profissionais e se comunicar.",
+                                    class_name="chakra-text css-q9k0mw",
+                                ),
+                                class_name="chakra-stack css-n21gh5",
+                            ),
+                            rx.box(
+                                rx.box(
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            fill="#1565C0",
+                                            d="M25,22h13l6,6V11c0-2.2-1.8-4-4-4H25c-2.2,0-4,1.8-4,4v7C21,20.2,22.8,22,25,22z",
+                                        ),
+                                        rx.el.svg.path(
+                                            fill="#2196F3",
+                                            d="M23,19H10l-6,6V8c0-2.2,1.8-4,4-4h15c2.2,0,4,1.8,4,4v7C27,17.2,25.2,19,23,19z",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.svg.circle(cx="12", cy="31", r="5"),
+                                            rx.el.svg.circle(cx="36", cy="31", r="5"),
+                                            fill="#FFA726",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.svg.path(
+                                                d="M20,42c0,0-2.2-4-8-4s-8,4-8,4v2h16V42z"
+                                            ),
+                                            rx.el.svg.path(
+                                                d="M44,42c0,0-2.2-4-8-4s-8,4-8,4v2h16V42z"
+                                            ),
+                                            fill="#607D8B",
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        version="1",
+                                        viewbox="0 0 48 48",
+                                        enable_background="new 0 0 48 48",
+                                        focusable="false",
+                                        class_name="chakra-icon css-n17ngm",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="css-1motzux",
+                                ),
+                                rx.text(
+                                    "Aprender a fazer",
+                                    class_name="chakra-text css-35ezg3",
+                                ),
+                                rx.text(
+                                    "Ele se refere \u00e0 forma\u00e7\u00e3o do profissional. Fala sobre como conseguir usar os conhecimentos adquiridos na pr\u00e1tica, no mercado de trabalho, criando qualifica\u00e7\u00e3o profissional e experi\u00eancia.",
+                                    class_name="chakra-text css-q9k0mw",
+                                ),
+                                class_name="chakra-stack css-n21gh5",
+                            ),
+                            rx.box(
+                                rx.box(
+                                    rx.el.svg(
+                                        rx.el.svg.polygon(
+                                            fill="#FF9800",
+                                            points="24,37 19,31 19,25 29,25 29,31",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.svg.circle(cx="33", cy="19", r="2"),
+                                            rx.el.svg.circle(cx="15", cy="19", r="2"),
+                                            fill="#FFA726",
+                                        ),
+                                        rx.el.svg.path(
+                                            fill="#FFB74D",
+                                            d="M33,13c0-7.6-18-5-18,0c0,1.1,0,5.9,0,7c0,5,4,9,9,9s9-4,9-9C33,18.9,33,14.1,33,13z",
+                                        ),
+                                        rx.el.svg.path(
+                                            fill="#424242",
+                                            d="M24,4c-6.1,0-10,4.9-10,11c0,0.8,0,2.3,0,2.3l2,1.7v-5l12-4l4,4v5l2-1.7c0,0,0-1.5,0-2.3c0-4-1-8-6-9l-1-2 H24z",
+                                        ),
+                                        rx.el.a(
+                                            rx.el.svg.circle(cx="28", cy="19", r="1"),
+                                            rx.el.svg.circle(cx="20", cy="19", r="1"),
+                                            fill="#784719",
+                                        ),
+                                        rx.el.svg.polygon(
+                                            fill="#fff",
+                                            points="24,43 19,31 24,32 29,31",
+                                        ),
+                                        rx.el.svg.polygon(
+                                            fill="#D32F2F",
+                                            points="23,35 22.3,39.5 24,43.5 25.7,39.5 25,35 26,34 24,32 22,34",
+                                        ),
+                                        rx.el.svg.path(
+                                            fill="#546E7A",
+                                            d="M29,31L29,31l-5,12l-5-12c0,0-11,2-11,13h32C40,33,29,31,29,31z",
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        version="1",
+                                        viewbox="0 0 48 48",
+                                        enable_background="new 0 0 48 48",
+                                        focusable="false",
+                                        class_name="chakra-icon css-n17ngm",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="css-1motzux",
+                                ),
+                                rx.text(
+                                    "Aprender a ser",
+                                    class_name="chakra-text css-35ezg3",
+                                ),
+                                rx.text(
+                                    "Ele defende que o ser humano precisa se tornar apto a pensar de forma aut\u00f4noma e cr\u00edtica, sendo capaz de formular o pr\u00f3prio ju\u00edzo de valor e sabendo que atitudes tomar ante as circunst\u00e2ncias da vida.",
+                                    class_name="chakra-text css-q9k0mw",
+                                ),
+                                class_name="chakra-stack css-n21gh5",
+                            ),
+                            class_name="css-p92pfp",
+                        ),
+                        class_name="css-h94677",
+                    ),
+                    class_name="css-11csr4g",
+                ),
+                rx.box(
+                    rx.box(
+                        rx.heading(
+                            "Aprenda blockchain ",
+                            rx.el.br(),
+                            rx.text.span("agora", class_name="chakra-text css-10tibwi"),
+                            class_name="chakra-heading css-1xb57ov",
+                            as_="h2",
+                            size="6",
+                        ),
+                        rx.text(
+                            "A Blockchain Insper tem o prazer de apresentar o Curso de Introdu\u00e7\u00e3o \u00e0 Blockchain! Na linha de contribuir para o acesso \u00e0 informa\u00e7\u00e3o e o fomento do estudo das novas tecnologias, o curso \u00e9 realizado no formato online, e \u00e9 aberto para qualquer pessoa. Os conte\u00fados foram escolhidos pelos membros da entidade, abordando desde contexto hist\u00f3rico at\u00e9 futuras perspectivas da tecnologia.",
+                            class_name="chakra-text css-q9k0mw",
+                        ),
+                        rx.box(
+                            rx.el.a(
+                                rx.el.button(
+                                    "Vamos come\u00e7ar!",
+                                    type="button",
+                                    class_name="chakra-button css-1f8g3n5",
+                                ),
+                                class_name="chakra-link css-f4h6uy",
+                                href="#/learn/curso-intro",
+                            ),
+                            class_name="chakra-stack css-grmpig",
+                        ),
+                        class_name="chakra-stack css-ab1nhi",
+                    ),
+                    class_name="chakra-container css-1a3l159",
+                ),
+                rx.box(
+                    rx.heading(
+                        "Aprenda na pr\u00e1tica",
+                        class_name="chakra-heading css-1dklj6k",
+                        as_="h1",
+                        size="8",
+                    ),
+                    rx.box(
+                        rx.box(
+                            rx.box(
+                                rx.el.a(
+                                    rx.image(
+                                        alt="some good alt text",
+                                        src="/static/media/arteAgro.f232cae3.png",
+                                        class_name="chakra-image css-1q7mro",
+                                    ),
+                                    target="_blank",
+                                    rel="noopener noreferrer",
+                                    class_name="chakra-link css-10qsrqw",
+                                    href="https://drive.google.com/file/d/1zlmy-Juu6i6HVZw7WCYQs_rC4CEDZSFy/view",
+                                ),
+                                class_name="css-wo9i0v",
+                            ),
+                            rx.box(
+                                rx.box(class_name="css-504s85"), class_name="css-bm0zes"
+                            ),
+                            class_name="css-1r21lrd",
+                        ),
+                        rx.box(
+                            rx.box(
+                                rx.text.span(
+                                    "Agropecu\u00e1ria", class_name="css-1s4b4jw"
+                                ),
+                                rx.text.span("Report", class_name="css-1s4b4jw"),
+                                class_name="chakra-stack css-g9cw6v",
+                            ),
+                            rx.heading(
+                                rx.el.a(
+                                    "Report do setor Agropecu\u00e1rio",
+                                    target="_blank",
+                                    rel="noopener noreferrer",
+                                    class_name="chakra-link css-10qsrqw",
+                                    href="https://drive.google.com/file/d/1zlmy-Juu6i6HVZw7WCYQs_rC4CEDZSFy/view",
+                                ),
+                                class_name="chakra-heading css-15loomw",
+                                as_="h2",
+                                size="6",
+                            ),
+                            rx.text(
+                                "O setor agropecu\u00e1rio \u00e9 um dos principais setores econ\u00f4micos do Brasil, representando uma parcela de 21% do PIB nacional. Atualmente, ele encontra diversos problemas estruturais, os quais poderiam ser solucionados atrav\u00e9s da tecnologia blockchain. No report a seguir esses t\u00f3picos ser\u00e3o abordados e discutidos.",
+                                class_name="chakra-text css-bjugk0",
+                            ),
+                            class_name="css-fu5aqi",
+                        ),
+                        class_name="css-1tvbi2x",
+                    ),
+                    rx.box(
+                        rx.box(
+                            rx.box(
+                                rx.text.span("Sa\u00fade", class_name="css-1s4b4jw"),
+                                rx.text.span("Report", class_name="css-1s4b4jw"),
+                                class_name="chakra-stack css-g9cw6v",
+                            ),
+                            rx.heading(
+                                rx.el.a(
+                                    "Report do setor da Sa\u00fade",
+                                    target="_blank",
+                                    rel="noopener noreferrer",
+                                    class_name="chakra-link css-10qsrqw",
+                                    href="https://drive.google.com/file/d/1KzcVDm7Ipq4yGfkN1DBzlBwWOwS-DfYz/view",
+                                ),
+                                class_name="chakra-heading css-15loomw",
+                                as_="h2",
+                                size="6",
+                            ),
+                            rx.text(
+                                "Sendo o assunto de maior import\u00e2ncia recentemente, o setor de sa\u00fade aparece como enfoque de 2020 pela situa\u00e7\u00e3o vivida com a pandemia do COVID-19. Nesse ano, foi poss\u00edvel notar a import\u00e2ncia e os benef\u00edcios de um sistema de sa\u00fade bem estruturado. No report a seguir esses t\u00f3picos ser\u00e3o abordados e discutidos.",
+                                class_name="chakra-text css-bjugk0",
+                            ),
+                            class_name="css-fu5aqi",
+                        ),
+                        rx.box(
+                            rx.box(
+                                rx.el.a(
+                                    rx.image(
+                                        alt="some good alt text",
+                                        src="/static/media/arteHealth.aabf715a.png",
+                                        class_name="chakra-image css-1q7mro",
+                                    ),
+                                    target="_blank",
+                                    rel="noopener noreferrer",
+                                    class_name="chakra-link css-10qsrqw",
+                                    href="https://drive.google.com/file/d/1KzcVDm7Ipq4yGfkN1DBzlBwWOwS-DfYz/view",
+                                ),
+                                class_name="css-wo9i0v",
+                            ),
+                            rx.box(
+                                rx.box(class_name="css-504s85"), class_name="css-bm0zes"
+                            ),
+                            class_name="css-1r21lrd",
+                        ),
+                        class_name="css-1tvbi2x",
+                    ),
+                    class_name="chakra-container css-1oamxn5",
+                ),
+                rx.box(
+                    rx.box(
+                        rx.box(
+                            rx.image(
+                                src="/static/media/logo-dark.537e082d.svg",
+                                class_name="chakra-image css-v7v99c",
+                            ),
+                            rx.box(
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 640 512",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="Discord",
+                                    href="https://discord.gg/jdK5yB48Mm",
+                                ),
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 448 512",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="LinkedIn",
+                                    href="https://www.linkedin.com/company/blockchain-insper",
+                                ),
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 448 512",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="Instagram",
+                                    href="https://www.instagram.com/blockchainsper/",
+                                ),
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(
+                                            d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 496 512",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="GitHub",
+                                    href="https://github.com/BlockchainInsper",
+                                ),
+                                rx.el.a(
+                                    rx.el.svg(
+                                        rx.el.svg.path(fill="none", d="M0 0h24v24H0z"),
+                                        rx.el.svg.path(
+                                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                                        ),
+                                        stroke="currentColor",
+                                        fill="currentColor",
+                                        stroke_width="0",
+                                        viewbox="0 0 24 24",
+                                        font_size="20px",
+                                        aria_hidden="true",
+                                        focusable="false",
+                                        height="1em",
+                                        width="1em",
+                                        xmlns="http://www.w3.org/2000/svg",
+                                    ),
+                                    class_name="chakra-button css-12su4ed",
+                                    aria_label="Email",
+                                    href="mailto:blockchainsper@gmail.com",
+                                ),
+                                role="group",
+                                class_name="chakra-button__group css-1bdsol1",
+                            ),
+                            class_name="chakra-stack css-3ivhej",
+                        ),
+                        rx.text(
+                            "\u00a9 2025 Blockchain Insper. All rights reserved.",
+                            class_name="chakra-text css-1kfduyp",
+                        ),
+                        class_name="chakra-stack css-n21gh5",
+                    ),
+                    role="contentinfo",
+                    class_name="css-1xi056f",
+                ),
+                id="root",
+            )
+        )
+    )
+
+
 app = rx.App()
 app.add_page(index)
 app.add_page(processo_seletivo, "/#/ps")
 app.add_page(time, "/#/members/actual")
 app.add_page(nucleos, "/#/areas")
 app.add_page(fundo, "/#/fund")
+app.add_page(parceiros, "/#/partnerships")
+app.add_page(aprenda, "/#/learn")
