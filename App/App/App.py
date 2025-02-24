@@ -3288,7 +3288,7 @@ def fundo():
                         rx.box(
                             rx.el.button(
                                 rx.el.svg(
-                                    rx.el.g(
+                                    rx.el.a(
                                         rx.el.svg.circle(cx="12", cy="12", r="5"),
                                         rx.el.svg.path(d="M12 1v2"),
                                         rx.el.svg.path(d="M12 21v2"),
