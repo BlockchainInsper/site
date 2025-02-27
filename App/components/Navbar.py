@@ -113,7 +113,7 @@ def navbar():
                             rx.el.a(
                                 "N\u00facleos",
                                 class_name="chakra-link css-p92xmu",
-                                href="#/areas",
+                                href="/areas",
                                 id="popover-trigger-7",
                                 aria_haspopup="dialog",
                                 aria_expanded="false",
