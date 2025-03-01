@@ -21,12 +21,6 @@ from components.contato.info_contato import contato_info
 from components.contato.location import location_info
 
 
-class State(rx.State):
-    """The app state."""
-
-    ...
-
-
 def index():
     # Welcome Page (Index)
     return rx.fragment(
@@ -39,7 +33,8 @@ def index():
                 with_background_image(),
                 footer(),
                 id="root",
-            )
+            ),
+            class_name="page-std",
         )
     )
 
@@ -191,7 +186,9 @@ def contato():
     )
 
 
-app = rx.App()
+app = rx.App(
+    stylesheets=["stylesheet/style.css"],
+)
 app.add_page(index)
 app.add_page(processo_seletivo, route="/ps")
 app.add_page(time, route="/members/actual")
