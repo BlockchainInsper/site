@@ -1,0 +1,425 @@
+.page-std {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color: rgba(255, 255, 255, 0.92);
+    background: #1A202C;
+    transition-property: background-color;
+    transition-duration: 200ms;
+    line-height: 1.5;
+}
+
+.css-1553k70 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    background: #1A202C;
+    color: #FFFFFF;
+    min-height: 60px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: #171923;
+}
+@media screen and (min-width: 48em) {
+    .css-1twb9xo {
+        display: none;
+        flex: 1 1 auto;
+    }    
+}
+
+.css-1twb9xo {
+    display: flex;
+    flex: 1 1 0%;
+    margin-left: calc(0.5rem * -1);
+}
+
+.chakra-button {
+    padding: 0px;
+    line-height: inherit;
+    color: inherit;
+    cursor: pointer;
+    background: transparent;
+    padding: 0px;
+    text-transform: none;
+    overflow: visible;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0px;
+}
+
+/* chakra icon */
+
+.css-bokek7 {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-block;
+    line-height: 1em;
+    flex-shrink: 0;
+    color: currentcolor;
+    vertical-align: middle;
+}
+
+.css-f59olw {
+    display: inline-flex;
+    appearance: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    width: auto;
+    line-height: 1.2;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 200ms;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    font-size: 1rem;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    color: rgba(255, 255, 255, 0.92);
+    padding: 0px;
+}
+
+@media screen and (min-width: 48em) {
+    .css-1ef8uzr {
+        -webkit-box-pack: start;
+        justify-content: start;
+    }}
+
+.css-1ef8uzr {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex: 1 1 0%;
+}
+
+.css-f4h6uy {
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    cursor: pointer;
+    text-decoration: none;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    color: inherit;
+}
+
+a {
+    background-color: transparent;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.chakra-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.css-v7v99c {
+    width: 100px;
+}
+
+@media screen and (min-width: 48em) {
+    .css-1ynfsgs {
+        display: flex;
+    }
+}
+
+.css-1ynfsgs {
+    display: none;
+    margin-left: 2.5rem;
+}
+
+.css-nd8846 {
+    display: flex;
+    flex-direction: row;
+}
+
+.css-p92xmu {
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    cursor: pointer;
+    text-decoration: none;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    color: #E2E8F0;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.chakra-popover_popper {
+    visibility: hidden;
+    position: absolute;
+    min-width: max-content;
+    inset: 0px auto auto 0px;
+}
+
+.css-1qq679y {
+    z-index: 10;
+}
+
+.chakra-popover_content {
+    transform-origin: var(--popper-transform-origin); /* Testar com center */
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.95) translateZ(0px);
+}
+
+.css-c440zk {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    --popper-bg: #2D3748;
+    background: #1A202C;
+    --popper-arrow-bg: #2D3748;
+    --popper-arrow-shadow-color: rgba(255, 255, 255, 0.16);
+    width: 20rem;
+    border-width: 0px;
+    border-style: initial;
+    border-image: initial;
+    border-color: inherit;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    z-index: inherit;
+    padding: 1rem;
+    min-width: 24rem;
+}
+
+.css-n21gh5 {
+    display: flex;
+    flex-direction: column;
+}
+
+.css-v8ajqy {
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    cursor: pointer;
+    text-decoration: none;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    color: inherit;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+}
+
+.css-84zodg {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.css-cugd40 {
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.css-itvw0n {
+    font-size: 0.875rem;
+}
+
+.css-2gz105 {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    transition: 0.3s;
+    transform: translateX(-10px);
+    opacity: 0;
+    flex: 1 1 0%;
+}
+
+@media screen and (min-width: 48em){
+    .css-uiyb8i {
+        flex: 0 1 0%;
+    }
+}
+
+.css-uiyb8i {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex: 1 1 0%;
+}
+
+.css-73pxpg {
+    display: inline-flex;
+    appearance: none;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    user-select: none;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    width: auto;
+    line-height: 1.2;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 200ms;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    font-size: 1rem;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.css-onkibi {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    line-height: 1em;
+    flex-shrink: 0;
+    color: currentcolor;
+    vertical-align: middle;
+}
+
+.chakra-collapse {
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    height: 0px;
+}
+
+@media screen and (min-width: 48em) {
+    .css-1delute {
+        display: none;
+    }
+}
+
+.css-1delute {
+    flex-direction: column;
+    background: var(--chakra-colors-gray-800);
+    padding: var(--chakra-space-4);
+}
+
+.css-egoftb {
+    display: flex;
+    flex-direction: column;
+}
+
+.css-ryc07z {
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    cursor: pointer;
+    text-decoration: none;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    color: inherit;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.css-13xtz7x {
+    font-weight: 600;
+    color: var(--chakra-colors-gray-200);
+}
+
+.css-1xmht12 {
+    display: flex;
+    -webkit-box-align: start;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left-width: 1px;
+    border-style: solid;
+    border-color: #2D3748;
+}
+
+.css-egoftb > :not(style) ~ :not(style) {
+    margin-top: 1rem;
+    margin-inline: 0px;
+    margin-bottom: 0px;
+}
+
+
+.css-1delute > :not(style) ~ :not(style) {
+    margin-top: 0.5rem;
+    margin-inline: 0px;
+    margin-bottom: 0px;
+}
+
+.css-1twc07j {
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    line-height: 1em;
+    flex-shrink: 0;
+    color: currentcolor;
+    transition: 0.25s ease-in-out;
+}
+
+
+
+.css-1vsk1kk {
+    width: 100%;
+    margin-inline: auto;
+    max-width: var(--chakra-sizes-7xl);
+    padding-inline: 1rem;
+}
+
+.css-16vsuek {
+    width: 100%;
+    margin-inline: auto;
+    max-width: var(--chakra-sizes-8xl);
+    padding-inline: 1rem;
+    padding-top: var(--chakra-space-12);
+    padding-bottom: var(--chakra-space-12);
+}
+
+.css-1cozlc8 {
+    background: var(--chakra-colors-gray-700);
+}
+
+.css-1utqpha {
+    display: flex;
+    width: var(--chakra-sizes-full);
+    height: 30vh;
+    background-image: url("/static/media/overlay.088e633e.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+.css-1xi056f {
+    margin-inline: auto;
+    max-width: var(--chakra-sizes-7xl);
+    padding-top: var(--chakra-space-12);
+    padding-bottom: var(--chakra-space-12);
+    padding-inline-start: var(--chakra-space-4);
+    padding-inline-end: var(--chakra-space-4);
+}
+
