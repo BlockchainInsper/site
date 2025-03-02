@@ -1,21 +1,18 @@
 import reflex as rx
-# from App.components.home.hero import hero
-# from App.components.home.features import features
-# from App.components.home.testimonials import testimonials
-
-# Constantes para estilo
-OVERLAY_IMAGE = "overlay.png"  # Ajuste o caminho conforme necessário
+from components.home.Hero import call_to_action_with_video
+from components.home.Features import features
+from components.home.Testimonials import testimonials
 
 
-def background_section() -> rx.Component:
+def with_background_image():
     return rx.flex(
         rx.vstack(
             rx.stack(
                 rx.text(
                     "Conheça nossas áreas! Estamos estruturados em áreas de estudo e áreas administrativas",
-                    size="6",
-                    weight="bold",
-                    line_height="1.2",
+                    font_weight=700,
+                    line_height=1.2,
+                    font_size=rx.breakpoints(initial="3xl", md="4xl"),
                 ),
                 rx.stack(
                     rx.link(
@@ -34,22 +31,22 @@ def background_section() -> rx.Component:
                 align="start",
                 spacing="6",
             ),
-            width="100%",
+            width="full",
             justify="center",
-            padding_x=["4", "8"],
+            px=rx.breakpoints(initial="4", md="8"),
         ),
-        width="100%",
+        width="full",
         height="30vh",
-        background=f"center/cover url({OVERLAY_IMAGE})",
+        background_image="url('/overlay.png')",
         background_size="cover",
         background_position="center center",
     )
 
 
-def home() -> rx.Component:
+def home():
     return rx.box(
-        # hero(),
-        # features(),
-        # testimonials(),
-        background_section(),
+        call_to_action_with_video(),
+        features(),
+        testimonials(),
+        with_background_image(),
     )

@@ -3,12 +3,9 @@
 import reflex as rx
 from components.Navbar import navbar
 from components.Footer import footer
-from components.home.Hero import call_to_action_with_video
-from components.home.Features import features
-from components.home.Testimonials import testimonials
-from components.home.With_Background_Image import with_background_image
 from components.processo_seletivo.Intro import intro
 from components.processo_seletivo.Summary import summary
+from pages.Home import home
 from pages.Areas import areas
 from components.fundo.intro import intro_fundo
 from components.fundo.fundo_info import info_fundo
@@ -19,23 +16,33 @@ from components.learn.Curso import curso
 from components.learn.Blog import blog
 from components.contato.info_contato import contato_info
 from components.contato.location import location_info
+from typing import Callable
 
 
-def index():
-    # Welcome Page (Index)
-    return rx.fragment(
+def template(page: Callable[[], rx.Component]) -> rx.Component:
+    return rx.box(
+        navbar(),
         rx.box(
-            rx.box(
-                navbar(),
-                call_to_action_with_video(),
-                features(),
-                testimonials(),
-                with_background_image(),
-                footer(),
-                id="root",
-            ),
-            class_name="page-std",
-        )
+            page(),
+            style={
+                "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+                "color": "rgba(255, 255, 255, 0.92)",
+                "backgroundColor": "#1A202C",
+                "transitionProperty": "background-color",
+                "transitionDuration": "200ms",
+                "lineHeight": "1.5",
+                "minHeight": "100vh",
+            },
+        ),
+        footer(),
+    )
+
+
+@rx.page(route="/")
+@template
+def index():
+    return rx.vstack(
+        home(),
     )
 
 
@@ -188,8 +195,12 @@ def contato():
 
 app = rx.App(
     stylesheets=["stylesheet/style.css"],
+    theme=rx.theme(
+        appearance="dark",
+        has_background=False,
+    ),
 )
-app.add_page(index)
+app.add_page(index, route="/")
 app.add_page(processo_seletivo, route="/ps")
 app.add_page(time, route="/members/actual")
 app.add_page(nucleos, route="/areas")
