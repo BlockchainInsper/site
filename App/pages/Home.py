@@ -37,7 +37,7 @@ def with_background_image():
 @rx.page(route="/")
 @template
 def home():
-    return rx.vstack(
+    return rx.box(
         call_to_action_with_video(),
         features(),
         testimonials(),

@@ -5,7 +5,7 @@ from App.Template import template
 @rx.page(route="/members/actual")
 @template
 def membros_atuais():
-    return rx.vstack(
+    return rx.box(
         rx.box(
             rx.box(
                 rx.heading(

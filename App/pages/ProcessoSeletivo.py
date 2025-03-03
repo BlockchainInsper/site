@@ -7,7 +7,7 @@ from App.Template import template
 @rx.page(route="/ps")
 @template
 def processo_seletivo():
-    return rx.vstack(
+    return rx.box(
         intro(),
         summary(),
     )
