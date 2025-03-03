@@ -17,6 +17,14 @@ app = rx.App(
         appearance="dark",
         has_background=True,
     ),
+    style={
+        "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+        "color": "rgba(255, 255, 255, 0.92)",
+        "transitionProperty": "background-color",
+        "transitionDuration": "200ms",
+        "lineHeight": "1.5",
+        "minHeight": "100vh",
+    },
 )
 app.add_page(home, route="/")
 app.add_page(processo_seletivo, route="/ps")

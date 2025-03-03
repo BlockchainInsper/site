@@ -1,137 +1,124 @@
 import reflex as rx
 
 
+def feature(heading, text):
+    return rx.box(
+        rx.heading(
+            heading,
+            class_name="text-xl font-bold mb-2",
+            as_="h3",
+        ),
+        rx.text(
+            text,
+            class_name="text-gray-600",
+        ),
+    )
+
+
 def intro():
-    return (
+    return rx.box(
         rx.box(
-            rx.box(
+            # Grid de duas colunas (1 em mobile)
+            rx.grid(
+                # Coluna 1 - Título e botões
                 rx.box(
-                    rx.box(
+                    rx.vstack(
                         rx.heading(
                             "Nosso Processo Seletivo chegou!",
-                            class_name="css-kttl9l",
+                            class_name="text-3xl font-bold",
                             as_="h2",
-                            size="6",
                         ),
-                        rx.el.a(
-                            rx.el.button(
+                        rx.link(
+                            rx.button(
                                 "Inscrever-se",
-                                type="button",
-                                class_name="chakra-button css-b85hn3",
+                                class_name="bg-[#f68b23] text-white hover:bg-[#f68b70] rounded-md px-4 py-2",
                             ),
-                            target="_blank",
-                            rel="noopener noreferrer",
-                            class_name="chakra-link css-f4h6uy",
                             href="https://docs.google.com/forms/d/e/1FAIpQLScQyW4RGcwtcNAAVtYj3iFJdgJ4Khq07rSluQo5tWROKWYxow/viewform",
+                            is_external=True,
                         ),
-                        rx.el.a(
-                            rx.el.button(
-                                rx.text.span(
+                        rx.link(
+                            rx.button(
+                                rx.hstack(
+                                    # SVG personalizado do Discord
                                     rx.el.svg(
                                         rx.el.svg.path(
-                                            d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"
+                                            d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1 14.66 14.66 0 0 0-4.58 0 10.14 10.14 0 0 0-.53-1.1 16 16 0 0 0-4.13 1.3 17.33 17.33 0 0 0-3 11.59 16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83 3.39 3.39 0 0 0 .42-.33 11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84 12.41 12.41 0 0 0 1.08 1.78 16.44 16.44 0 0 0 5.06-2.59 17.22 17.22 0 0 0-3-11.59 16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.93 1.93 0 0 1 1.8 2 1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.92 1.92 0 0 1 1.8 2 1.92 1.92 0 0 1-1.8 2z",
+                                            fill="currentColor",
                                         ),
-                                        stroke="currentColor",
-                                        fill="currentColor",
-                                        stroke_width="0",
-                                        role="img",
-                                        viewbox="0 0 24 24",
-                                        aria_hidden="true",
-                                        focusable="false",
-                                        height="1em",
-                                        width="1em",
+                                        viewBox="0 0 24 24",
+                                        width="20px",
+                                        height="20px",
                                         xmlns="http://www.w3.org/2000/svg",
+                                        class_name="text-white w-5 h-5",
                                     ),
-                                    class_name="chakra-button__icon css-1wh2kri",
+                                    rx.text("Discord"),
                                 ),
-                                "Discord",
-                                type="button",
-                                class_name="chakra-button css-a6md8f",
+                                class_name="bg-[#5865F2] text-white hover:bg-[#5865F2]/90 rounded-md px-4 py-2",
                             ),
-                            target="_blank",
-                            rel="noopener noreferrer",
-                            class_name="chakra-link css-f4h6uy",
                             href="https://discord.gg/jdK5yB48Mm",
+                            is_external=True,
                         ),
-                        class_name="chakra-stack css-1lpczhs",
+                        spacing="5",
+                        align_items="flex-start",
+                        class_name="items-start",
                     ),
-                    class_name="css-zd4of5",
                 ),
+                # Coluna 2 - Texto descritivo
                 rx.box(
-                    rx.box(
-                        rx.text(
-                            "O maior experimento financeiro e sociol\u00f3gico do s\u00e9culo XXI, o Bitcoin veio solucionar diversos problemas antes sem solu\u00e7\u00e3o. A Blockchain Insper vai te dar base para entender o que est\u00e1 por tr\u00e1s da constru\u00e7\u00e3o do protocolo e o que motivou Satoshi Nakamoto a desenvolv\u00ea-lo, entre muitas outras coisas que rondam essa tecnologia que est\u00e1 revolucionando a economia mundial. Al\u00e9m disso, temos parcerias com as maiores empresas do mercado para, al\u00e9m de ganhar conhecimento, saber como funcionam os projetos na pr\u00e1tica.",
-                            class_name="css-0",
-                        ),
-                        class_name="css-k008qs",
+                    rx.text(
+                        "O maior experimento financeiro e sociológico do século XXI, o "
+                        "Bitcoin veio solucionar diversos problemas antes sem solução. A "
+                        "Blockchain Insper vai te dar base para entender o que está por "
+                        "trás da construção do protocolo e o que motivou Satoshi Nakamoto a "
+                        "desenvolvê-lo, entre muitas outras coisas que rondam essa "
+                        "tecnologia que está revolucionando a economia mundial. Além disso, "
+                        "temos parcerias com as maiores empresas do mercado para, além de "
+                        "ganhar conhecimento, saber como funcionam os projetos na prática.",
+                        class_name="text-gray-600",
                     ),
-                    class_name="css-0",
                 ),
-                class_name="css-1xb0s7",
+                # Configuração do grid
+                columns=rx.breakpoints(initial="1", sm="2"),
+                gap="1rem",
+                class_name="w-full",
             ),
+            # Divisor horizontal
             rx.divider(
-                aria_orientation="horizontal",
-                class_name="chakra-divider css-gir5mk",
+                class_name="my-12 border-gray-200",
             ),
-            rx.box(
-                rx.box(
-                    rx.heading(
-                        "Primeira Fase",
-                        class_name="css-vv36la",
-                        as_="h3",
-                        size="4",
-                    ),
-                    rx.text(
-                        "Preenchimento de um Forms com detalhes pessoais e perguntas de car\u00e1ter opinativo.",
-                        class_name="css-0",
-                    ),
-                    class_name="css-0",
+            # Grid de quatro colunas
+            rx.grid(
+                # Fase 1
+                feature(
+                    heading="Primeira Fase",
+                    text="Preenchimento de um Forms com detalhes pessoais e perguntas de caráter opinativo.",
                 ),
-                rx.box(
-                    rx.heading(
-                        "Segunda Fase",
-                        class_name="css-vv36la",
-                        as_="h3",
-                        size="4",
-                    ),
-                    rx.text(
-                        "Resolu\u00e7\u00e3o de um case elaborado em parceria com o BTG e com a Mynt.",
-                        class_name="css-0",
-                    ),
-                    class_name="css-0",
+                # Fase 2
+                feature(
+                    heading="Segunda Fase",
+                    text="Resolução de um case elaborado em parceria com o BTG e com a Mynt.",
                 ),
-                rx.box(
-                    rx.heading(
-                        "Terceira Fase",
-                        class_name="css-vv36la",
-                        as_="h3",
-                        size="4",
-                    ),
-                    rx.text(
-                        "Entrevista individual para conhecer melhor o candidato com perguntas pessoais e possivelmente t\u00e9cnicas.",
-                        class_name="css-0",
-                    ),
-                    class_name="css-0",
+                # Fase 3
+                feature(
+                    heading="Terceira Fase",
+                    text="Entrevista individual para conhecer melhor o candidato com perguntas pessoais e possivelmente técnicas.",
                 ),
-                rx.box(
-                    rx.heading(
-                        "Programa de Trainees",
-                        class_name="css-vv36la",
-                        as_="h3",
-                        size="4",
-                    ),
-                    rx.text(
-                        "Desempenho no Curso de Introdu\u00e7\u00e3o \u00e0 Blockchain e Projeto Interno Aplicado (nessa fase, os candidatos j\u00e1 ganham entre 5 e 10 horas complementares).",
-                        class_name="css-0",
-                    ),
-                    class_name="css-0",
+                # Fase 4
+                feature(
+                    heading="Programa de Trainees",
+                    text="Desempenho no Curso de Introdução à Blockchain e Projeto Interno Aplicado (nessa fase, os candidatos já ganham entre 5 e 10 horas complementares).",
                 ),
-                class_name="css-1gmb2s4",
+                # Configuração do grid
+                columns=rx.breakpoints(initial="1", sm="2", md="4"),
+                gap=rx.breakpoints(initial="2rem", sm="3rem", md="4rem"),
+                class_name="w-full",
             ),
+            # Divisor horizontal
             rx.divider(
-                aria_orientation="horizontal",
-                class_name="chakra-divider css-gir5mk",
+                class_name="my-12 border-gray-200",
             ),
-            class_name="chakra-container css-1x6bs2p",
+            # Configuração do container
+            class_name="max-w-7xl mx-auto p-4",
         ),
+        class_name="w-full py-10 bg-white dark:bg-gray-800 text-gray-900 dark:text-white",
     )
