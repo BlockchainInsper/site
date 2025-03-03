@@ -6,15 +6,13 @@ def feature(text, icon, icon_bg):
     return rx.flex(
         rx.flex(
             icon,
-            width="2rem",
-            height="2rem",
-            align="center",
-            justify="center",
-            border_radius="full",
-            bg=icon_bg,
+            class_name=f"w-8 h-8 items-center justify-center rounded-full bg-[{icon_bg}] flex",
         ),
-        rx.text(text, font_weight="600", margin_left="0.75rem"),
-        align="center",
+        rx.text(
+            text,
+            class_name="font-semibold ml-3",
+        ),
+        class_name="flex flex-row items-center",
     )
 
 
@@ -22,132 +20,98 @@ def features():
     """Componente principal que exibe informações sobre a organização com imagem."""
     return rx.box(
         rx.container(
-            # Substituindo o grid por hstack para layout horizontal
-            rx.hstack(
-                # Coluna da esquerda com texto
+            # SimpleGrid com 2 colunas em desktop, 1 em mobile
+            rx.grid(
+                # COLUNA 1 - Stack vertical com texto e features
                 rx.vstack(
+                    # Título
                     rx.heading(
                         "Reavaliando o presente e construindo o futuro",
-                        size="4",
-                        margin_bottom="1.5rem",
+                        class_name="text-2xl font-bold",
                     ),
+                    # Descrição
                     rx.text(
                         "Buscamos criar um time altamente engajado e preparado "
                         "para enfrentar a nova onda de tecnologia no mercado de trabalho. "
                         "Seguimos com o objetivo de estimular o estudo e a adoção "
                         "dessa tecnologia no Brasil, criando conhecimento não apenas "
                         "para o agora, como também para o futuro.",
-                        color="#A0AEC0",
-                        margin_bottom="2rem",
+                        class_name="text-gray-400 text-lg",
                     ),
-                    # Seção Nossa Missão
+                    # Stack com as 3 seções divididas
                     rx.vstack(
+                        # Seção Nossa Missão
                         rx.box(
                             feature(
                                 text="Nossa Missão",
                                 icon=rx.icon(
                                     tag="rocket",
-                                    color="#D69E2E",
-                                    width="1.25rem",
-                                    height="1.25rem",
+                                    class_name="text-yellow-500 w-5 h-5",
                                 ),
                                 icon_bg="#744210",
                             ),
-                            width="100%",
+                            rx.text(
+                                "Fomentar o desenvolvimento do ecossistema brasileiro "
+                                "em torno da tecnologia blockchain, criando um futuro mais eficiente "
+                                "através da tecnologia.",
+                                class_name="text-gray-400 mt-2",
+                            ),
                         ),
-                        rx.text(
-                            "Fomentar o desenvolvimento do ecossistema brasileiro "
-                            "em torno da tecnologia blockchain, criando um futuro mais eficiente "
-                            "através da tecnologia.",
-                            color="#A0AEC0",
-                            margin_top="0.5rem",
-                            margin_bottom="1rem",
-                        ),
-                        rx.divider(border_color="#2D3748"),
-                        align_items="start",
-                        width="100%",
-                        spacing="4",
-                        margin_bottom="1rem",
-                    ),
-                    # Seção Nossa Visão
-                    rx.vstack(
+                        # Divider
+                        rx.divider(class_name="border-gray-700"),
+                        # Seção Nossa Visão
                         rx.box(
                             feature(
                                 text="Nossa Visão",
                                 icon=rx.icon(
                                     tag="eye",
-                                    color="#38A169",
-                                    width="1.25rem",
-                                    height="1.25rem",
+                                    class_name="text-green-500 w-5 h-5",
                                 ),
                                 icon_bg="#1C4532",
                             ),
-                            width="100%",
+                            rx.text(
+                                "Capacitar os alunos com o melhor conteúdo e conectá-los ao mercado, "
+                                "no intuito de incluir nosso país nesse cenário de inovação.",
+                                class_name="text-gray-400 mt-2",
+                            ),
                         ),
-                        rx.text(
-                            "Capacitar os alunos com o melhor conteúdo e conectá-los ao mercado, "
-                            "no intuito de incluir nosso país nesse cenário de inovação.",
-                            color="#A0AEC0",
-                            margin_top="0.5rem",
-                            margin_bottom="1rem",
-                        ),
-                        rx.divider(border_color="#2D3748"),
-                        align_items="start",
-                        width="100%",
-                        spacing="4",
-                        margin_bottom="1rem",
-                    ),
-                    # Seção Nossos Valores
-                    rx.vstack(
+                        # Divider
+                        rx.divider(class_name="border-gray-700"),
+                        # Seção Nossos Valores
                         rx.box(
                             feature(
                                 text="Nossos Valores",
                                 icon=rx.icon(
                                     tag="compass",
-                                    color="#805AD5",
-                                    width="1.25rem",
-                                    height="1.25rem",
+                                    class_name="text-purple-500 w-5 h-5",
                                 ),
                                 icon_bg="#44337A",
                             ),
-                            width="100%",
+                            rx.text(
+                                "Alto comprometimento, proatividade, inovação, "
+                                "trabalho em equipe, multidisciplinaridade, excelência e eficiência.",
+                                class_name="text-gray-400 mt-2",
+                            ),
                         ),
-                        rx.text(
-                            "Alto comprometimento, proatividade, inovação, "
-                            "trabalho em equipe, multidisciplinaridade, excelência e eficiência.",
-                            color="#A0AEC0",
-                            margin_top="0.5rem",
-                        ),
+                        class_name="space-y-4 w-full",
                         align_items="start",
-                        width="100%",
-                        spacing="4",
                     ),
-                    align_items="flex-start",
-                    spacing="0",
-                    width="100%",
+                    class_name="space-y-4 w-full",
+                    align_items="start",
                 ),
-                # Coluna da direita com imagem
-                rx.box(
+                # COLUNA 2 - Imagem
+                rx.flex(
                     rx.image(
                         src="/insper.jpg",
                         alt="Auditório Insper",
-                        width="100%",
-                        height="100%",
-                        border_radius="md",
-                        object_fit="cover",
+                        class_name="w-full h-full rounded-md object-cover",
                     ),
+                    class_name="w-full h-full",
                 ),
-                # Configuração do hstack
-                spacing="8",
-                align_items="center",
-                width="100%",
-                # Tornando responsivo para dispositivos móveis
-                flex_direction=rx.cond(rx.breakpoints(md=True), "row", "column"),
+                # Configuração do grid
+                class_name="grid grid-cols-1 md:grid-cols-2 gap-10",
             ),
-            max_width="90rem",
-            padding_y="3rem",
-            padding_x="1.5rem",
+            class_name="max-w-[90rem] py-12 px-6",
         ),
-        background_color="#1A202C",
-        color="white",
+        class_name="w-full bg-[#1A202C] text-white",
     )
