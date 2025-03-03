@@ -43,12 +43,18 @@ def blob(props=None):
             fill="currentColor",
         ),
         width="100%",
+        height="150%",
+        display="inline-block",
+        line_height="1em",
+        flex_shrink="0",
+        vertical_align="middle",
         view_box="0 0 578 440",
         fill="none",
         xmlns="http://www.w3.org/2000/svg",
-        opacity="0.2",
         color="#f68b23",
         position="absolute",
+        top="-20%",
+        left="0px",
         z_index="0",
         **props,
     )
@@ -156,5 +162,7 @@ def call_to_action_with_video():
                     class_name="flex flex-col md:flex-row items-center py-20 md:py-28 space-y-8 md:space-y-0 md:space-x-10",
                 ),
             )
-        )
+        ),
+        margin_x="auto",
+        padding_x="1rem",
     )
