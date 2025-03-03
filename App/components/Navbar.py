@@ -72,42 +72,26 @@ def desktop_sub_nav(label, href, subLabel):
             rx.box(
                 rx.text(
                     label,
-                    transition="all .3s ease",
-                    _group_hover={"color": "#f68b23"},
-                    font_weight="500",
+                    class_name="transition-all duration-300 group-hover:text-[#f68b23] font-medium",
                 ),
                 rx.text(
                     subLabel,
-                    font_size="0.875rem",
+                    class_name="text-sm",
                 ),
+                class_name="",
             ),
             rx.flex(
                 rx.icon(
                     tag="chevron_right",
-                    color="#f68b23",
-                    width="1.25rem",
-                    height="1.25rem",
+                    class_name="text-[#f68b23] w-5 h-5",
                 ),
-                transition="all .3s ease",
-                transform="translateX(-10px)",
-                opacity="0px",
-                _group_hover={
-                    "opacity": "100%",
-                    "transform": "translateX(0)",
-                },
-                justify="end",
-                align="center",
-                flex="0.25rem",
+                class_name="transition-all duration-300 -translate-x-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 flex justify-end items-center flex-1",
             ),
-            direction="row",
-            align="center",
+            class_name="flex flex-row items-center",
         ),
         href=href,
         role="group",
-        display="block",
-        padding="0.5rem",
-        border_radius="md",
-        _hover={"bg": rx.color_mode_cond("#f7e2dc", "#171923")},
+        class_name="block p-2 rounded-md hover:bg-[#f7e2dc] dark:hover:bg-gray-900",
     )
 
 
@@ -118,14 +102,7 @@ def desktop_nav():
         link_component = rx.link(
             navItem["label"],
             href=navItem.get("href", "#"),
-            padding="0.5rem",
-            font_size="0.875rem",
-            font_weight="500",
-            color=rx.color_mode_cond("#4A5568", "#E2E8F0"),
-            _hover={
-                "text_decoration": "none",
-                "color": rx.color_mode_cond("#1A202C", "white"),
-            },
+            class_name="p-2 text-sm font-medium text-gray-600 dark:text-gray-200 hover:no-underline hover:text-gray-800 dark:hover:text-white",
         )
 
         # If it has children, wrap in popover, otherwise just use the link
@@ -145,12 +122,7 @@ def desktop_nav():
                                     for child in navItem.get("children", [])
                                 ],
                             ),
-                            border="0",
-                            box_shadow="0.75rem",
-                            bg=rx.color_mode_cond("white", "#1A202C"),
-                            padding="1rem",
-                            border_radius="0 20px 25px -5px rgba(0, 0, 0, 0.1)",
-                            min_width="24rem",
+                            class_name="border-0 shadow-xl bg-white dark:bg-[#1A202C] p-4 rounded-xl min-w-[24rem]",
                         ),
                         trigger="hover",
                         placement="bottom-start",
@@ -168,9 +140,7 @@ def desktop_nav():
 
     return rx.stack(
         *nav_items,
-        direction="row",
-        spacing="2",
-        align="center",
+        class_name="flex flex-row items-center gap-2",
     )
 
 
@@ -178,20 +148,17 @@ def mobile_nav_item(label, children, href):
     # Build flex components differently depending on whether there are children
     flex_children = [
         rx.text(
-            label, font_weight="600", color=rx.color_mode_cond("#4A5568", "#E2E8F0")
+            label,
+            class_name="font-semibold text-gray-600 dark:text-gray-200",
         )
     ]
+
     # Only add icon if there are children
     if children:
         flex_children.append(
             rx.icon(
                 tag="chevron_down",
-                transition="all .25s ease-in-out",
-                transform=rx.cond(
-                    NavItemState.is_item_open(label), "rotate(180deg)", ""
-                ),
-                width="1.5rem",
-                height="1.5rem",
+                class_name=f"transition-all duration-300 ease-in-out w-6 h-6 {rx.cond(NavItemState.is_item_open(label), 'rotate-180', '')}",
             )
         )
 
@@ -205,19 +172,14 @@ def mobile_nav_item(label, children, href):
                     rx.link(
                         child["label"],
                         key=child["label"],
-                        padding_y="1rem",
+                        class_name="py-2",
                         href=child["href"],
                     )
                     for child in children
                 ],
-                margin_top="0.5rem",
-                padding_left="1rem",
-                border_left="0.25rem",
-                border_style="solid",
-                border_color=rx.color_mode_cond("#E2E8F0", "#2D3748"),
-                align="start",
+                class_name="mt-2 pl-4 border-l border-solid border-gray-200 dark:border-gray-700 items-start",
             ),
-            rx.box(),  # Empty box as fallback
+            rx.box(),  # Empty box instead of None
         )
     else:
         # If no children, always render an empty box
@@ -227,18 +189,13 @@ def mobile_nav_item(label, children, href):
     return rx.stack(
         rx.flex(
             *flex_children,
-            padding_y="0.5rem",
+            class_name="py-2 justify-between items-center hover:no-underline",
             as_="a",
             href="#" if children else href,
-            justify="between",
-            align="center",
-            _hover={
-                "text_decoration": "none",
-            },
             on_click=NavItemState.toggle_item(label) if children else None,
         ),
         submenu,
-        spacing="2",
+        class_name="gap-2",
     )
 
 
@@ -250,9 +207,7 @@ def mobile_nav():
             )
             for navItem in NAV_ITEMS
         ],
-        bg=rx.color_mode_cond("white", "#1A202C"),
-        padding="1rem",
-        display=rx.cond(rx.breakpoints(md=True), "none", "block"),
+        class_name="bg-white dark:bg-[#1A202C] p-4 md:hidden block",
     )
 
 
@@ -264,16 +219,14 @@ def navbar():
                 rx.icon_button(
                     rx.cond(
                         MobileNavState.is_open,
-                        rx.icon(tag="x", width="0.75rem", height="0.75rem"),
-                        rx.icon(tag="menu", width="1.25rem", height="1.25rem"),
+                        rx.icon(tag="x", class_name="w-3 h-3"),
+                        rx.icon(tag="menu", class_name="w-5 h-5"),
                     ),
                     variant="ghost",
                     aria_label="Toggle Navigation",
                     on_click=MobileNavState.toggle,
                 ),
-                flex=rx.cond(rx.breakpoints(md=True), "auto", "0.25rem"),
-                margin_left=rx.cond(rx.breakpoints(md=True), "0rem", "-0.5rem"),
-                display=rx.cond(rx.breakpoints(md=True), "none", "flex"),
+                class_name="md:flex-auto flex-1 md:ml-0 -ml-2 md:hidden flex items-center",
             ),
             # Logo and navigation
             rx.flex(
@@ -286,34 +239,21 @@ def navbar():
                         width="100px",
                     ),
                     href="/",
+                    class_name="flex items-center",
                 ),
                 rx.flex(
                     desktop_nav(),
-                    display=rx.cond(rx.breakpoints(md=True), "flex", "none"),
-                    margin_left="2.5rem",
+                    class_name="md:flex hidden ml-10 items-center",
                 ),
-                flex="0.5rem",
-                justify=rx.cond(rx.breakpoints(md=True), "start", "center"),
+                class_name="md:justify-start justify-center flex-1 items-center",
             ),
             # Theme toggle button
             rx.stack(
                 rx.color_mode.button(),
-                flex=rx.cond(rx.breakpoints(md=True), "0rem", "0.25rem"),
-                justify="end",
-                direction="row",
-                spacing="3",
+                class_name="md:flex-0 flex-1 justify-end flex-row space-x-6 items-center",
             ),
             # Estilização principal do navbar
-            bg=rx.color_mode_cond("white", "#1A202C"),
-            color=rx.color_mode_cond("#4A5568", "white"),
-            min_height="60px",
-            padding_y="0.5rem",
-            padding_x="1rem",
-            border_bottom="1px",
-            border_style="solid",
-            border_color=rx.color_mode_cond("#E2E8F0", "#171923"),
-            align="center",
-            width="100%",
+            class_name="flex items-center bg-white dark:bg-[#1A202C] text-gray-600 dark:text-white min-h-[60px] py-2 px-4 border-b border-solid border-gray-200 dark:border-gray-900 w-full",
         ),
         # Menu mobile - animação de colapso
         rx.cond(
@@ -321,6 +261,5 @@ def navbar():
             mobile_nav(),
             rx.box(),
         ),
-        width="100%",
-        shadow="sm",
+        class_name="w-full shadow-sm",
     )
