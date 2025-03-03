@@ -10,7 +10,7 @@ def with_background_image():
             rx.stack(
                 rx.text(
                     "Conheça nossas áreas! Estamos estruturados em áreas de estudo e áreas administrativas",
-                    font_weight=700,
+                    font_weight="700",
                     line_height=1.2,
                     font_size=rx.breakpoints(initial="3xl", md="4xl"),
                 ),

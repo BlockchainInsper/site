@@ -24,15 +24,6 @@ def template(page: Callable[[], rx.Component]) -> rx.Component:
         navbar(),
         rx.box(
             page(),
-            style={
-                "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
-                "color": "rgba(255, 255, 255, 0.92)",
-                "backgroundColor": "#1A202C",
-                "transitionProperty": "background-color",
-                "transitionDuration": "200ms",
-                "lineHeight": "1.5",
-                "minHeight": "100vh",
-            },
         ),
         footer(),
     )
