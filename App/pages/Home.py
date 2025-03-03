@@ -6,40 +6,30 @@ from components.home.Testimonials import testimonials
 
 def with_background_image():
     return rx.flex(
-        rx.vstack(
-            rx.stack(
+        # Container principal centralizado horizontalmente
+        rx.flex(
+            # Stack vertical com texto e botão
+            rx.vstack(
+                # Texto alinhado à esquerda
                 rx.text(
                     "Conheça nossas áreas! Estamos estruturados em áreas de estudo e áreas administrativas",
-                    font_weight="700",
-                    line_height=1.2,
-                    font_size=rx.breakpoints(initial="3xl", md="4xl"),
+                    class_name="font-bold leading-tight text-3xl md:text-4xl text-left text-white",
                 ),
-                rx.stack(
-                    rx.link(
-                        rx.button(
-                            "Nossas áreas",
-                            bg="#f68b23",
-                            border_radius="full",
-                            color="white",
-                            _hover={"bg": "#f68b70"},
-                        ),
-                        href="/areas",
-                    ),
-                    direction="row",
+                # Botão alinhado à esquerda
+                rx.button(
+                    "Nossas áreas",
+                    class_name="bg-[#f68b23] rounded-full text-white hover:bg-[#f68b70]",
+                    on_click=rx.redirect("/areas"),
                 ),
-                max_width="2xl",
-                align="start",
+                # Configuração do vstack
                 spacing="6",
+                class_name="items-start w-full",  # Alinha os itens à esquerda
             ),
-            width="full",
-            justify="center",
-            px=rx.breakpoints(initial="4", md="8"),
+            # Configuração do flex container
+            class_name="max-w-2xl w-full justify-center",
         ),
-        width="full",
-        height="30vh",
-        background_image="url('/overlay.png')",
-        background_size="cover",
-        background_position="center center",
+        # Configuração do flex principal com cor de fundo
+        class_name="w-full h-[30vh] bg-[#1A202C] flex justify-center items-center px-4",
     )
 
 

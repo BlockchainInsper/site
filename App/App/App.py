@@ -188,7 +188,7 @@ app = rx.App(
     stylesheets=["stylesheet/style.css"],
     theme=rx.theme(
         appearance="dark",
-        has_background=False,
+        has_background=True,
     ),
 )
 app.add_page(index, route="/")

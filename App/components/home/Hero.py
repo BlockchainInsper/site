@@ -111,7 +111,7 @@ def call_to_action_with_video():
                 ),
                 class_name="flex flex-col md:flex-row items-center py-20 md:py-28 space-y-8 md:space-y-0 md:space-x-10 w-full",
             ),
-            class_name="max-w-[90rem] px-4 md:px-8 w-full mx-auto",  # Container centralizado, largura adequada
+            class_name="w-full px-4 md:px-8 mx-auto",  # Container centralizado, largura adequada
         ),
         class_name="w-full py-12 flex justify-center bg-[#1A202C] text-white",  # Box externo com background color
     )
