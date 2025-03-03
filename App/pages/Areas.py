@@ -1,7 +1,10 @@
 import reflex as rx
+from App.Template import template
 
 
-def areas():
+@rx.page(route="/areas")
+@template
+def nucleos():
     return rx.box(
         rx.box(
             rx.el.svg(

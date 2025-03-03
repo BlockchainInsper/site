@@ -2,6 +2,7 @@ import reflex as rx
 from components.home.Hero import call_to_action_with_video
 from components.home.Features import features
 from components.home.Testimonials import testimonials
+from App.Template import template
 
 
 def with_background_image():
@@ -33,8 +34,10 @@ def with_background_image():
     )
 
 
+@rx.page(route="/")
+@template
 def home():
-    return rx.box(
+    return rx.vstack(
         call_to_action_with_video(),
         features(),
         testimonials(),
