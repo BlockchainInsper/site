@@ -10,7 +10,6 @@ def feature(heading, text):
         ),
         rx.text(
             text,
-            class_name="text-gray-600",
         ),
     )
 
@@ -74,7 +73,6 @@ def intro():
                         "tecnologia que está revolucionando a economia mundial. Além disso, "
                         "temos parcerias com as maiores empresas do mercado para, além de "
                         "ganhar conhecimento, saber como funcionam os projetos na prática.",
-                        class_name="text-gray-600",
                     ),
                 ),
                 # Configuração do grid
@@ -120,5 +118,5 @@ def intro():
             # Configuração do container
             class_name="max-w-7xl mx-auto p-4",
         ),
-        class_name="w-full py-10 bg-white dark:bg-gray-800 text-gray-900 dark:text-white",
+        class_name="w-full py-10 bg-white dark:bg-[#1A202C] text-gray-900 dark:text-white",
     )
