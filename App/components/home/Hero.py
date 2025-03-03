@@ -163,6 +163,11 @@ def call_to_action_with_video():
                 ),
             )
         ),
+        # background_color="#1A202C",
+        width="100%",
         margin_x="auto",
+        max_width="90rem",  # equivalente a var(--chakra-sizes-8xl)
         padding_x="1rem",
+        padding_top="3rem",  # equivalente a var(--chakra-space-12) = 48px
+        padding_bottom="3rem",
     )
