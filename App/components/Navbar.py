@@ -72,40 +72,64 @@ def desktop_sub_nav(label, href, subLabel):
             rx.box(
                 rx.text(
                     label,
-                    class_name="transition-all duration-300 group-hover:text-[#f68b23] font-medium",
+                    style={
+                        "transition": "all 0.3s ease",
+                        "font_weight": "500",
+                        "_group_hover": {"color": "#f68b23"},
+                    },
                 ),
-                rx.text(
-                    subLabel,
-                    class_name="text-sm",
-                ),
-                class_name="",
+                rx.text(subLabel, style={"font_size": "0.875rem"}),
             ),
             rx.flex(
                 rx.icon(
                     tag="chevron_right",
-                    class_name="text-[#f68b23] w-5 h-5",
+                    style={"color": "#f68b23", "width": "1.25rem", "height": "1.25rem"},
                 ),
-                class_name="transition-all duration-300 -translate-x-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 flex justify-end items-center flex-1",
+                style={
+                    "transition": "all 0.3s ease",
+                    "transform": "translateX(-10px)",
+                    "opacity": "0",
+                    "_group_hover": {"opacity": "1", "transform": "translateX(0)"},
+                    "justify_content": "flex-end",
+                    "align_items": "center",
+                    "flex": "1",
+                },
             ),
-            class_name="flex flex-row items-center",
+            style={"display": "flex", "flex_direction": "row", "align_items": "center"},
         ),
         href=href,
         role="group",
-        class_name="block p-2 rounded-md hover:bg-[#f7e2dc] dark:hover:bg-gray-900",
+        style={
+            "display": "block",
+            "padding": "0.5rem",
+            "border_radius": "0.375rem",
+            "_hover": {
+                "background": rx.color_mode_cond(light="#f7e2dc", dark="gray.900")
+            },
+        },
     )
 
 
 def desktop_nav():
     nav_items = []
     for navItem in NAV_ITEMS:
-        # Link component for all items
         link_component = rx.link(
             navItem["label"],
             href=navItem.get("href", "#"),
-            class_name="p-2 text-sm font-medium text-gray-600 dark:text-gray-200 hover:no-underline hover:text-gray-800 dark:hover:text-white",
+            style={
+                "padding": "0.5rem",
+                "font_size": "0.875rem",
+                "font_weight": "500",
+                "color": rx.color_mode_cond(
+                    light="rgb(75, 85, 99)", dark="rgb(229, 231, 235)"
+                ),
+                "_hover": {
+                    "text_decoration": "none",
+                    "color": rx.color_mode_cond(light="rgb(31, 41, 55)", dark="white"),
+                },
+            },
         )
 
-        # If it has children, wrap in popover, otherwise just use the link
         if navItem.get("children"):
             nav_items.append(
                 rx.box(
@@ -122,7 +146,16 @@ def desktop_nav():
                                     for child in navItem.get("children", [])
                                 ],
                             ),
-                            class_name="border-0 shadow-xl bg-white dark:bg-[#1A202C] p-4 rounded-xl min-w-[24rem]",
+                            style={
+                                "border": "none",
+                                "box_shadow": "0 20px 25px -5px rgba(0, 0, 0, 0.1)",
+                                "background": rx.color_mode_cond(
+                                    light="white", dark="#1A202C"
+                                ),
+                                "padding": "1rem",
+                                "border_radius": "0.75rem",
+                                "min_width": "24rem",
+                            },
                         ),
                         trigger="hover",
                         placement="bottom-start",
@@ -140,29 +173,43 @@ def desktop_nav():
 
     return rx.stack(
         *nav_items,
-        class_name="flex flex-row items-center gap-2",
+        style={
+            "display": "flex",
+            "flex_direction": "row",
+            "align_items": "center",
+            "gap": "0.5rem",
+        },
     )
 
 
 def mobile_nav_item(label, children, href):
-    # Build flex components differently depending on whether there are children
     flex_children = [
         rx.text(
             label,
-            class_name="font-semibold text-gray-600 dark:text-gray-200",
+            style={
+                "font_weight": "600",
+                "color": rx.color_mode_cond(
+                    light="rgb(75, 85, 99)", dark="rgb(229, 231, 235)"
+                ),
+            },
         )
     ]
 
-    # Only add icon if there are children
     if children:
         flex_children.append(
             rx.icon(
                 tag="chevron_down",
-                class_name=f"transition-all duration-300 ease-in-out w-6 h-6 {rx.cond(NavItemState.is_item_open(label), 'rotate-180', '')}",
+                style={
+                    "transition": "all 0.25s ease-in-out",
+                    "transform": rx.cond(
+                        NavItemState.is_item_open(label), "rotate(180deg)", "none"
+                    ),
+                    "width": "1.5rem",
+                    "height": "1.5rem",
+                },
             )
         )
 
-    # Condition for showing submenu - Children exist and item is open
     submenu = None
     if children:
         submenu = rx.cond(
@@ -172,30 +219,41 @@ def mobile_nav_item(label, children, href):
                     rx.link(
                         child["label"],
                         key=child["label"],
-                        class_name="py-2",
+                        style={"padding": "0.5rem 0"},
                         href=child["href"],
                     )
                     for child in children
                 ],
-                class_name="mt-2 pl-4 border-l border-solid border-gray-200 dark:border-gray-700 items-start",
+                style={
+                    "margin_top": "0.5rem",
+                    "padding_left": "1rem",
+                    "border_left": "1px solid",
+                    "border_color": rx.color_mode_cond(
+                        light="rgb(229, 231, 235)", dark="rgb(75, 85, 99)"
+                    ),
+                    "align_items": "flex-start",
+                },
             ),
-            rx.box(),  # Empty box instead of None
+            rx.box(),
         )
     else:
-        # If no children, always render an empty box
         submenu = rx.box()
 
-    # Create flex with appropriate children
     return rx.stack(
         rx.flex(
             *flex_children,
-            class_name="py-2 justify-between items-center hover:no-underline",
+            style={
+                "padding": "0.5rem 0",
+                "justify_content": "space-between",
+                "align_items": "center",
+                "_hover": {"text_decoration": "none"},
+            },
             as_="a",
             href="#" if children else href,
             on_click=NavItemState.toggle_item(label) if children else None,
         ),
         submenu,
-        class_name="gap-2",
+        style={"gap": "0.5rem"},
     )
 
 
@@ -207,28 +265,45 @@ def mobile_nav():
             )
             for navItem in NAV_ITEMS
         ],
-        class_name="bg-white dark:bg-[#1A202C] p-4 md:hidden block",
+        style={
+            "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+            "padding": "1rem",
+            "@media (min-width: 768px)": {"display": "none"},
+            "display": "block",
+        },
     )
 
 
 def navbar():
     return rx.box(
         rx.flex(
-            # Mobile menu button
             rx.flex(
                 rx.icon_button(
                     rx.cond(
                         MobileNavState.is_open,
-                        rx.icon(tag="x", class_name="w-3 h-3"),
-                        rx.icon(tag="menu", class_name="w-5 h-5"),
+                        rx.icon(
+                            tag="x", style={"width": "0.75rem", "height": "0.75rem"}
+                        ),
+                        rx.icon(
+                            tag="menu", style={"width": "1.25rem", "height": "1.25rem"}
+                        ),
                     ),
                     variant="ghost",
                     aria_label="Toggle Navigation",
                     on_click=MobileNavState.toggle,
                 ),
-                class_name="md:flex-auto flex-1 md:ml-0 -ml-2 md:hidden flex items-center",
+                style={
+                    "@media (min-width: 768px)": {
+                        "flex": "auto",
+                        "margin_left": "0",
+                        "display": "none",
+                    },
+                    "flex": "1",
+                    "margin_left": "-0.5rem",
+                    "display": "flex",
+                    "align_items": "center",
+                },
             ),
-            # Logo and navigation
             rx.flex(
                 rx.link(
                     rx.image(
@@ -239,27 +314,59 @@ def navbar():
                         width="100px",
                     ),
                     href="/",
-                    class_name="flex items-center",
+                    style={"display": "flex", "align_items": "center"},
                 ),
                 rx.flex(
                     desktop_nav(),
-                    class_name="md:flex hidden ml-10 items-center",
+                    style={
+                        "@media (min-width: 768px)": {"display": "flex"},
+                        "display": "none",
+                        "margin_left": "2.5rem",
+                        "align_items": "center",
+                    },
                 ),
-                class_name="md:justify-start justify-center flex-1 items-center",
+                style={
+                    "@media (min-width: 768px)": {"justify_content": "flex-start"},
+                    "justify_content": "center",
+                    "flex": "1",
+                    "align_items": "center",
+                },
             ),
-            # Theme toggle button
             rx.stack(
-                rx.color_mode.button(),
-                class_name="md:flex-0 flex-1 justify-end flex-row space-x-6 items-center",
+                rx.color_mode.button(
+                    style={"color": rx.color_mode_cond(light="#1A202C", dark="white")}
+                ),
+                style={
+                    "@media (min-width: 768px)": {"flex": "0"},
+                    "flex": "1",
+                    "justify_content": "flex-end",
+                    "flex_direction": "row",
+                    "gap": "1.5rem",
+                    "align_items": "center",
+                },
             ),
-            # Estilização principal do navbar
-            class_name="flex items-center bg-white dark:bg-[#1A202C] text-gray-600 dark:text-white min-h-[60px] py-2 px-4 border-b border-solid border-gray-200 dark:border-gray-900 w-full",
+            style={
+                "display": "flex",
+                "align_items": "center",
+                "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+                "color": rx.color_mode_cond(light="rgb(75, 85, 99)", dark="white"),
+                "min_height": "60px",
+                "padding": "0.5rem 1rem",
+                "border_bottom": "1px solid",
+                "border_color": rx.color_mode_cond(
+                    light="rgb(229, 231, 235)", dark="rgb(17, 24, 39)"
+                ),
+                "width": "100%",
+            },
         ),
-        # Menu mobile - animação de colapso
         rx.cond(
             MobileNavState.is_open,
             mobile_nav(),
             rx.box(),
         ),
-        class_name="w-full shadow-sm",
+        style={
+            "width": "100%",
+            "box_shadow": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+            "transition": "background-color 0.2s ease-in-out",
+        },
     )
