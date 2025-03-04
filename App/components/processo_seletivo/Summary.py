@@ -2,14 +2,31 @@ import reflex as rx
 
 
 def feature(title: str, children: str, icon: rx.Component):
-    return rx.stack(
-        rx.box(icon, class_name="text-6xl"),
-        rx.stack(
-            rx.text(title, class_name="font-extrabold text-lg"),
-            rx.box(children, class_name="text-gray-600 dark:text-gray-400"),
-            class_name="space-y-1",
+    return rx.flex(
+        # Ícone à esquerda com tamanho ajustado
+        rx.center(
+            icon,
+            class_name="h-full flex items-center justify-center min-w-[4rem]",
         ),
-        class_name="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-6",
+        # Container vertical para título e descrição
+        rx.vstack(
+            rx.text(
+                title,
+                class_name="font-extrabold text-lg text-white",
+            ),
+            rx.text(
+                children,
+                class_name="text-white",
+            ),
+            align_items="flex-start",
+            spacing="1",
+            class_name="items-start py-2",
+        ),
+        # Flex sempre na horizontal
+        direction="row",
+        gap="4",
+        class_name="hover:bg-white/5 p-4 rounded-md transition-colors",
+        align_items="stretch",  # Alinha itens para esticar verticalmente
     )
 
 
@@ -20,7 +37,7 @@ def summary():
             fill="currentColor",
         ),
         view_box="0 0 24 24",
-        class_name="h-12 w-12",
+        class_name="text-white w-10 h-10",
     )
 
     building_svg = rx.el.svg(
@@ -29,50 +46,64 @@ def summary():
             fill="currentColor",
         ),
         view_box="0 0 24 24",
-        class_name="h-12 w-12",
+        class_name="text-white w-10 h-10",
     )
 
+    # SVG atualizado para projetos
+    # SVG atualizado para projetos - sem usar o parâmetro nomeado "children"
     projects_svg = rx.el.svg(
         rx.el.svg.path(
-            d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z",
+            # Gráfico
+            d="M7.3 13.8c.07.07.19.07.26 0l2.38-2.38l2.02 2.02c.07.07.19.07.26 0l5.3-5.3c.07-.07.07-.19 0-.27l-.86-.86c-.07-.07-.19-.07-.26 0L12.1 11.4l-2.02-2.02c-.07-.07-.19-.07-.26 0L6.45 12.7c-.07.07-.07.19 0 .27l.85.83z",
             fill="currentColor",
         ),
-        view_box="0 0 24 24",
-        class_name="h-12 w-12",
+        rx.el.svg.path(
+            # Monitor/dispositivo
+            d="M21.2 3.8h-8.3V2.3c0-.1-.08-.19-.18-.19h-1.3c-.1 0-.19.08-.19.19v1.5H2.8c-.41 0-.75.33-.75.75v12.2c0 .41.33.75.75.75h8.34v.75l-3.66 2.4c-.09.06-.11.17-.05.26l.71 1.1v.003c.06.09.17.11.26.05l4.7-3.08l3.78 2.47c.09.06.2.03.26-.05v-.001l.71-1.1c.06-.09.03-.2-.05-.26L14.3 18.2v-.75h8.33c.41 0 .75-.33.75-.75V4.5c0-.41-.33-.75-.75-.75M20.25 15.8H3.8V5.45h16.45v10.35z",
+            fill="currentColor",
+        ),
+        xmlns="http://www.w3.org/2000/svg",
+        view_box="0 0 24 24",  # Alterado para 24x24
+        class_name="text-white w-10 h-10",
     )
 
     return rx.box(
-        rx.grid(
-            rx.link(
-                feature(
-                    "Núcleos",
-                    "Clique aqui para conhecer nossas áreas de estudos",
-                    bitcoin_svg,
+        rx.box(
+            rx.grid(
+                rx.link(
+                    feature(
+                        "Núcleos",
+                        "Clique aqui para conhecer nossas áreas de estudos",
+                        bitcoin_svg,
+                    ),
+                    href="/areas",
+                    class_name="no-underline",
                 ),
-                href="#/areas",
-            ),
-            rx.link(
-                feature(
-                    "Parceiros",
-                    "Clique aqui para conhecer nossos parceiros",
-                    building_svg,
+                rx.link(
+                    feature(
+                        "Parceiros",
+                        "Clique aqui para conhecer nossos parceiros",
+                        building_svg,
+                    ),
+                    href="/partnerships",
+                    class_name="no-underline",
                 ),
-                href="#/partnerships",
-            ),
-            rx.link(
-                feature(
-                    "Projetos",
-                    "Clique aqui para conhecer nossos alguns dos nossos melhores projetos",
-                    projects_svg,
+                rx.link(
+                    feature(
+                        "Projetos",
+                        "Clique aqui para conhecer nossos alguns dos nossos melhores projetos",
+                        projects_svg,
+                    ),
+                    href="/projects",
+                    class_name="no-underline",
                 ),
-                href="#/projects",
+                columns=rx.breakpoints(initial="1", md="2"),
+                gap_x="10",
+                gap_y=rx.breakpoints(initial="8", md="14"),
+                class_name="w-full",
             ),
-            class_name="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8 md:gap-y-14",
+            class_name="max-w-5xl mx-auto pt-4 pb-12 px-6 md:px-8",
         ),
-        class_name="max-w-5xl mx-auto pt-4 pb-12 px-6 md:px-8",
+        class_name="w-full bg-[#1A202C]",
+        as_="section",
     )
-
-
-# Configuração do app
-app = rx.App()
-app.add_page(summary)
