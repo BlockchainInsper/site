@@ -24,6 +24,7 @@ app = rx.App(
         "transitionDuration": "200ms",
         "lineHeight": "1.5",
         "minHeight": "100vh",
+        rx.link: {"color": "rgba(255, 255, 255, 0.92)"},
     },
 )
 app.add_page(home, route="/")
