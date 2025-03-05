@@ -5,12 +5,21 @@ def feature(heading, text):
     return rx.box(
         rx.heading(
             heading,
-            class_name="text-xl font-bold mb-2",
+            style={
+                "font_size": "1.25rem",
+                "font_weight": "700",
+                "margin_bottom": "0.5rem",
+                "color": rx.color_mode_cond(light="rgb(17, 24, 39)", dark="white"),
+            },
             as_="h3",
         ),
         rx.text(
             text,
+            style={
+                "color": rx.color_mode_cond(light="rgb(17, 24, 39)", dark="white"),
+            },
         ),
+        style={},
     )
 
 
@@ -24,13 +33,30 @@ def intro():
                     rx.vstack(
                         rx.heading(
                             "Nosso Processo Seletivo chegou!",
-                            class_name="text-3xl font-bold",
+                            style={
+                                "font_size": "1.875rem",
+                                "font_weight": "700",
+                                "color": rx.color_mode_cond(
+                                    light="rgb(17, 24, 39)", dark="white"
+                                ),
+                            },
                             as_="h2",
                         ),
                         rx.link(
                             rx.button(
                                 "Inscrever-se",
-                                class_name="bg-[#f68b23] text-white hover:bg-[#f68b70] rounded-md px-4 py-2",
+                                style={
+                                    "background": "#f68b23",
+                                    "color": "white",
+                                    "border_radius": "0.375rem",
+                                    "padding_left": "1rem",
+                                    "padding_right": "1rem",
+                                    "padding_top": "0.5rem",
+                                    "padding_bottom": "0.5rem",
+                                    "_hover": {
+                                        "background": "#f68b70",
+                                    },
+                                },
                             ),
                             href="https://docs.google.com/forms/d/e/1FAIpQLScQyW4RGcwtcNAAVtYj3iFJdgJ4Khq07rSluQo5tWROKWYxow/viewform",
                             is_external=True,
@@ -48,18 +74,39 @@ def intro():
                                         width="20px",
                                         height="20px",
                                         xmlns="http://www.w3.org/2000/svg",
-                                        class_name="text-white w-5 h-5",
+                                        style={
+                                            "color": "white",
+                                            "width": "1.25rem",
+                                            "height": "1.25rem",
+                                        },
                                     ),
-                                    rx.text("Discord"),
+                                    rx.text(
+                                        "Discord",
+                                        style={
+                                            "color": "white",
+                                        },
+                                    ),
                                 ),
-                                class_name="bg-[#5865F2] text-white hover:bg-[#5865F2]/90 rounded-md px-4 py-2",
+                                style={
+                                    "background": "#5865F2",
+                                    "color": "white",
+                                    "border_radius": "0.375rem",
+                                    "padding_left": "1rem",
+                                    "padding_right": "1rem",
+                                    "padding_top": "0.5rem",
+                                    "padding_bottom": "0.5rem",
+                                    "_hover": {
+                                        "background": "rgba(88, 101, 242, 0.9)",
+                                    },
+                                },
                             ),
                             href="https://discord.gg/jdK5yB48Mm",
                             is_external=True,
                         ),
                         spacing="5",
-                        align_items="flex-start",
-                        class_name="items-start",
+                        style={
+                            "align_items": "flex_start",
+                        },
                     ),
                 ),
                 # Coluna 2 - Texto descritivo
@@ -73,16 +120,27 @@ def intro():
                         "tecnologia que está revolucionando a economia mundial. Além disso, "
                         "temos parcerias com as maiores empresas do mercado para, além de "
                         "ganhar conhecimento, saber como funcionam os projetos na prática.",
+                        style={
+                            "color": rx.color_mode_cond(
+                                light="rgb(17, 24, 39)", dark="white"
+                            ),
+                        },
                     ),
                 ),
                 # Configuração do grid
                 columns=rx.breakpoints(initial="1", sm="2"),
                 gap="1rem",
-                class_name="w-full",
+                style={
+                    "width": "100%",
+                },
             ),
             # Divisor horizontal
             rx.divider(
-                class_name="my-12 border-gray-200",
+                style={
+                    "margin_top": "3rem",
+                    "margin_bottom": "3rem",
+                    "border_color": "rgb(229, 231, 235)",
+                },
             ),
             # Grid de quatro colunas
             rx.grid(
@@ -109,14 +167,31 @@ def intro():
                 # Configuração do grid
                 columns=rx.breakpoints(initial="1", sm="2", md="4"),
                 gap=rx.breakpoints(initial="2rem", sm="3rem", md="4rem"),
-                class_name="w-full",
+                style={
+                    "width": "100%",
+                },
             ),
             # Divisor horizontal
             rx.divider(
-                class_name="my-12 border-gray-200",
+                style={
+                    "margin_top": "3rem",
+                    "margin_bottom": "3rem",
+                    "border_color": "rgb(229, 231, 235)",
+                },
             ),
             # Configuração do container
-            class_name="max-w-7xl mx-auto p-4",
+            style={
+                "max_width": "80rem",
+                "margin_left": "auto",
+                "margin_right": "auto",
+                "padding": "1rem",
+            },
         ),
-        class_name="w-full py-10 bg-white dark:bg-[#1A202C] text-gray-900 dark:text-white",
+        style={
+            "width": "100%",
+            "padding_top": "2.5rem",
+            "padding_bottom": "2.5rem",
+            "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+            "color": rx.color_mode_cond(light="rgb(17, 24, 39)", dark="white"),
+        },
     )
