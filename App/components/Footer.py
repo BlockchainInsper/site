@@ -4,13 +4,9 @@ from datetime import datetime
 
 def footer() -> rx.Component:
     return rx.box(
-        # Container centralizado com largura máxima
         rx.box(
-            # Flex para organizar os elementos
             rx.flex(
-                # Coluna da esquerda com logo e copyright
                 rx.flex(
-                    # Logo
                     rx.image(
                         src=rx.color_mode_cond(
                             "/logo-light.svg",
@@ -18,16 +14,25 @@ def footer() -> rx.Component:
                         ),
                         width="100px",
                     ),
-                    # Texto de copyright abaixo da logo
                     rx.text(
                         f"© {datetime.now().year} Blockchain Insper. All rights reserved.",
-                        class_name="text-sm text-gray-600 dark:text-gray-400",
+                        style={
+                            "font_size": "0.875rem",
+                            "color": rx.color_mode_cond(
+                                light="rgb(75, 85, 99)",  # gray-600
+                                dark="rgb(156, 163, 175)",  # gray-400
+                            ),
+                        },
                     ),
-                    class_name="flex flex-col items-start justify-center space-y-2",
+                    style={
+                        "display": "flex",
+                        "flex_direction": "column",
+                        "align": "flex-start",
+                        "justify_content": "center",
+                        "gap": "0.5rem",
+                    },
                 ),
-                # Flex com ícones na direita
                 rx.flex(
-                    # Discord com SVG personalizado
                     rx.link(
                         rx.el.svg(
                             rx.el.svg.path(
@@ -38,65 +43,122 @@ def footer() -> rx.Component:
                             width="20px",
                             height="20px",
                             xmlns="http://www.w3.org/2000/svg",
-                            class_name="text-white",
+                            style={"color": "white"},
                         ),
                         href="https://discord.gg/jdK5yB48Mm",
                         is_external=True,
-                        class_name="text-white hover:bg-white/10 hover:rounded-md ml-4 flex items-center justify-center min-w-[2.5rem] h-10",
+                        style={
+                            "color": "white",
+                            "_hover": {
+                                "background": "rgba(255, 255, 255, 0.1)",
+                                "border_radius": "0.375rem",
+                            },
+                            "margin_left": "1rem",
+                            "display": "flex",
+                            "align": "center",
+                            "justify_content": "center",
+                            "min_width": "2.5rem",
+                            "height": "2.5rem",
+                        },
                     ),
                     # LinkedIn
                     rx.link(
-                        rx.icon(
-                            tag="linkedin",
-                            size=20,
-                            class_name="text-white",
-                        ),
+                        rx.icon(tag="linkedin", size=20, style={"color": "white"}),
                         href="https://www.linkedin.com/company/blockchain-insper",
                         is_external=True,
-                        class_name="text-white hover:bg-white/10 hover:rounded-md ml-2 flex items-center justify-center min-w-[2.5rem] h-10",
+                        style={
+                            "color": "white",
+                            "_hover": {
+                                "background": "rgba(255, 255, 255, 0.1)",
+                                "border_radius": "0.375rem",
+                            },
+                            "margin_left": "0.5rem",
+                            "display": "flex",
+                            "align": "center",
+                            "justify_content": "center",
+                            "min_width": "2.5rem",
+                            "height": "2.5rem",
+                        },
                     ),
                     # Instagram
                     rx.link(
-                        rx.icon(
-                            tag="instagram",
-                            size=20,
-                            class_name="text-white",
-                        ),
+                        rx.icon(tag="instagram", size=20, style={"color": "white"}),
                         href="https://www.instagram.com/blockchainsper/",
                         is_external=True,
-                        class_name="text-white hover:bg-white/10 hover:rounded-md ml-2 flex items-center justify-center min-w-[2.5rem] h-10",
+                        style={
+                            "color": "white",
+                            "_hover": {
+                                "background": "rgba(255, 255, 255, 0.1)",
+                                "border_radius": "0.375rem",
+                            },
+                            "margin_left": "0.5rem",
+                            "display": "flex",
+                            "align": "center",
+                            "justify_content": "center",
+                            "min_width": "2.5rem",
+                            "height": "2.5rem",
+                        },
                     ),
                     # GitHub
                     rx.link(
-                        rx.icon(
-                            tag="github",
-                            size=20,
-                            class_name="text-white",
-                        ),
+                        rx.icon(tag="github", size=20, style={"color": "white"}),
                         href="https://github.com/BlockchainInsper",
                         is_external=True,
-                        class_name="text-white hover:bg-white/10 hover:rounded-md ml-2 flex items-center justify-center min-w-[2.5rem] h-10",
+                        style={
+                            "color": "white",
+                            "_hover": {
+                                "background": "rgba(255, 255, 255, 0.1)",
+                                "border_radius": "0.375rem",
+                            },
+                            "margin_left": "0.5rem",
+                            "display": "flex",
+                            "align": "center",
+                            "justify_content": "center",
+                            "min_width": "2.5rem",
+                            "height": "2.5rem",
+                        },
                     ),
                     # Email
                     rx.link(
-                        rx.icon(
-                            tag="mail",
-                            size=20,
-                            class_name="text-white",
-                        ),
+                        rx.icon(tag="mail", size=20, style={"color": "white"}),
                         href="mailto:blockchainsper@gmail.com",
                         is_external=True,
-                        class_name="text-white hover:bg-white/10 hover:rounded-md ml-2 flex items-center justify-center min-w-[2.5rem] h-10",
+                        style={
+                            "color": "white",
+                            "_hover": {
+                                "background": "rgba(255, 255, 255, 0.1)",
+                                "border_radius": "0.375rem",
+                            },
+                            "margin_left": "0.5rem",
+                            "display": "flex",
+                            "align": "center",
+                            "justify_content": "center",
+                            "min_width": "2.5rem",
+                            "height": "2.5rem",
+                        },
                     ),
-                    class_name="flex flex-row items-center",
+                    style={
+                        "display": "flex",
+                        "flex_direction": "row",
+                        "align": "center",
+                    },
                 ),
-                # Ajustes do container principal - responsivo
-                class_name="flex flex-col sm:flex-row justify-between w-full items-center sm:items-start space-y-4 sm:space-y-0",
+                style={
+                    "display": "flex",
+                    "flex_direction": rx.breakpoints(initial="column", sm="row"),
+                    "justify_content": "space-between",
+                    "width": "100%",
+                    "align": rx.breakpoints(initial="center", sm="flex-start"),
+                    "gap": rx.breakpoints(initial="1rem", sm="0"),
+                },
             ),
-            # Container centralizado com padding e largura máxima
-            class_name="max-w-7xl mx-auto px-4 md:px-8 w-full",
+            style={
+                "max_width": "80rem",  # 7xl
+                "margin": "0 auto",
+                "padding": rx.breakpoints(initial="0 1rem", md="0 2rem"),
+                "width": "100%",
+            },
         ),
         role="contentinfo",
-        # Box externo ocupa toda a largura da tela
-        class_name="w-full py-12 bg-[#1A202C]",
+        style={"width": "100%", "padding": "3rem 0", "background": "#1A202C"},
     )
