@@ -7,30 +7,65 @@ from App.Template import template
 
 def with_background_image():
     return rx.flex(
-        # Container principal centralizado horizontalmente
         rx.flex(
-            # Stack vertical com texto e botão
             rx.vstack(
-                # Texto alinhado à esquerda
                 rx.text(
                     "Conheça nossas áreas! Estamos estruturados em áreas de estudo e áreas administrativas",
-                    class_name="font-bold leading-tight text-3xl md:text-4xl text-left text-white",
+                    style={
+                        "font_weight": "700",
+                        "line_height": "1.2",
+                        "font_size": rx.breakpoints(
+                            initial="1.875rem",  # 3xl
+                            md="2.25rem",  # 4xl
+                        ),
+                        "text_align": "left",
+                        "color": rx.color_mode_cond(
+                            light="gray.600", dark="rgba(255, 255, 255, 0.92)"
+                        ),
+                    },
                 ),
-                # Botão alinhado à esquerda
-                rx.button(
-                    "Nossas áreas",
-                    class_name="bg-[#f68b23] rounded-full text-white hover:bg-[#f68b70]",
-                    on_click=rx.redirect("/areas"),
+                rx.link(
+                    rx.button(
+                        "Nossas áreas",
+                        style={
+                            "background": "#f68b23",
+                            "border_radius": "9999px",
+                            "color": "white",
+                            "padding": "0.75rem 1.5rem",
+                            "_hover": {"background": "#f68b70"},
+                        },
+                    ),
+                    href="#/areas",
                 ),
-                # Configuração do vstack
-                spacing="6",
-                class_name="items-start w-full",  # Alinha os itens à esquerda
+                style={
+                    "spacing": "1.5rem",
+                    "align_items": "flex-start",
+                    "width": "100%",
+                },
             ),
-            # Configuração do flex container
-            class_name="max-w-2xl w-full justify-center",
+            style={
+                "max_width": "42rem",  # 2xl
+                "width": "100%",
+                "justify_content": "center",
+                "padding_x": rx.breakpoints(
+                    initial="1rem",  # 4
+                    md="2rem",  # 8
+                ),
+            },
         ),
-        # Configuração do flex principal com cor de fundo
-        class_name="w-full h-[30vh] bg-[#1A202C] flex justify-center items-center px-4",
+        style={
+            "width": "100%",
+            "height": "30vh",
+            "background_image": "url('/overlay.png')",
+            "background_size": "cover",
+            "background_position": "center center",
+            "display": "flex",
+            "justify_content": "center",
+            "align_items": "center",
+            "background_color": rx.color_mode_cond(
+                light="rgba(255, 255, 255, 0.92)", dark="#1A202C"
+            ),
+        },
     )
 
 
