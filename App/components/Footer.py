@@ -19,8 +19,8 @@ def footer() -> rx.Component:
                         style={
                             "font_size": "0.875rem",
                             "color": rx.color_mode_cond(
-                                light="rgb(75, 85, 99)",  # gray-600
-                                dark="rgb(156, 163, 175)",  # gray-400
+                                light="#1A202C",  # gray-600
+                                dark="rgba(255, 255, 255, 0.92)",  # gray-400
                             ),
                         },
                     ),
@@ -37,7 +37,10 @@ def footer() -> rx.Component:
                         rx.el.svg(
                             rx.el.svg.path(
                                 d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1 14.66 14.66 0 0 0-4.58 0 10.14 10.14 0 0 0-.53-1.1 16 16 0 0 0-4.13 1.3 17.33 17.33 0 0 0-3 11.59 16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83 3.39 3.39 0 0 0 .42-.33 11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84 12.41 12.41 0 0 0 1.08 1.78 16.44 16.44 0 0 0 5.06-2.59 17.22 17.22 0 0 0-3-11.59 16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.93 1.93 0 0 1 1.8 2 1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.92 1.92 0 0 1 1.8 2 1.92 1.92 0 0 1-1.8 2z",
-                                fill="currentColor",
+                                fill=rx.color_mode_cond(
+                                    light="#4A5568",  # gray-600
+                                    dark="rgba(255, 255, 255, 0.92)",  # gray-400
+                                ),
                             ),
                             viewBox="0 0 24 24",
                             width="20px",
@@ -48,7 +51,6 @@ def footer() -> rx.Component:
                         href="https://discord.gg/jdK5yB48Mm",
                         is_external=True,
                         style={
-                            "color": "white",
                             "_hover": {
                                 "background": "rgba(255, 255, 255, 0.1)",
                                 "border_radius": "0.375rem",
@@ -67,7 +69,10 @@ def footer() -> rx.Component:
                         href="https://www.linkedin.com/company/blockchain-insper",
                         is_external=True,
                         style={
-                            "color": "white",
+                            "color": rx.color_mode_cond(
+                                light="#4A5568",  # gray-600
+                                dark="rgba(255, 255, 255, 0.92)",  # gray-400
+                            ),
                             "_hover": {
                                 "background": "rgba(255, 255, 255, 0.1)",
                                 "border_radius": "0.375rem",
@@ -86,7 +91,10 @@ def footer() -> rx.Component:
                         href="https://www.instagram.com/blockchainsper/",
                         is_external=True,
                         style={
-                            "color": "white",
+                            "color": rx.color_mode_cond(
+                                light="#4A5568",  # gray-600
+                                dark="rgba(255, 255, 255, 0.92)",  # gray-400
+                            ),
                             "_hover": {
                                 "background": "rgba(255, 255, 255, 0.1)",
                                 "border_radius": "0.375rem",
@@ -105,7 +113,10 @@ def footer() -> rx.Component:
                         href="https://github.com/BlockchainInsper",
                         is_external=True,
                         style={
-                            "color": "white",
+                            "color": rx.color_mode_cond(
+                                light="#4A5568",  # gray-600
+                                dark="rgba(255, 255, 255, 0.92)",  # gray-400
+                            ),
                             "_hover": {
                                 "background": "rgba(255, 255, 255, 0.1)",
                                 "border_radius": "0.375rem",
@@ -124,7 +135,10 @@ def footer() -> rx.Component:
                         href="mailto:blockchainsper@gmail.com",
                         is_external=True,
                         style={
-                            "color": "white",
+                            "color": rx.color_mode_cond(
+                                light="#4A5568",  # gray-600
+                                dark="rgba(255, 255, 255, 0.92)",  # gray-400
+                            ),
                             "_hover": {
                                 "background": "rgba(255, 255, 255, 0.1)",
                                 "border_radius": "0.375rem",
@@ -141,6 +155,10 @@ def footer() -> rx.Component:
                         "display": "flex",
                         "flex_direction": "row",
                         "align": "center",
+                        "color": rx.color_mode_cond(
+                            light="#4A5568",  # gray-600
+                            dark="rgba(255, 255, 255, 0.92)",  # gray-400
+                        ),
                     },
                 ),
                 style={
@@ -160,5 +178,9 @@ def footer() -> rx.Component:
             },
         ),
         role="contentinfo",
-        style={"width": "100%", "padding": "3rem 0", "background": "#1A202C"},
+        style={
+            "width": "100%",
+            "padding": "3rem 0",
+            "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+        },
     )

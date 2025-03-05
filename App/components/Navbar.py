@@ -349,7 +349,7 @@ def navbar():
                 "display": "flex",
                 "align_items": "center",
                 "background": rx.color_mode_cond(light="white", dark="#1A202C"),
-                "color": rx.color_mode_cond(light="rgb(75, 85, 99)", dark="white"),
+                "color": rx.color_mode_cond(light="#4A5568", dark="#E2E8F0"),
                 "min_height": "60px",
                 "padding": "0.5rem 1rem",
                 "border_bottom": "1px solid",
@@ -367,6 +367,5 @@ def navbar():
         style={
             "width": "100%",
             "box_shadow": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-            "transition": "background-color 0.2s ease-in-out",
         },
     )
