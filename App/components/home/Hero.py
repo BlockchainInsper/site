@@ -11,26 +11,32 @@ def discord_button() -> rx.Component:
                         fill="currentColor",
                     ),
                     viewBox="0 0 24 24",
-                    class_name="w-6 h-6",
+                    style={"width": "1.5rem", "height": "1.5rem"},
                     xmlns="http://www.w3.org/2000/svg",
                 ),
                 rx.text("Discord"),
-                class_name="space-x-2",
+                style={"gap": "0.5rem"},
             ),
-            class_name="rounded-full text-lg font-normal px-6 text-white bg-[#5865F2] hover:bg-[#5865F2]",
+            style={
+                "border_radius": "9999px",
+                "font_size": "1.125rem",
+                "font_weight": "normal",
+                "padding_left": "1.5rem",
+                "padding_right": "1.5rem",
+                "color": "white",
+                "background_color": "#5865F2",
+                "_hover": {"background_color": "#5865F2"},
+            },
         ),
         href="https://discord.gg/jdK5yB48Mm",
         is_external=True,
-        class_name="no-underline",
+        style={"text_decoration": "none"},
     )
 
 
 def blob(props=None):
-    """Blob component precisely matching the original JavaScript implementation."""
     if props is None:
         props = {}
-
-    class_name = props.pop("class_name", "")
 
     return rx.el.svg(
         rx.el.svg.path(
@@ -42,76 +48,162 @@ def blob(props=None):
         view_box="0 0 578 440",
         fill="none",
         xmlns="http://www.w3.org/2000/svg",
-        class_name=f"w-full h-[150%] inline-block leading-[1em] flex-shrink-0 align-middle text-[#f68b23] absolute -top-[20%] left-0 z-0 {class_name}",
+        style={
+            "width": "100%",
+            "height": "150%",
+            "display": "inline-block",
+            "line_height": "1em",
+            "flex_shrink": "0",
+            "vertical_align": "middle",
+            "color": rx.color_mode_cond(  # Adicionado color mode
+                light="rgb(254, 242, 242)",  # red.50 do Chakra
+                dark="#f68b23",
+            ),
+            "position": "absolute",
+            "top": "-20%",
+            "left": "0",
+            "z_index": "0",
+        },
         **props,
     )
 
 
 def call_to_action_with_video():
     return rx.box(
-        rx.box(  # Outer container para centralizar
+        rx.box(
             rx.stack(
-                # Stack da esquerda com texto e botão
                 rx.stack(
-                    # Heading
                     rx.heading(
                         rx.text(
                             "Venha conhecer",
                             as_="span",
-                            class_name="relative z-[1] after:content-[''] after:absolute after:w-full after:h-[30%] after:bottom-[1px] after:left-0 after:bg-[#f68b23] after:z-[-1]",
+                            style={
+                                "position": "relative",
+                                "z_index": "1",
+                                "color": rx.color_mode_cond(  # Adicionado suporte ao tema
+                                    light="#1A202C", dark="rgba(255, 255, 255, 0.92)"
+                                ),
+                                "_after": {
+                                    "content": "''",
+                                    "position": "absolute",
+                                    "width": "100%",
+                                    "height": "30%",
+                                    "bottom": "1px",
+                                    "left": "0",
+                                    "background_color": "#f68b23",
+                                    "z_index": "-1",
+                                },
+                            },
                         ),
                         rx.el.br(),
                         rx.text(
-                            "nosso trabalho!",
-                            as_="span",
-                            class_name="text-[#f68b23]",
+                            "nosso trabalho!", as_="span", style={"color": "#f68b23"}
                         ),
-                        class_name="font-semibold leading-[1.1] text-3xl sm:text-4xl lg:text-6xl",
+                        style={
+                            "font_weight": "600",
+                            "line_height": "1.1",
+                            # Ajustado para usar breakpoints do Reflex
+                            "font_size": rx.breakpoints(
+                                initial="1.875rem",  # 3xl
+                                sm="2.25rem",  # 4xl
+                                lg="3.75rem",  # 6xl
+                            ),
+                        },
                     ),
-                    # Texto descritivo
                     rx.text(
                         "Criada em setembro de 2017, a Blockchain Insper é a primeira "
                         "organização estudantil da América Latina focada em estudo de tecnologias "
                         "blockchain. Derivada de uma iniciativa universitária, que reúne "
                         "estudantes de administração, economia, engenharias e direito a entidade está "
                         "dividida em três áreas de estudo: Business, Finance e Tecnologia.",
-                        class_name="text-gray-500 font-bold",
+                        style={"color": "rgb(107, 114, 128)", "font_weight": "bold"},
                     ),
-                    # Botões (só o Discord neste caso)
                     rx.stack(
                         discord_button(),
-                        class_name="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6",
-                    ),
-                    class_name="flex-1 flex flex-col space-y-5 md:space-y-10",
-                ),
-                # Flex da direita com o vídeo
-                rx.flex(
-                    # Box que contém o blob e o vídeo com overflow para o blob não ser cortado
-                    rx.box(
-                        # Blob de decoração
-                        blob(),  # Aumentando o blob um pouco
-                        # Box do vídeo
-                        rx.box(
-                            rx.html(
-                                """
-                                <iframe
-                                    title="Teste"
-                                    alt="Bitcoin Video"
-                                    src="https://www.youtube.com/embed/P3gAHRgNrEE"
-                                    allowFullScreen
-                                    style="width:100%; height:100%; position:absolute; top:0; left:0; border-radius:inherit"
-                                ></iframe>
-                                """
+                        style={
+                            "display": "flex",
+                            # Ajustado para breakpoints do Reflex
+                            "flex_direction": rx.breakpoints(
+                                initial="column", sm="row"
                             ),
-                            class_name="relative h-[300px] rounded-2xl shadow-2xl w-full overflow-hidden z-10",
-                        ),
-                        class_name="relative w-full h-full",  # Container para o blob e vídeo
+                            # Ajustado spacing para breakpoints
+                            "gap": rx.breakpoints(initial="1rem", sm="1.5rem"),
+                        },
                     ),
-                    class_name="flex-1 flex justify-center items-center relative w-full overflow-visible",  # Overflow visible para o blob
+                    style={
+                        "flex": "1",
+                        "display": "flex",
+                        "flex_direction": "column",
+                        # Ajustado spacing para breakpoints
+                        "gap": rx.breakpoints(initial="1.25rem", md="2.5rem"),
+                    },
                 ),
-                class_name="flex flex-col md:flex-row items-center py-20 md:py-28 space-y-8 md:space-y-0 md:space-x-10 w-full",
+                rx.flex(
+                    rx.box(
+                        blob(),
+                        rx.aspect_ratio(
+                            rx.el.iframe(
+                                src="https://www.youtube.com/embed/P3gAHRgNrEE",
+                                title="Teste",
+                                width="100%",
+                                height="100%",
+                            ),
+                            style={
+                                "position": "relative",
+                                "height": "300px",
+                                "border_radius": "1rem",
+                                "box_shadow": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                                "width": "100%",
+                                "overflow": "hidden",
+                                "z_index": "10",
+                            },
+                        ),
+                        style={
+                            "position": "relative",
+                            "width": "100%",
+                            "height": "100%",
+                        },
+                    ),
+                    style={
+                        "flex": "1",
+                        "display": "flex",
+                        "justify": "center",
+                        "align": "center",
+                        "position": "relative",
+                        "width": "100%",
+                        "overflow": "visible",
+                    },
+                ),
+                style={
+                    "display": "flex",
+                    # Ajustado para breakpoints do Reflex
+                    "flex_direction": rx.breakpoints(initial="column", md="row"),
+                    "align": "center",
+                    # Ajustado padding para breakpoints
+                    "padding_top": rx.breakpoints(initial="5rem", md="7rem"),
+                    "padding_bottom": rx.breakpoints(initial="5rem", md="7rem"),
+                    # Ajustado spacing para breakpoints
+                    "gap": rx.breakpoints(initial="2rem", md="2.5rem"),
+                    "width": "100%",
+                },
             ),
-            class_name="w-full px-4 md:px-8 mx-auto",  # Container centralizado, largura adequada
+            style={
+                "width": "100%",
+                # Ajustado padding para breakpoints
+                "padding_left": rx.breakpoints(initial="1rem", md="2rem"),
+                "padding_right": rx.breakpoints(initial="1rem", md="2rem"),
+                "margin": "0 auto",
+                "max_width": "80rem",  # maxW={'7xl'} do Chakra
+            },
         ),
-        class_name="w-full py-12 flex justify-center bg-[#1A202C] text-white",  # Box externo com background color
+        style={
+            "width": "100%",
+            "padding": "3rem 0",
+            "display": "flex",
+            "justify_content": "center",
+            "background": rx.color_mode_cond(  # Adicionado suporte ao tema
+                light="white", dark="#1A202C"
+            ),
+            "color": "white",
+        },
     )
