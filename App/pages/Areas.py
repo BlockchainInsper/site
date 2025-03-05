@@ -92,7 +92,9 @@ def tech_icon():
         style={
             "width": "50px",
             "height": "50px",
-            "color": rx.color_mode_cond(light="#0B69FF", dark="#63B3ED"),
+            "color": rx.color_mode_cond(
+                light="#1A202C", dark="rgba(255, 255, 255, 0.92)"
+            ),
         },
     )
 
