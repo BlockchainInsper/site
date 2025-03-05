@@ -49,7 +49,7 @@ def blob(props=None):
         fill="none",
         xmlns="http://www.w3.org/2000/svg",
         style={
-            "width": "100%",
+            "width": "150%",
             "height": "150%",
             "display": "inline-block",
             "line_height": "1em",
@@ -60,7 +60,7 @@ def blob(props=None):
                 dark="#f68b23",
             ),
             "position": "absolute",
-            "top": "-20%",
+            "top": "-10%",
             "left": "0",
             "z_index": "0",
         },
@@ -134,8 +134,9 @@ def call_to_action_with_video():
                         "flex": "1",
                         "display": "flex",
                         "flex_direction": "column",
-                        # Ajustado spacing para breakpoints
                         "gap": rx.breakpoints(initial="1.25rem", md="2.5rem"),
+                        "justify_content": "center",  # Adicionado para alinhar verticalmente
+                        "height": "100%",  # Adicionado para ocupar altura total
                     },
                 ),
                 rx.flex(
@@ -148,6 +149,7 @@ def call_to_action_with_video():
                                 width="100%",
                                 height="100%",
                             ),
+                            ratio=16 / 9,
                             style={
                                 "position": "relative",
                                 "height": "300px",
@@ -168,7 +170,7 @@ def call_to_action_with_video():
                         "flex": "1",
                         "display": "flex",
                         "justify": "center",
-                        "align": "center",
+                        "align_items": "center",
                         "position": "relative",
                         "width": "100%",
                         "overflow": "visible",
@@ -178,7 +180,7 @@ def call_to_action_with_video():
                     "display": "flex",
                     # Ajustado para breakpoints do Reflex
                     "flex_direction": rx.breakpoints(initial="column", md="row"),
-                    "align": "center",
+                    "align_items": "flex-start",
                     # Ajustado padding para breakpoints
                     "padding_top": rx.breakpoints(initial="5rem", md="7rem"),
                     "padding_bottom": rx.breakpoints(initial="5rem", md="7rem"),
