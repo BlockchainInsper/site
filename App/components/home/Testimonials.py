@@ -28,7 +28,8 @@ def testimonial_content(text: str) -> rx.Component:
             "display": "flex",
             "align_items": "center",
             "justify_content": "center",
-            "width": "400px",  # Largura fixa maior
+            "max_width": "400px",  # Largura fixa maior
+            "width": "100%",
             "_after": {
                 "content": "''",
                 "position": "absolute",
@@ -80,7 +81,15 @@ def testimonial(content: str, src: str, name: str, title: str) -> rx.Component:
     return rx.box(
         testimonial_content(content),
         testimonial_avatar(src, name, title),
-        style={"width": "100%"},
+        style={
+            "width": "100%",
+            "display": "flex",
+            "flex_direction": "column",
+            "align_items": "center",  # Centraliza em telas pequenas
+            "max_width": "400px",  # Limita a largura máxima
+            "margin_left": "auto",  # Auto margins para centralização
+            "margin_right": "auto",
+        },
     )
 
 
@@ -110,7 +119,7 @@ def testimonials() -> rx.Component:
                         "justify_content": "center",  # Centraliza horizontalmente
                     },
                 ),
-                rx.grid(
+                rx.stack(
                     testimonial(
                         "Hoje acredito que a entidade se tornou algo muito mais próximo do que imaginávamos quando "
                         "foi fundada, um organismo que funciona de maneira independente de qualquer membro "
@@ -146,16 +155,22 @@ def testimonials() -> rx.Component:
                         "Co-fundador e Ex-membro",
                     ),
                     style={
-                        "display": "grid",
-                        "grid_template_columns": rx.breakpoints(
-                            initial="1fr", md="repeat(3, 1fr)"
+                        "flex_direction": rx.breakpoints(
+                            initial="column",  # mobile (base)
+                            md="row",  # médias telas e acima
                         ),
-                        "gap": "2.5rem",
+                        "gap": rx.breakpoints(
+                            initial="2.5rem",  # mobile (base)
+                            md="1rem",  # médias telas
+                            lg="2.5rem",  # grandes telas
+                        ),
+                        "justify_content": "center",
+                        "align_items": "center",
                         "width": "100%",
                     },
                 ),
                 style={
-                    "spacing": "3rem",
+                    "gap": "3rem",
                     "width": "100%",
                 },
             ),
