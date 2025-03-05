@@ -271,17 +271,17 @@ def research_list(researches):
         rx.heading(
             "Researches",
             style={
-                "fontSize": "1.5rem",
-                "fontWeight": "bold",
+                "font_size": "1.5rem",
+                "font_weight": "bold",
                 "color": rx.color_mode_cond(light="#2D3748", dark="#F7FAFC"),
             },
             as_="h2",
         ),
         rx.divider(
             style={
-                "marginTop": "1.25rem",
-                "marginBottom": "1.25rem",
-                "borderColor": rx.color_mode_cond(light="gray.300", dark="gray.600"),
+                "margin_top": "1.25rem",
+                "margin_bottom": "1.25rem",
+                "border_color": rx.color_mode_cond(light="gray.300", dark="gray.600"),
             }
         ),
         rx.flex(
@@ -292,20 +292,20 @@ def research_list(researches):
                         "width": rx.breakpoints(
                             initial="100%", sm="45%", md="45%", lg="30%"
                         ),
-                        "marginBottom": "2rem",
+                        "margin_bottom": "2rem",
                     },
                 )
                 for research in researches
             ],
             style={
-                "marginTop": "1.25rem",
+                "margin_top": "1.25rem",
                 "gap": "30px",
-                "flexWrap": "wrap",
-                "justifyContent": "flex-start",
+                "flex_wrap": "wrap",
+                "justify_content": "flex-start",
             },
         ),
         style={
-            "maxWidth": "80rem",
+            "max_width": "80rem",
             "margin": "0 auto",
             "padding": "3rem",
         },
