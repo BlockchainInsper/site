@@ -4,67 +4,104 @@ import reflex as rx
 def feature(title: str, children: str, icon: rx.Component):
     return rx.flex(
         # Ícone à esquerda com tamanho ajustado
-        rx.center(
+        rx.box(
             icon,
-            class_name="h-full flex items-center justify-center min-w-[4rem]",
+            style={
+                "height": "100%",
+                "display": "flex",
+                "align_items": "center",
+                "justify_content": "center",
+                "min_width": "4rem",
+            },
         ),
         # Container vertical para título e descrição
         rx.vstack(
             rx.text(
                 title,
-                class_name="font-extrabold text-lg text-white",
+                style={
+                    "font_weight": "800",  # extrabold
+                    "font_size": "1.125rem",  # text-lg
+                    "color": rx.color_mode_cond(
+                        light="#1A202C",  # Escuro no modo claro
+                        dark="white",  # Branco no modo escuro
+                    ),
+                },
             ),
             rx.text(
                 children,
-                class_name="text-white",
+                style={
+                    "color": rx.color_mode_cond(
+                        light="#4A5568",
+                        dark="#A0AEC0",
+                    ),
+                },
             ),
-            align_items="flex-start",
+            style={
+                "margin_left": "1rem",
+                "align_items": "flex-start",
+            },
             spacing="1",
-            class_name="items-start py-2",
         ),
-        # Flex sempre na horizontal
-        direction="row",
-        gap="4",
-        class_name="hover:bg-white/5 p-4 rounded-md transition-colors",
-        align_items="stretch",  # Alinha itens para esticar verticalmente
+        style={
+            "padding": "1rem",  # p-4
+            "border_radius": "0.375rem",  # rounded-md
+            "transition": "background-color 0.2s",  # transition-colors
+            "_hover": {
+                "background": rx.color_mode_cond(
+                    light="rgba(0, 0, 0, 0.05)",  # Escuro suave no modo claro
+                    dark="rgba(255, 255, 255, 0.05)",  # Branco suave no modo escuro
+                ),
+            },
+            "direction": "row",
+            "align_items": "inherit",  # Centralização vertical
+            "gap": "1rem",
+        },
     )
 
 
 def summary():
-    bitcoin_svg = rx.el.svg(
-        rx.el.svg.path(
-            d="M23.638 14.904c-1.602 6.43-8.113 10.34-14.542 8.736C2.67 22.05-1.244 15.525.362 9.105 1.962 2.67 8.475-1.243 14.9.358c6.43 1.605 10.342 8.115 8.738 14.548v-.002zm-6.35-4.613c.24-1.59-.974-2.45-2.64-3.03l.54-2.153-1.315-.33-.525 2.107c-.345-.087-.705-.167-1.064-.25l.526-2.127-1.32-.33-.54 2.165c-.285-.067-.565-.132-.84-.2l-1.815-.45-.35 1.407s.974.225.955.236c.535.136.63.486.615.766l-1.477 5.92c-.075.166-.24.406-.614.314.015.02-.96-.24-.96-.24l-.66 1.51 1.71.426.93.236-.54 2.19 1.32.327.54-2.17c.36.1.705.19 1.05.273l-.51 2.154 1.32.33.545-2.19c2.24.427 3.93.257 4.64-1.774.57-1.637-.03-2.58-1.217-3.196.854-.193 1.5-.76 1.68-1.93h.01zm-3.01 4.22c-.404 1.64-3.157.75-4.05.53l.72-2.9c.896.23 3.757.67 3.33 2.37zm.41-4.24c-.37 1.49-2.662.735-3.405.55l.654-2.64c.744.18 3.137.524 2.75 2.084v.006z",
-            fill="currentColor",
-        ),
-        view_box="0 0 24 24",
-        class_name="text-white w-10 h-10",
+    bitcoin_svg = rx.html(
+        """<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 512 512">
+            <path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256S119.033 8 256 8s248 111.033 248 248m-141.651-35.33c4.937-32.999-20.191-50.739-54.55-62.573l11.146-44.702l-27.213-6.781l-10.851 43.524c-7.154-1.783-14.502-3.464-21.803-5.13l10.929-43.81l-27.198-6.781l-11.153 44.686c-5.922-1.349-11.735-2.682-17.377-4.084l.031-.14l-37.53-9.37l-7.239 29.062s20.191 4.627 19.765 4.913c11.022 2.751 13.014 10.044 12.68 15.825l-12.696 50.925c.76.194 1.744.473 2.829.907c-.907-.225-1.876-.473-2.876-.713l-17.796 71.338c-1.349 3.348-4.767 8.37-12.471 6.464c.271.395-19.78-4.937-19.78-4.937l-13.51 31.147l35.414 8.827c6.588 1.651 13.045 3.379 19.4 5.006l-11.262 45.213l27.182 6.781l11.153-44.733a1038 1038 0 0 0 21.687 5.627l-11.115 44.523l27.213 6.781l11.262-45.128c46.404 8.781 81.299 5.239 95.986-36.727c11.836-33.79-.589-53.281-25.004-65.991c17.78-4.098 31.174-15.792 34.747-39.949m-62.177 87.179c-8.41 33.79-65.308 15.523-83.755 10.943l14.944-59.899c18.446 4.603 77.6 13.717 68.811 48.956m8.417-87.667c-7.673 30.736-55.031 15.12-70.393 11.292l13.548-54.327c15.363 3.828 64.836 10.973 56.845 43.035" />
+        </svg>""",
+        style={
+            "color": rx.color_mode_cond(
+                light="#1A202C",
+                dark="rgba(255, 255, 255, 0.92)",
+            ),
+            "width": "2.5rem",  # w-10
+            "height": "2.5rem",  # h-10
+        },
     )
 
-    building_svg = rx.el.svg(
-        rx.el.svg.path(
-            d="M17 11V3H7v4H3v14h8v-4h2v4h8V11h-4zM7 19H5v-2h2v2zm0-4H5v-2h2v2zm0-4H5V9h2v2zm4 4H9v-2h2v2zm0-4H9V9h2v2zm0-4H9V5h2v2zm4 8h-2v-2h2v2zm0-4h-2V9h2v2zm0-4h-2V5h2v2zm4 12h-2v-2h2v2zm0-4h-2v-2h2v2z",
-            fill="currentColor",
-        ),
-        view_box="0 0 24 24",
-        class_name="text-white w-10 h-10",
+    building_svg = rx.html(
+        """<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M17 11V3H7v4H3v14h8v-4h2v4h8V11zM7 19H5v-2h2zm0-4H5v-2h2zm0-4H5V9h2zm4 4H9v-2h2zm0-4H9V9h2zm0-4H9V5h2zm4 8h-2v-2h2zm0-4h-2V9h2zm0-4h-2V5h2zm4 12h-2v-2h2zm0-4h-2v-2h2z" />
+            </svg>""",
+        style={
+            "color": rx.color_mode_cond(
+                light="#1A202C",
+                dark="rgba(255, 255, 255, 0.92)",
+            ),
+            "width": "2.5rem",  # w-10
+            "height": "2.5rem",  # h-10
+        },
     )
 
     # SVG atualizado para projetos
-    # SVG atualizado para projetos - sem usar o parâmetro nomeado "children"
-    projects_svg = rx.el.svg(
-        rx.el.svg.path(
-            # Gráfico
-            d="M7.3 13.8c.07.07.19.07.26 0l2.38-2.38l2.02 2.02c.07.07.19.07.26 0l5.3-5.3c.07-.07.07-.19 0-.27l-.86-.86c-.07-.07-.19-.07-.26 0L12.1 11.4l-2.02-2.02c-.07-.07-.19-.07-.26 0L6.45 12.7c-.07.07-.07.19 0 .27l.85.83z",
-            fill="currentColor",
-        ),
-        rx.el.svg.path(
-            # Monitor/dispositivo
-            d="M21.2 3.8h-8.3V2.3c0-.1-.08-.19-.18-.19h-1.3c-.1 0-.19.08-.19.19v1.5H2.8c-.41 0-.75.33-.75.75v12.2c0 .41.33.75.75.75h8.34v.75l-3.66 2.4c-.09.06-.11.17-.05.26l.71 1.1v.003c.06.09.17.11.26.05l4.7-3.08l3.78 2.47c.09.06.2.03.26-.05v-.001l.71-1.1c.06-.09.03-.2-.05-.26L14.3 18.2v-.75h8.33c.41 0 .75-.33.75-.75V4.5c0-.41-.33-.75-.75-.75M20.25 15.8H3.8V5.45h16.45v10.35z",
-            fill="currentColor",
-        ),
-        xmlns="http://www.w3.org/2000/svg",
-        view_box="0 0 24 24",  # Alterado para 24x24
-        class_name="text-white w-10 h-10",
+    projects_svg = rx.html(
+        """<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 1024 1024">
+                <path fill="currentColor" d="M312.1 591.5c3.1 3.1 8.2 3.1 11.3 0l101.8-101.8l86.1 86.2c3.1 3.1 8.2 3.1 11.3 0l226.3-226.5c3.1-3.1 3.1-8.2 0-11.3l-36.8-36.8c-3.1-3.1-8.2-3.1-11.3 0L517 485.3l-86.1-86.2c-3.1-3.1-8.2-3.1-11.3 0L275.3 543.4c-3.1 3.1-3.1 8.2 0 11.3z" />
+                <path fill="currentColor" d="M904 160H548V96c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H120c-17.7 0-32 14.3-32 32v520c0 17.7 14.3 32 32 32h356.4v32L311.6 884.1c-3.7 2.4-4.7 7.3-2.3 11l30.3 47.2v.1c2.4 3.7 7.4 4.7 11.1 2.3L512 838.9l161.3 105.8c3.7 2.4 8.7 1.4 11.1-2.3v-.1l30.3-47.2c2.4-3.7 1.3-8.6-2.3-11L548 776.3V744h356c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32m-40 512H160V232h704z" />
+            </svg>""",
+        style={
+            "color": rx.color_mode_cond(
+                light="#1A202C",
+                dark="rgba(255, 255, 255, 0.92)",
+            ),
+            "width": "2.5rem",  # w-10
+            "height": "2.5rem",  # h-10
+        },
     )
 
     return rx.box(
@@ -77,7 +114,9 @@ def summary():
                         bitcoin_svg,
                     ),
                     href="/areas",
-                    class_name="no-underline",
+                    style={
+                        "text_decoration": "none"  # no-underline
+                    },
                 ),
                 rx.link(
                     feature(
@@ -86,7 +125,9 @@ def summary():
                         building_svg,
                     ),
                     href="/partnerships",
-                    class_name="no-underline",
+                    style={
+                        "text_decoration": "none"  # no-underline
+                    },
                 ),
                 rx.link(
                     feature(
@@ -95,15 +136,43 @@ def summary():
                         projects_svg,
                     ),
                     href="/projects",
-                    class_name="no-underline",
+                    style={
+                        "text_decoration": "none"  # no-underline
+                    },
                 ),
-                columns=rx.breakpoints(initial="1", md="2"),
-                gap_x="10",
-                gap_y=rx.breakpoints(initial="8", md="14"),
-                class_name="w-full",
+                style={
+                    "width": "100%",  # w-full
+                    "grid_template_columns": rx.breakpoints(
+                        initial="repeat(1, 1fr)",
+                        md="repeat(2, 1fr)",
+                    ),  # columns=rx.breakpointss(...)
+                    "column_gap": "2.5rem",  # gap_x="10"
+                    "row_gap": rx.breakpoints(
+                        initial="2rem",  # gap_y inicial "8"
+                        md="3.5rem",  # gap_y md "14"
+                    ),
+                },
             ),
-            class_name="max-w-5xl mx-auto pt-4 pb-12 px-6 md:px-8",
+            style={
+                "max_width": "64rem",  # max-w-5xl (aproximadamente 64rem)
+                "margin_left": "auto",  # mx-auto
+                "margin_right": "auto",
+                "padding_top": "1rem",  # pt-4
+                "padding_bottom": "3rem",  # pb-12
+                "padding_left": rx.breakpoints(
+                    initial="1.5rem", md="2rem"
+                ),  # px-6 md:px-8
+                "padding_right": rx.breakpoints(
+                    initial="1.5rem", md="2rem"
+                ),  # px-6 md:px-8
+            },
         ),
-        class_name="w-full bg-[#1A202C]",
+        style={
+            "width": "100%",  # w-full
+            "background": rx.color_mode_cond(
+                light="white",
+                dark="#1A202C",
+            ),
+        },
         as_="section",
     )
