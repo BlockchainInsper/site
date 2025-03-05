@@ -1,8 +1,7 @@
 import reflex as rx
 
 
-def feature(text, icon, icon_bg):
-    """Componente Feature que exibe um ícone com texto."""
+def feature(text: str, icon, icon_bg: str) -> rx.Component:
     return rx.flex(
         rx.flex(
             icon,
@@ -21,15 +20,19 @@ def feature(text, icon, icon_bg):
     )
 
 
-def features():
+def features() -> rx.Component:
     return rx.box(
-        rx.container(
+        rx.box(
             rx.grid(
-                # COLUNA 1
+                # Coluna 1
                 rx.vstack(
                     rx.heading(
                         "Reavaliando o presente e construindo o futuro",
-                        style={"font_size": "1.5rem", "font_weight": "700"},
+                        style={
+                            "font_size": "2rem",
+                            "font_weight": "700",
+                            "margin_bottom": "1rem",
+                        },
                     ),
                     rx.text(
                         "Buscamos criar um time altamente engajado e preparado "
@@ -42,6 +45,8 @@ def features():
                                 light="rgb(107, 114, 128)", dark="rgb(156, 163, 175)"
                             ),
                             "font_size": "1.125rem",
+                            "line_height": "1.75rem",
+                            "margin_bottom": "2rem",
                         },
                     ),
                     rx.vstack(
@@ -51,14 +56,13 @@ def features():
                                 icon=rx.icon(
                                     tag="rocket",
                                     style={
-                                        "color": "rgb(245, 158, 11)",  # yellow.500
+                                        "color": "rgb(245, 158, 11)",
                                         "width": "1.25rem",
                                         "height": "1.25rem",
                                     },
                                 ),
                                 icon_bg=rx.color_mode_cond(
-                                    light="rgb(254, 243, 199)",  # yellow.100
-                                    dark="rgb(116, 66, 16)",  # yellow.900
+                                    light="rgb(254, 243, 199)", dark="rgb(116, 66, 16)"
                                 ),
                             ),
                             rx.text(
@@ -71,15 +75,20 @@ def features():
                                         dark="rgb(156, 163, 175)",
                                     ),
                                     "margin_top": "0.5rem",
+                                    "line_height": "1.5rem",
                                 },
                             ),
+                            style={
+                                "width": "100%",
+                                "border_radius": "0.5rem",
+                            },
                         ),
                         rx.divider(
                             style={
                                 "border_color": rx.color_mode_cond(
-                                    light="rgb(243, 244, 246)",  # gray.100
-                                    dark="rgb(55, 65, 81)",  # gray.700
-                                )
+                                    light="rgb(243, 244, 246)", dark="rgb(55, 65, 81)"
+                                ),
+                                "margin": "1rem 0",
                             }
                         ),
                         rx.box(
@@ -88,14 +97,13 @@ def features():
                                 icon=rx.icon(
                                     tag="eye",
                                     style={
-                                        "color": "rgb(34, 197, 94)",  # green.500
+                                        "color": "rgb(34, 197, 94)",
                                         "width": "1.25rem",
                                         "height": "1.25rem",
                                     },
                                 ),
                                 icon_bg=rx.color_mode_cond(
-                                    light="rgb(220, 252, 231)",  # green.100
-                                    dark="rgb(28, 69, 50)",  # green.900
+                                    light="rgb(220, 252, 231)", dark="rgb(28, 69, 50)"
                                 ),
                             ),
                             rx.text(
@@ -107,15 +115,20 @@ def features():
                                         dark="rgb(156, 163, 175)",
                                     ),
                                     "margin_top": "0.5rem",
+                                    "line_height": "1.5rem",
                                 },
                             ),
+                            style={
+                                "width": "100%",
+                                "border_radius": "0.5rem",
+                            },
                         ),
                         rx.divider(
                             style={
                                 "border_color": rx.color_mode_cond(
-                                    light="rgb(243, 244, 246)",  # gray.100
-                                    dark="rgb(55, 65, 81)",  # gray.700
-                                )
+                                    light="rgb(243, 244, 246)", dark="rgb(55, 65, 81)"
+                                ),
+                                "margin": "1rem 0",
                             }
                         ),
                         rx.box(
@@ -124,14 +137,13 @@ def features():
                                 icon=rx.icon(
                                     tag="compass",
                                     style={
-                                        "color": "rgb(168, 85, 247)",  # purple.500
+                                        "color": "rgb(168, 85, 247)",
                                         "width": "1.25rem",
                                         "height": "1.25rem",
                                     },
                                 ),
                                 icon_bg=rx.color_mode_cond(
-                                    light="rgb(243, 232, 255)",  # purple.100
-                                    dark="rgb(68, 51, 122)",  # purple.900
+                                    light="rgb(243, 232, 255)", dark="rgb(68, 51, 122)"
                                 ),
                             ),
                             rx.text(
@@ -143,8 +155,13 @@ def features():
                                         dark="rgb(156, 163, 175)",
                                     ),
                                     "margin_top": "0.5rem",
+                                    "line_height": "1.5rem",
                                 },
                             ),
+                            style={
+                                "width": "100%",
+                                "border_radius": "0.5rem",
+                            },
                         ),
                         style={
                             "gap": "1rem",
@@ -152,9 +169,14 @@ def features():
                             "align_items": "flex-start",
                         },
                     ),
-                    style={"gap": "1rem", "width": "100%", "align_items": "flex-start"},
+                    style={
+                        "gap": "1rem",
+                        "width": "100%",
+                        "align_items": "flex-start",
+                        "padding": "1rem",
+                    },
                 ),
-                # COLUNA 2
+                # Coluna 2
                 rx.flex(
                     rx.image(
                         src="/insper.jpg",
@@ -174,12 +196,20 @@ def features():
                         initial="1fr", md="repeat(2, 1fr)"
                     ),
                     "gap": "2.5rem",
+                    "padding": "3rem 0",
+                    "align_items": "start",
                 },
             ),
-            style={"max_width": "90rem", "padding": "3rem 1.5rem"},
+            style={
+                "max_width": "90rem",
+                "padding": "3rem 1.5rem",
+                "margin": "0 auto",
+                "width": "100%",
+            },
         ),
         style={
             "width": "100%",
+            "min_height": "100vh",
             "background": rx.color_mode_cond(light="white", dark="#1A202C"),
             "color": rx.color_mode_cond(light="black", dark="white"),
         },
