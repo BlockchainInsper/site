@@ -41,7 +41,7 @@ def content():
                                     rx.link(
                                         "Acesse ",
                                         external_link_icon(),
-                                        href="#/learn/curso-intro/introducao",
+                                        href="/learn/curso-intro/introducao",
                                         style={
                                             "display": "flex",
                                             "align_items": "center",
@@ -62,7 +62,7 @@ def content():
                                     rx.link(
                                         "Acesse ",
                                         external_link_icon(),
-                                        href="#/learn/curso-intro/bitcoin",
+                                        href="/learn/curso-intro/bitcoin",
                                         style={
                                             "display": "flex",
                                             "align_items": "center",
@@ -83,7 +83,7 @@ def content():
                                     rx.link(
                                         "Acesse ",
                                         external_link_icon(),
-                                        href="#/learn/curso-intro/blockchain",
+                                        href="/learn/curso-intro/blockchain",
                                         style={
                                             "display": "flex",
                                             "align_items": "center",
@@ -104,7 +104,7 @@ def content():
                                     rx.link(
                                         "Acesse ",
                                         external_link_icon(),
-                                        href="#/learn/curso-intro/crypto-assets",
+                                        href="/learn/curso-intro/crypto-assets",
                                         style={
                                             "display": "flex",
                                             "align_items": "center",
@@ -125,7 +125,7 @@ def content():
                                     rx.link(
                                         "Acesse ",
                                         external_link_icon(),
-                                        href="#/learn/curso-intro/chains",
+                                        href="/learn/curso-intro/chains",
                                         style={
                                             "display": "flex",
                                             "align_items": "center",
