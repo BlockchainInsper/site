@@ -1,11 +1,6 @@
 import reflex as rx
 
 config = rx.Config(
-    app_name="App",
-    tailwind={
-        "theme": {
-            "extend": {},
-        },
-        "plugins": ["@tailwindcss/typography"],
-    },
+    app_name="meu_app",
+    db_url="sqlite:///reflex.db",  # SQLite local
 )
