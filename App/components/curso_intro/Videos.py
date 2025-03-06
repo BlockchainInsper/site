@@ -41,7 +41,7 @@ def videos(videos_list: list, titulo: str):
                     )
                     for i, video in enumerate(videos_list)
                 ],
-                spacing="10",
+                spacing="3",
                 style={
                     "width": "100%",
                     "align_items": "stretch",

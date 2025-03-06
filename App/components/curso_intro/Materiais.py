@@ -65,7 +65,7 @@ def materiais(materiais: list, titulo: str):
                 ),
                 spacing="4",
             ),
-            spacing="10",
+            gap="2.5rem",
             style={
                 "background": rx.color_mode_cond(light="white", dark="#1A202C"),
             },
