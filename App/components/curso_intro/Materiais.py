@@ -41,6 +41,8 @@ def materiais(materiais: list, titulo: str):
                                         href=material.get("link", "#"),
                                         is_external=True,
                                         style={
+                                            "display": "flex",  # Alinhamento horizontal
+                                            "align_items": "center",  # Centraliza itens verticalmente
                                             "color": rx.color_mode_cond(
                                                 light="#3182CE", dark="#63B3ED"
                                             ),

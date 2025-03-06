@@ -149,6 +149,7 @@ def content():
                                         href="/learn/curso-intro/tecnologia",
                                         style={
                                             "display": "flex",
+                                            "align_items": "center",
                                             "color": rx.color_mode_cond(
                                                 light="#3182CE", dark="#63B3ED"
                                             ),
