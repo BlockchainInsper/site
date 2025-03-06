@@ -11,6 +11,7 @@ from pages.Fundo import fundo
 from pages.Parcerias import parceiros
 from pages.Aprenda import aprenda
 from pages.Contato import contato
+from pages.CursoIntro import curso_intro
 
 app = rx.App(
     theme=rx.theme(
@@ -35,3 +36,4 @@ app.add_page(fundo, route="/fund")
 app.add_page(parceiros, route="/partnerships")
 app.add_page(aprenda, route="/learn")
 app.add_page(contato, route="/contact")
+app.add_page(curso_intro, route="/learn/curso-intro")
