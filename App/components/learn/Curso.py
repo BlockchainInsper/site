@@ -48,7 +48,7 @@ def curso():
                                 },
                             },
                         ),
-                        href="#/learn/curso-intro",
+                        href="/learn/curso-intro",
                     ),
                     style={
                         "direction": "column",
