@@ -2,35 +2,80 @@ import reflex as rx
 
 
 def curso():
-    return (
+    return rx.box(
         rx.box(
-            rx.box(
+            rx.stack(
                 rx.heading(
                     "Aprenda blockchain ",
                     rx.el.br(),
-                    rx.text.span("agora", class_name="chakra-text css-10tibwi"),
-                    class_name="chakra-heading css-1xb57ov",
-                    as_="h2",
-                    size="6",
+                    rx.text(
+                        "agora",
+                        as_="span",
+                        style={
+                            "color": "#f68b23",
+                        },
+                    ),
+                    style={
+                        "font_weight": "600",
+                        "font_size": rx.breakpoints(
+                            initial="1.5rem", sm="2.25rem", md="3.75rem"
+                        ),
+                        "line_height": "110%",
+                        "color": rx.color_mode_cond(light="#2D3748", dark="#F7FAFC"),
+                    },
                 ),
                 rx.text(
-                    "A Blockchain Insper tem o prazer de apresentar o Curso de Introdu\u00e7\u00e3o \u00e0 Blockchain! Na linha de contribuir para o acesso \u00e0 informa\u00e7\u00e3o e o fomento do estudo das novas tecnologias, o curso \u00e9 realizado no formato online, e \u00e9 aberto para qualquer pessoa. Os conte\u00fados foram escolhidos pelos membros da entidade, abordando desde contexto hist\u00f3rico at\u00e9 futuras perspectivas da tecnologia.",
-                    class_name="chakra-text css-q9k0mw",
+                    "A Blockchain Insper tem o prazer de apresentar o Curso de Introdução à Blockchain! "
+                    "Na linha de contribuir para o acesso à informação e o fomento do estudo das novas tecnologias, "
+                    "o curso é realizado no formato online, e é aberto para qualquer pessoa. "
+                    "Os conteúdos foram escolhidos pelos membros da entidade, abordando desde contexto histórico até futuras "
+                    "perspectivas da tecnologia.",
+                    style={
+                        "color": rx.color_mode_cond(light="#A0AEC0", dark="#CBD5E0"),
+                    },
                 ),
-                rx.box(
-                    rx.el.a(
-                        rx.el.button(
-                            "Vamos come\u00e7ar!",
-                            type="button",
-                            class_name="chakra-button css-1f8g3n5",
+                rx.stack(
+                    rx.link(
+                        rx.button(
+                            "Vamos começar!",
+                            style={
+                                "background": "#f68b23",
+                                "color": "white",
+                                "border_radius": "9999px",
+                                "padding_x": "1.5rem",
+                                "_hover": {
+                                    "background": "#f68b70",
+                                },
+                            },
                         ),
-                        class_name="chakra-link css-f4h6uy",
                         href="#/learn/curso-intro",
                     ),
-                    class_name="chakra-stack css-grmpig",
+                    style={
+                        "direction": "column",
+                        "spacing": "0.75rem",
+                        "align": "center",
+                        "align_self": "center",
+                        "position": "relative",
+                    },
                 ),
-                class_name="chakra-stack css-ab1nhi",
+                style={
+                    "flex_direction": "column",
+                    "align_items": "center",
+                    "justify_content": "center",
+                    "text_align": "center",
+                    "spacing": rx.breakpoints(initial="2rem", md="3.5rem"),
+                    "padding_y": rx.breakpoints(initial="5rem", md="7.5rem"),
+                },
             ),
-            class_name="chakra-container css-1a3l159",
+            style={
+                "max_width": "48rem",
+                "padding_y": "2.5rem",
+                "margin": "0 auto",
+                "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+            },
         ),
+        style={
+            "width": "full",
+            "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+        },
     )

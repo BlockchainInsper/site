@@ -1,105 +1,281 @@
 import reflex as rx
 
 
+def blog_tags(tags, margin_top="1"):
+    return rx.hstack(
+        *[
+            rx.box(
+                tag,
+                style={
+                    "background": "#ED8936",
+                    "color": "white",
+                    "padding_x": "0.5rem",
+                    "padding_y": "0.25rem",
+                    "border_radius": "0.375rem",
+                    "font_size": "0.875rem",
+                    "font_weight": "600",
+                },
+            )
+            for tag in tags
+        ],
+        style={
+            "margin_top": margin_top,
+            "spacing": "0.5rem",
+        },
+    )
+
+
 def blog():
-    return (
+    return rx.box(
         rx.box(
             rx.heading(
-                "Aprenda na pr\u00e1tica",
-                class_name="chakra-heading css-1dklj6k",
+                "Aprenda na prática",
                 as_="h1",
-                size="8",
+                style={
+                    "font_size": "2.25rem",
+                    "font_weight": "bold",
+                    "margin_bottom": "1.5rem",
+                    "color": rx.color_mode_cond(light="#2D3748", dark="#F7FAFC"),
+                },
             ),
+            # Primeiro artigo
             rx.box(
                 rx.box(
                     rx.box(
-                        rx.el.a(
+                        rx.link(
                             rx.image(
+                                src="/blog/arteAgro.png",
                                 alt="some good alt text",
-                                src="/static/media/arteAgro.f232cae3.png",
-                                class_name="chakra-image css-1q7mro",
+                                style={
+                                    "border_radius": "0.5rem",
+                                    "object_fit": "contain",
+                                    "width": "100%",
+                                },
                             ),
-                            target="_blank",
-                            rel="noopener noreferrer",
-                            class_name="chakra-link css-10qsrqw",
                             href="https://drive.google.com/file/d/1zlmy-Juu6i6HVZw7WCYQs_rC4CEDZSFy/view",
+                            is_external=True,
+                            style={
+                                "text_decoration": "none",
+                                "_hover": {"text_decoration": "none"},
+                            },
                         ),
-                        class_name="css-wo9i0v",
+                        style={
+                            "width": rx.breakpoints(initial="100%", sm="85%"),
+                            "z_index": "2",
+                            "margin_left": rx.breakpoints(initial="0", sm="5%"),
+                            "margin_top": "5%",
+                        },
                     ),
-                    rx.box(rx.box(class_name="css-504s85"), class_name="css-bm0zes"),
-                    class_name="css-1r21lrd",
+                    rx.box(
+                        rx.box(
+                            style={
+                                "background": "radial-gradient("
+                                + rx.color_mode_cond(
+                                    light="rgba(237, 137, 54, 0.6) 1px, transparent 1px",
+                                    dark="rgba(237, 137, 54, 0.3) 1px, transparent 1px",
+                                )
+                                + ")",
+                                "background_size": "20px 20px",
+                                "opacity": "0.4",
+                                "height": "100%",
+                            }
+                        ),
+                        style={
+                            "z_index": "1",
+                            "width": "100%",
+                            "position": "absolute",
+                            "height": "100%",
+                            "background": rx.color_mode_cond(
+                                light="transparent", dark="rgba(26, 32, 44, 0.3)"
+                            ),
+                        },
+                    ),
+                    style={
+                        "display": "flex",
+                        "flex": "1",
+                        "margin_right": "0.75rem",
+                        "position": "relative",
+                        "align_items": "center",
+                    },
                 ),
                 rx.box(
-                    rx.box(
-                        rx.text.span("Agropecu\u00e1ria", class_name="css-1s4b4jw"),
-                        rx.text.span("Report", class_name="css-1s4b4jw"),
-                        class_name="chakra-stack css-g9cw6v",
-                    ),
+                    blog_tags(["Agropecuária", "Report"]),
                     rx.heading(
-                        rx.el.a(
-                            "Report do setor Agropecu\u00e1rio",
-                            target="_blank",
-                            rel="noopener noreferrer",
-                            class_name="chakra-link css-10qsrqw",
+                        rx.link(
+                            "Report do setor Agropecuário",
                             href="https://drive.google.com/file/d/1zlmy-Juu6i6HVZw7WCYQs_rC4CEDZSFy/view",
+                            is_external=True,
+                            style={
+                                "text_decoration": "none",
+                                "_hover": {"text_decoration": "none"},
+                                "color": rx.color_mode_cond(
+                                    light="#2D3748", dark="#F7FAFC"
+                                ),
+                            },
                         ),
-                        class_name="chakra-heading css-15loomw",
-                        as_="h2",
-                        size="6",
+                        style={
+                            "margin_top": "0.25rem",
+                            "font_size": "2.25rem",
+                            "font_weight": "bold",
+                            "color": rx.color_mode_cond(
+                                light="#2D3748", dark="#F7FAFC"
+                            ),
+                        },
                     ),
                     rx.text(
-                        "O setor agropecu\u00e1rio \u00e9 um dos principais setores econ\u00f4micos do Brasil, representando uma parcela de 21% do PIB nacional. Atualmente, ele encontra diversos problemas estruturais, os quais poderiam ser solucionados atrav\u00e9s da tecnologia blockchain. No report a seguir esses t\u00f3picos ser\u00e3o abordados e discutidos.",
-                        class_name="chakra-text css-bjugk0",
+                        "O setor agropecuário é um dos principais setores econômicos do Brasil, "
+                        "representando uma parcela de 21% do PIB nacional. Atualmente, ele encontra "
+                        "diversos problemas estruturais, os quais poderiam ser solucionados através "
+                        "da tecnologia blockchain. No report a seguir esses tópicos serão abordados e discutidos.",
+                        style={
+                            "margin_top": "0.5rem",
+                            "color": rx.color_mode_cond(
+                                light="#4A5568", dark="#E2E8F0"
+                            ),
+                            "font_size": "1.125rem",
+                        },
                     ),
-                    class_name="css-fu5aqi",
+                    style={
+                        "display": "flex",
+                        "flex": "1",
+                        "flex_direction": "column",
+                        "justify_content": "center",
+                        "margin_top": rx.breakpoints(initial="0.75rem", sm="0"),
+                    },
                 ),
-                class_name="css-1tvbi2x",
+                style={
+                    "margin_top": rx.breakpoints(initial="0.25rem", sm="1.25rem"),
+                    "display": "flex",
+                    "flex_direction": rx.breakpoints(initial="column", sm="row"),
+                    "justify_content": "space-between",
+                    "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+                    "padding": "1.5rem",
+                    "border_radius": "0.5rem",
+                },
             ),
+            # Segundo artigo
             rx.box(
                 rx.box(
-                    rx.box(
-                        rx.text.span("Sa\u00fade", class_name="css-1s4b4jw"),
-                        rx.text.span("Report", class_name="css-1s4b4jw"),
-                        class_name="chakra-stack css-g9cw6v",
-                    ),
+                    blog_tags(["Saúde", "Report"]),
                     rx.heading(
-                        rx.el.a(
-                            "Report do setor da Sa\u00fade",
-                            target="_blank",
-                            rel="noopener noreferrer",
-                            class_name="chakra-link css-10qsrqw",
+                        rx.link(
+                            "Report do setor da Saúde",
                             href="https://drive.google.com/file/d/1KzcVDm7Ipq4yGfkN1DBzlBwWOwS-DfYz/view",
+                            is_external=True,
+                            style={
+                                "text_decoration": "none",
+                                "_hover": {"text_decoration": "none"},
+                                "color": rx.color_mode_cond(
+                                    light="#2D3748", dark="#F7FAFC"
+                                ),
+                            },
                         ),
-                        class_name="chakra-heading css-15loomw",
-                        as_="h2",
-                        size="6",
+                        style={
+                            "margin_top": "0.25rem",
+                            "font_size": "2.25rem",
+                            "font_weight": "bold",
+                            "color": rx.color_mode_cond(
+                                light="#2D3748", dark="#F7FAFC"
+                            ),
+                        },
                     ),
                     rx.text(
-                        "Sendo o assunto de maior import\u00e2ncia recentemente, o setor de sa\u00fade aparece como enfoque de 2020 pela situa\u00e7\u00e3o vivida com a pandemia do COVID-19. Nesse ano, foi poss\u00edvel notar a import\u00e2ncia e os benef\u00edcios de um sistema de sa\u00fade bem estruturado. No report a seguir esses t\u00f3picos ser\u00e3o abordados e discutidos.",
-                        class_name="chakra-text css-bjugk0",
+                        "Sendo o assunto de maior importância recentemente, o setor de saúde aparece como enfoque de 2020 "
+                        "pela situação vivida com a pandemia do COVID-19. Nesse ano, foi possível notar a importância e os "
+                        "benefícios de um sistema de saúde bem estruturado. No report a seguir esses tópicos serão abordados e discutidos.",
+                        style={
+                            "margin_top": "0.5rem",
+                            "color": rx.color_mode_cond(
+                                light="#4A5568", dark="#E2E8F0"
+                            ),
+                            "font_size": "1.125rem",
+                        },
                     ),
-                    class_name="css-fu5aqi",
+                    style={
+                        "display": "flex",
+                        "flex": "1",
+                        "flex_direction": "column",
+                        "justify_content": "center",
+                        "margin_top": rx.breakpoints(initial="0.75rem", sm="0"),
+                    },
                 ),
                 rx.box(
                     rx.box(
-                        rx.el.a(
+                        rx.link(
                             rx.image(
+                                src="/blog/arteHealth.png",
                                 alt="some good alt text",
-                                src="/static/media/arteHealth.aabf715a.png",
-                                class_name="chakra-image css-1q7mro",
+                                style={
+                                    "border_radius": "0.5rem",
+                                    "object_fit": "contain",
+                                    "width": "100%",
+                                },
                             ),
-                            target="_blank",
-                            rel="noopener noreferrer",
-                            class_name="chakra-link css-10qsrqw",
                             href="https://drive.google.com/file/d/1KzcVDm7Ipq4yGfkN1DBzlBwWOwS-DfYz/view",
+                            is_external=True,
+                            style={
+                                "text_decoration": "none",
+                                "_hover": {"text_decoration": "none"},
+                            },
                         ),
-                        class_name="css-wo9i0v",
+                        style={
+                            "width": rx.breakpoints(initial="100%", sm="85%"),
+                            "z_index": "2",
+                            "margin_left": rx.breakpoints(initial="0", sm="5%"),
+                            "margin_top": "5%",
+                        },
                     ),
-                    rx.box(rx.box(class_name="css-504s85"), class_name="css-bm0zes"),
-                    class_name="css-1r21lrd",
+                    rx.box(
+                        rx.box(
+                            style={
+                                "background": "radial-gradient("
+                                + rx.color_mode_cond(
+                                    light="rgba(237, 137, 54, 0.6) 1px, transparent 1px",
+                                    dark="rgba(237, 137, 54, 0.3) 1px, transparent 1px",
+                                )
+                                + ")",
+                                "background_size": "20px 20px",
+                                "opacity": "0.4",
+                                "height": "100%",
+                            }
+                        ),
+                        style={
+                            "z_index": "1",
+                            "width": "100%",
+                            "position": "absolute",
+                            "height": "100%",
+                            "background": rx.color_mode_cond(
+                                light="transparent", dark="rgba(26, 32, 44, 0.3)"
+                            ),
+                        },
+                    ),
+                    style={
+                        "display": "flex",
+                        "flex": "1",
+                        "margin_right": "0.75rem",
+                        "position": "relative",
+                        "align_items": "center",
+                    },
                 ),
-                class_name="css-1tvbi2x",
+                style={
+                    "margin_top": rx.breakpoints(initial="0.25rem", sm="1.25rem"),
+                    "display": "flex",
+                    "flex_direction": rx.breakpoints(initial="column", sm="row"),
+                    "justify_content": "space-between",
+                    "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+                    "padding": "1.5rem",
+                    "border_radius": "0.5rem",
+                },
             ),
-            class_name="chakra-container css-1oamxn5",
+            style={
+                "max_width": "80rem",
+                "padding": "3rem",
+                "margin": "0 auto",
+                "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+            },
         ),
+        style={
+            "width": "full",
+            "background": rx.color_mode_cond(light="white", dark="#1A202C"),
+        },
     )
