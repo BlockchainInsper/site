@@ -1,6 +1,8 @@
 """Welcome to Reflex! This file outlines the steps to create a basic app."""
 
 import reflex as rx
+
+from App.States import ContactFormState
 from pages.Home import home
 from pages.ProcessoSeletivo import processo_seletivo
 from pages.MembrosAtuais import membros_atuais

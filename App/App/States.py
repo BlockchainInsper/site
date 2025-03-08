@@ -1,10 +1,16 @@
 import reflex as rx
-from Models import Contact
+from App.Models import Contact
 
 
 class ContactFormState(rx.State):
-    @rx.event
-    def handle_submit(self, form_data: dict):
+    # Defina as variáveis de estado para armazenar os valores do formulário
+    name: str = ""
+    email: str = ""
+    subject: str = ""  # Certifique-se de que esta variável existe
+    message: str = ""
+
+    @rx.event(background=True)
+    async def handle_submit(self, form_data: dict):
         with rx.session() as session:
             contact = Contact(
                 name=form_data["name"],
@@ -14,3 +20,4 @@ class ContactFormState(rx.State):
             )
             session.add(contact)
             session.commit()
+            return rx.window_alert("Mensagem enviada! Entraremos em contato em breve.")

@@ -1,5 +1,6 @@
 import reflex as rx
 from components.icons.icons import discord_icon
+from App.States import ContactFormState
 
 
 def contato_info():
@@ -319,8 +320,9 @@ def contato_info():
                                         "Outros",
                                     ],
                                     placeholder="Selecione um assunto",
-                                    id="subject",
                                     name="subject",
+                                    default_value="Geral",
+                                    required=True,
                                     style={
                                         "color": rx.color_mode_cond(
                                             light="#2D3748", dark="white"
@@ -415,9 +417,7 @@ def contato_info():
                             spacing="6",
                             align="stretch",
                         ),
-                        on_submit=lambda event: rx.window_alert(
-                            "Mensagem enviada! Entraremos em contato em breve."
-                        ),
+                        on_submit=ContactFormState.handle_submit,
                         reset_on_submit=True,
                     ),
                     style={
