@@ -30,6 +30,9 @@ app = rx.App(
         "transitionDuration": "200ms",
         "lineHeight": "1.5",
         "minHeight": "100vh",
+        rx.button: {
+            "cursor": "pointer",
+        },
     },
 )
 app.add_page(home, route="/")
