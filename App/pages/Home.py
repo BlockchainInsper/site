@@ -27,6 +27,7 @@ def with_background_image():
                 rx.link(
                     rx.button(
                         "Nossas áreas",
+                        size="3",
                         style={
                             "background": "#f68b23",
                             "border_radius": "9999px",

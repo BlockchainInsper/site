@@ -1,28 +1,27 @@
 import reflex as rx
+from components.icons.icons import discord_icon
 
 
 def discord_button() -> rx.Component:
     return rx.link(
         rx.button(
             rx.hstack(
-                rx.el.svg(
-                    rx.el.svg.path(
-                        d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1 14.66 14.66 0 0 0-4.58 0 10.14 10.14 0 0 0-.53-1.1 16 16 0 0 0-4.13 1.3 17.33 17.33 0 0 0-3 11.59 16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83 3.39 3.39 0 0 0 .42-.33 11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84 12.41 12.41 0 0 0 1.08 1.78 16.44 16.44 0 0 0 5.06-2.59 17.22 17.22 0 0 0-3-11.59 16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.93 1.93 0 0 1 1.8 2 1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.92 1.92 0 0 1 1.8 2 1.92 1.92 0 0 1-1.8 2z",
-                        fill="currentColor",
-                    ),
-                    viewBox="0 0 24 24",
-                    style={"width": "1.5rem", "height": "1.5rem"},
-                    xmlns="http://www.w3.org/2000/svg",
-                ),
-                rx.text("Discord"),
-                style={"gap": "0.5rem"},
+                discord_icon(1.125, 18),
+                rx.text("Discord", line_height="1.1"),
+                style={
+                    "align_items": "center",
+                    "justify_content": "center",
+                },
             ),
+            size="4",
             style={
+                "display": "flex",
+                "align_items": "center",
+                "justify_content": "center",
                 "border_radius": "9999px",
                 "font_size": "1.125rem",
                 "font_weight": "normal",
-                "padding_left": "1.5rem",
-                "padding_right": "1.5rem",
+                "padding_x": "1.5rem",
                 "color": "white",
                 "background_color": "#5865F2",
                 "_hover": {"background_color": "#5865F2"},
@@ -30,7 +29,9 @@ def discord_button() -> rx.Component:
         ),
         href="https://discord.gg/jdK5yB48Mm",
         is_external=True,
-        style={"text_decoration": "none"},
+        style={
+            "text_decoration": "none",
+        },
     )
 
 
@@ -192,15 +193,13 @@ def call_to_action_with_video():
             style={
                 "width": "100%",
                 # Ajustado padding para breakpoints
-                "padding_left": rx.breakpoints(initial="1rem", md="2rem"),
-                "padding_right": rx.breakpoints(initial="1rem", md="2rem"),
+                "padding_x": rx.breakpoints(initial="1rem", md="1rem"),
                 "margin": "0 auto",
                 "max_width": "80rem",  # maxW={'7xl'} do Chakra
             },
         ),
         style={
             "width": "100%",
-            "padding": "3rem 0",
             "display": "flex",
             "justify_content": "center",
             "background": rx.color_mode_cond(  # Adicionado suporte ao tema

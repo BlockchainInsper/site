@@ -20,7 +20,7 @@ def curso():
                         "font_size": rx.breakpoints(
                             initial="1.5rem", sm="2.25rem", md="3.75rem"
                         ),
-                        "line_height": "110%",
+                        "line_height": "1.1",
                         "color": rx.color_mode_cond(light="#2D3748", dark="#F7FAFC"),
                     },
                 ),
@@ -38,6 +38,7 @@ def curso():
                     rx.link(
                         rx.button(
                             "Vamos começar!",
+                            size="3",
                             style={
                                 "background": "#f68b23",
                                 "color": "white",
@@ -53,7 +54,7 @@ def curso():
                     style={
                         "direction": "column",
                         "spacing": "0.75rem",
-                        "align": "center",
+                        "align_items": "center",
                         "align_self": "center",
                         "position": "relative",
                     },
@@ -63,7 +64,7 @@ def curso():
                     "align_items": "center",
                     "justify_content": "center",
                     "text_align": "center",
-                    "spacing": rx.breakpoints(initial="2rem", md="3.5rem"),
+                    "gap": rx.breakpoints(initial="2rem", md="3.5rem"),
                     "padding_y": rx.breakpoints(initial="5rem", md="7.5rem"),
                 },
             ),

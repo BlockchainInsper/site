@@ -44,7 +44,6 @@ def feature(title: str, children: str, icon: rx.Component):
             spacing="1",
         ),
         style={
-            "padding": "1rem",  # p-4
             "border_radius": "0.375rem",  # rounded-md
             "transition": "background-color 0.2s",  # transition-colors
             "_hover": {
@@ -54,8 +53,7 @@ def feature(title: str, children: str, icon: rx.Component):
                 ),
             },
             "direction": "row",
-            "align_items": "inherit",  # Centralização vertical
-            "gap": "1rem",
+            "align_items": "center",  # Centralização vertical
         },
     )
 
@@ -68,7 +66,7 @@ def summary():
                     feature(
                         "Núcleos",
                         "Clique aqui para conhecer nossas áreas de estudos",
-                        bitcoin_icon(2.5, 60),
+                        bitcoin_icon(3.75, 60),
                     ),
                     href="/areas",
                     style={
@@ -102,7 +100,7 @@ def summary():
                     "grid_template_columns": rx.breakpoints(
                         initial="repeat(1, 1fr)",
                         md="repeat(2, 1fr)",
-                    ),  # columns=rx.breakpointss(...)
+                    ),
                     "column_gap": "2.5rem",  # gap_x="10"
                     "row_gap": rx.breakpoints(
                         initial="2rem",  # gap_y inicial "8"

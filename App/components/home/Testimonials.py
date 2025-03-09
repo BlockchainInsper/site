@@ -184,8 +184,8 @@ def testimonials() -> rx.Component:
         style={
             "width": "100%",
             "background": rx.color_mode_cond(
-                light="rgb(243, 244, 246)",  # gray-100
-                dark="rgb(55, 65, 81)",  # gray-700
+                light="#EDF2F7",  # gray-100
+                dark="#2D3748",  # gray-700
             ),
         },
     )
