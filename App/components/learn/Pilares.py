@@ -27,7 +27,7 @@ def feature(title, text, icon):
         rx.text(
             text,
             style={
-                "color": rx.color_mode_cond(light="#718096", dark="#CBD5E0"),
+                "color": rx.color_mode_cond(light="#4A5568", dark="#718096"),
             },
         ),
         style={

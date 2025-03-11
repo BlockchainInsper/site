@@ -111,11 +111,11 @@ def area_box(icon, title, description):
                 title,
                 as_="h2",
                 style={
-                    "font_size": "2rem",  # Tamanho ajustado para evitar overflow
+                    "font_size": "2.25rem",  # Tamanho ajustado para evitar overflow
                     "font_weight": "bold",
                     "margin_top": "0.75rem",  # Reduzido para economizar espaço vertical
                     "margin_bottom": "0.5rem",  # Reduzido para economizar espaço
-                    "color": rx.color_mode_cond(light="#2D3748", dark="#F7FAFC"),
+                    "color": rx.color_mode_cond(light="#1A202C", dark="rgba(255, 255, 255, 0.92)"),
                     "text_align": "center",
                 },
             ),
@@ -123,7 +123,7 @@ def area_box(icon, title, description):
             rx.text(
                 description,
                 style={
-                    "color": rx.color_mode_cond(light="gray.600", dark="gray.300"),
+                    "color": "#718096",
                     "text_align": "center",
                     "max_width": "500px",
                     "line_height": "1.4",  # Reduzido para economizar espaço vertical

@@ -31,7 +31,7 @@ def curso():
                     "Os conteúdos foram escolhidos pelos membros da entidade, abordando desde contexto histórico até futuras "
                     "perspectivas da tecnologia.",
                     style={
-                        "color": rx.color_mode_cond(light="#A0AEC0", dark="#CBD5E0"),
+                        "color": "#718096",
                     },
                 ),
                 rx.stack(

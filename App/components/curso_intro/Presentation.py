@@ -70,9 +70,7 @@ def presentation():
                                 "O Curso Fundamental vai te dar base para entender o que está por trás da construção do protocolo e o que motivou "
                                 "Satoshi Nakamoto a desenvolvê-lo, entre muitas outras coisas que rondam essa tecnologia que está revolucionando a economia mundial.",
                                 style={
-                                    "color": rx.color_mode_cond(
-                                        light="#718096", dark="#CBD5E0"
-                                    ),  # gray.500
+                                    "color": "#718096",  # gray.500
                                     "font_size": "1rem",  # medium
                                     "margin_top": "1.25rem",  # marginTop={5}
                                 },
@@ -101,9 +99,7 @@ def presentation():
                                 "O curso será disponibilizado nesse site de seguinte maneira: cada página é um módulo, dentro desses módulos existem "
                                 "subtemas que se relacionam com o assunto principal, e em seguida os links com os conteúdos.",
                                 style={
-                                    "color": rx.color_mode_cond(
-                                        light="#718096", dark="#CBD5E0"
-                                    ),  # gray.500
+                                    "color": "#718096",  # gray.500
                                     "font_size": "1rem",  # medium
                                     "margin_top": "1.25rem",  # marginTop={5}
                                     "white_space": "pre-wrap",  # Para preservar quebras de linha
@@ -127,11 +123,11 @@ def presentation():
             ),
             style={
                 "max_width": "80rem",  # 5xl
-                "padding_y": "3rem",  # py={12} = 3rem
                 "margin": "0 auto",
             },
         ),
         style={
+            "padding_y": "2rem",  # py={12} = 3rem
             "width": "100%",
             "background": rx.color_mode_cond(light="white", dark="#1A202C"),
         },

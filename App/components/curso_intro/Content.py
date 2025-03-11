@@ -30,8 +30,22 @@ def content():
                     rx.table.root(
                         rx.table.header(
                             rx.table.row(
-                                rx.table.column_header_cell("Tema"),
-                                rx.table.column_header_cell("Conteúdos"),
+                                rx.table.column_header_cell(
+                                    "Tema",
+                                    style={
+                                        "color": rx.color_mode_cond(
+                                            light="#4A5568", dark="#A0AEC0"
+                                        ),
+                                    },
+                                ),
+                                rx.table.column_header_cell(
+                                    "Conteúdos",
+                                    style={
+                                        "color": rx.color_mode_cond(
+                                            light="#4A5568", dark="#A0AEC0"
+                                        ),
+                                    },
+                                ),
                             ),
                         ),
                         rx.table.body(

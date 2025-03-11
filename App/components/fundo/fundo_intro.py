@@ -7,11 +7,12 @@ def intro_fundo():
             rx.heading(
                 "Fundo Blockchain Insper",
                 style={
-                    "font_size": "1.875rem",
-                    "font_weight": "extrabold",
-                    "letter_spacing": "tight",
+                    "font_size": "3.75rem",
+                    "font_weight": "800",
+                    "letter_spacing": "-0.025em",
                     "color": rx.color_mode_cond(light="#2D3748", dark="#F7FAFC"),
                     "text_align": "center",
+                    "line_height": "1",
                 },
                 as_="h2",
             ),
@@ -23,7 +24,9 @@ def intro_fundo():
                 style={
                     "margin_top": "1rem",
                     "font_size": "1.125rem",
-                    "color": rx.color_mode_cond(light="gray.700", dark="gray.300"),
+                    "color": rx.color_mode_cond(
+                        light="#1A202C", dark="rgba(255, 255, 255, 0.92)"
+                    ),
                     "text_align": "center",
                 },
             ),

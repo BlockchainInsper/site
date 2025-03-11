@@ -73,9 +73,7 @@ def location_info():
                         "Aberto de Segunda à Sexta das 07:00 às 23:00",
                         style={
                             "font_weight": "bold",
-                            "color": rx.color_mode_cond(
-                                light="#4A5568", dark="#E2E8F0"
-                            ),
+                            "color": "#718096",
                         },
                     ),
                     style={

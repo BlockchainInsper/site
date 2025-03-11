@@ -7,9 +7,10 @@ def intro_partnerships():
             rx.heading(
                 "Parceiros",
                 style={
-                    "font_size": "3rem",  # 3xl
-                    "font_weight": "extrabold",
-                    "letter_spacing": "tight",
+                    "font_size": "3.75rem",  # 3xl
+                    "font_weight": "800",
+                    "line_height": "1",
+                    "letter_spacing": "-0.025em",
                     "color": rx.color_mode_cond(light="#2D3748", dark="#F7FAFC"),
                 },
                 as_="h2",
@@ -19,7 +20,9 @@ def intro_partnerships():
                 style={
                     "margin_top": "1rem",  # mt="4"
                     "font_size": "1.125rem",  # lg
-                    "color": rx.color_mode_cond(light="gray.700", dark="gray.300"),
+                    "color": rx.color_mode_cond(
+                        light="#1A202C", dark="rgba(255, 255, 255, 0.92)"
+                    ),
                 },
             ),
             style={

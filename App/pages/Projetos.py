@@ -59,7 +59,6 @@ def card1(data):
                             style={
                                 "border_radius": "0.5rem",  # borderRadius="lg"
                                 "object_fit": "contain",
-                                "width": "100%",
                             },
                         ),
                         style={
@@ -74,8 +73,8 @@ def card1(data):
                             style={
                                 "background": "radial-gradient("
                                 + rx.color_mode_cond(
-                                    light="rgba(237, 137, 54, 0.6) 1px, transparent 1px",
-                                    dark="rgba(237, 137, 54, 0.3) 1px, transparent 1px",
+                                    light="#C05621 1px, transparent 1px",
+                                    dark="#F6AD55 1px, transparent 1px",
                                 )
                                 + ")",
                                 "background_size": "20px 20px",
@@ -104,11 +103,11 @@ def card1(data):
                         data["nome"],
                         style={
                             "margin_top": "0.25rem",  # marginTop="1"
-                            "font_weight": "bold",
+                            "font_weight": "700",
                             "color": rx.color_mode_cond(
                                 light="#2D3748", dark="#F7FAFC"
                             ),
-                            "font_size": "1.75rem",
+                            "font_size": "2.25rem",
                         },
                     ),
                     rx.text(
@@ -117,9 +116,9 @@ def card1(data):
                         style={
                             "margin_top": "0.5rem",  # marginTop="2"
                             "color": rx.color_mode_cond(
-                                light="gray.700", dark="gray.200"
+                                light="#2D3748", dark="#E2E8F0"
                             ),
-                            "font_size": "lg",
+                            "font_size": "1.125rem",
                         },
                     ),
                     style={
@@ -162,11 +161,11 @@ def card2(data):
                         data["nome"],
                         style={
                             "margin_top": "0.25rem",  # marginTop="1"
-                            "font_weight": "bold",
+                            "font_weight": "700",
                             "color": rx.color_mode_cond(
                                 light="#2D3748", dark="#F7FAFC"
                             ),
-                            "font_size": "1.75rem",
+                            "font_size": "2.25rem",
                         },
                     ),
                     rx.text(
@@ -175,9 +174,9 @@ def card2(data):
                         style={
                             "margin_top": "0.5rem",  # marginTop="2"
                             "color": rx.color_mode_cond(
-                                light="gray.700", dark="gray.200"
+                                light="#2D3748", dark="#E2E8F0"
                             ),
-                            "font_size": "lg",
+                            "font_size": "1.125rem",
                         },
                     ),
                     style={
@@ -214,8 +213,8 @@ def card2(data):
                             style={
                                 "background": "radial-gradient("
                                 + rx.color_mode_cond(
-                                    light="rgba(237, 137, 54, 0.6) 1px, transparent 1px",
-                                    dark="rgba(237, 137, 54, 0.3) 1px, transparent 1px",
+                                    light="#C05621 1px, transparent 1px",
+                                    dark="#F6AD55 1px, transparent 1px",
                                 )
                                 + ")",
                                 "background_size": "20px 20px",
@@ -268,9 +267,9 @@ def projetos_page():
                     "Projetos",
                     style={
                         "font_size": "3.75rem",  # size="3xl"
-                        "font_weight": "extrabold",
+                        "font_weight": "800",
                         "color": rx.color_mode_cond(light="#2D3748", dark="#F7FAFC"),
-                        "line_height": "1.2",  # Adicionar controle de altura da linha
+                        "line_height": "1",  # Adicionar controle de altura da linha
                     },
                 ),
                 rx.text(

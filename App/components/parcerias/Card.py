@@ -104,8 +104,8 @@ def card(card_info: dict) -> rx.Component:
                 rx.heading(
                     card_info["name"],
                     style={
+                        "line_height": "1.2",
                         "font_size": "1.5rem",  # 2xl
-                        "font_family": "body",
                         "font_weight": "500",
                     },
                 ),
