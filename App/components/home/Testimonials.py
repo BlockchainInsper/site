@@ -165,7 +165,7 @@ def testimonials() -> rx.Component:
                             lg="2.5rem",  # grandes telas
                         ),
                         "justify_content": "center",
-                        "align_items": "center",
+                        "align_items": "start",
                         "width": "100%",
                     },
                 ),
