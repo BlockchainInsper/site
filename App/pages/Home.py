@@ -39,7 +39,7 @@ def with_background_image():
                     href="#/areas",
                 ),
                 style={
-                    "spacing": "1.5rem",
+                    "gap": "1.5rem",
                     "align_items": "flex-start",
                     "width": "100%",
                 },
@@ -48,10 +48,6 @@ def with_background_image():
                 "max_width": "42rem",  # 2xl
                 "width": "100%",
                 "justify_content": "center",
-                "padding_x": rx.breakpoints(
-                    initial="1rem",  # 4
-                    md="2rem",  # 8
-                ),
             },
         ),
         style={

@@ -8,18 +8,15 @@ def testimonial_content(text: str) -> rx.Component:
             text,
             style={
                 "text_align": "center",
-                "color": rx.color_mode_cond(
-                    light="rgb(107, 114, 128)",  # gray-600
-                    dark="rgb(156, 163, 175)",  # gray-400
-                ),
-                "font_size": "0.875rem",  # text-sm
+                "color": "#A0AEC0", 
+                "font_size": "0.875rem",
                 "line_height": "1.5rem",
             },
         ),
         style={
             "background": rx.color_mode_cond(
                 light="white",
-                dark="rgb(31, 41, 55)",  # gray-800
+                dark="#1A202C",
             ),
             "box_shadow": "0 10px 15px -3px rgba(0, 0, 0, 0.1)",
             "padding": "2rem",
@@ -52,7 +49,7 @@ def testimonial_avatar(src: str, name: str, title: str) -> rx.Component:
     """Avatar com nome e título do depoente."""
     return rx.box(
         rx.box(
-            rx.avatar(src=src, alt=name, style={"width": "3rem", "height": "3rem"}),
+            rx.avatar(src=src, alt=name, style={"width": "3rem", "height": "3rem", "border_radius": "9999px"}),
             style={"display": "flex", "justify_content": "center", "width": "100%"},
         ),
         rx.box(
@@ -65,8 +62,8 @@ def testimonial_avatar(src: str, name: str, title: str) -> rx.Component:
                 style={
                     "font_size": "0.875rem",
                     "color": rx.color_mode_cond(
-                        light="rgb(107, 114, 128)",  # gray-600
-                        dark="rgb(156, 163, 175)",  # gray-400
+                        light="#4A5568",  # gray-600
+                        dark="#A0AEC0",  # gray-400
                     ),
                 },
             ),
@@ -170,7 +167,6 @@ def testimonials() -> rx.Component:
                     },
                 ),
                 style={
-                    "gap": "3rem",
                     "width": "100%",
                 },
             ),
