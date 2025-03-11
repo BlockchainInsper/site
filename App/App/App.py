@@ -28,7 +28,6 @@ app = rx.App(
         "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "transitionProperty": "background-color",
         "transitionDuration": "200ms",
-        "lineHeight": "1.5",
         "minHeight": "100vh",
         rx.button: {
             "cursor": "pointer",
