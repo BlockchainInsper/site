@@ -41,9 +41,7 @@ def features() -> rx.Component:
                         "dessa tecnologia no Brasil, criando conhecimento não apenas "
                         "para o agora, como também para o futuro.",
                         style={
-                            "color": rx.color_mode_cond(
-                                light="rgb(107, 114, 128)", dark="rgb(156, 163, 175)"
-                            ),
+                            "color": "#718096",
                             "font_size": "1.125rem",
                             "line_height": "1.75rem",
                             "margin_bottom": "2rem",
@@ -70,10 +68,7 @@ def features() -> rx.Component:
                                 "em torno da tecnologia blockchain, criando um futuro mais eficiente "
                                 "através da tecnologia.",
                                 style={
-                                    "color": rx.color_mode_cond(
-                                        light="rgb(107, 114, 128)",
-                                        dark="rgb(156, 163, 175)",
-                                    ),
+                                    "color": "#718096",
                                     "margin_top": "0.5rem",
                                     "line_height": "1.5rem",
                                 },
@@ -110,10 +105,7 @@ def features() -> rx.Component:
                                 "Capacitar os alunos com o melhor conteúdo e conectá-los ao mercado, "
                                 "no intuito de incluir nosso país nesse cenário de inovação.",
                                 style={
-                                    "color": rx.color_mode_cond(
-                                        light="rgb(107, 114, 128)",
-                                        dark="rgb(156, 163, 175)",
-                                    ),
+                                    "color": "#718096",
                                     "margin_top": "0.5rem",
                                     "line_height": "1.5rem",
                                 },
@@ -150,10 +142,7 @@ def features() -> rx.Component:
                                 "Alto comprometimento, proatividade, inovação, "
                                 "trabalho em equipe, multidisciplinaridade, excelência e eficiência.",
                                 style={
-                                    "color": rx.color_mode_cond(
-                                        light="rgb(107, 114, 128)",
-                                        dark="rgb(156, 163, 175)",
-                                    ),
+                                    "color": "#718096",
                                     "margin_top": "0.5rem",
                                     "line_height": "1.5rem",
                                 },
@@ -202,7 +191,6 @@ def features() -> rx.Component:
             ),
             style={
                 "max_width": "90rem",
-                "padding": "3rem 1.5rem",
                 "margin": "0 auto",
                 "width": "100%",
             },

@@ -117,7 +117,7 @@ def call_to_action_with_video():
                         "blockchain. Derivada de uma iniciativa universitária, que reúne "
                         "estudantes de administração, economia, engenharias e direito a entidade está "
                         "dividida em três áreas de estudo: Business, Finance e Tecnologia.",
-                        style={"color": "rgb(107, 114, 128)", "font_weight": "bold"},
+                        style={"color": "#718096", "font_weight": "bold"},
                     ),
                     rx.stack(
                         discord_button(),
