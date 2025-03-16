@@ -87,8 +87,8 @@ def card(card_info: dict) -> rx.Component:
                 rx.image(
                     src=card_info["image"],
                     style={
-                        "height": "230px",
-                        "width": "282px",
+                        "height": "200px",  # Reduced from 230px
+                        "width": "250px",  # Reduced from 282px
                         "object_fit": "cover",
                         "border_radius": "0.5rem",  # lg
                     },
@@ -97,7 +97,7 @@ def card(card_info: dict) -> rx.Component:
                     "border_radius": "0.5rem",  # lg
                     "margin_top": "-3rem",  # -12
                     "position": "relative",
-                    "height": "230px",
+                    "height": "200px",  # Reduced from 230px
                 },
             ),
             rx.stack(
@@ -136,8 +136,8 @@ def card(card_info: dict) -> rx.Component:
             ),
             style={
                 "role": "group",
-                "padding": "1.5rem",  # 6
-                "max_width": "330px",
+                "padding": "1.25rem",  # Reduced from 1.5rem
+                "max_width": "300px",  # Reduced from 330px
                 "width": "100%",
                 "background": rx.color_mode_cond(
                     light="white", dark="#1A202C"
@@ -151,6 +151,7 @@ def card(card_info: dict) -> rx.Component:
         style={
             "padding_top": "3rem",  # py={12}
             "padding_bottom": "3rem",
+            "margin": "0 0.5rem",  # Add horizontal margin between cards
         },
     )
 
@@ -162,9 +163,6 @@ def render_cards():
                 rx.box(
                     card(card_info),
                     key=card_info["name"],
-                    style={
-                        "padding": "1rem",  # 4
-                    },
                 )
                 for card_info in CARDS
             ],
