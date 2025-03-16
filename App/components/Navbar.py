@@ -68,43 +68,48 @@ class NavItemState(rx.State):
 
 def desktop_sub_nav(label, href, subLabel):
     return rx.link(
-        rx.stack(
-            rx.box(
+        rx.hstack(
+            rx.vstack(
                 rx.text(
                     label,
-                    style={
-                        "transition": "all 0.3s ease",
-                        "font_weight": "500",
-                        "_group_hover": {"color": "#f68b23"},
-                    },
+                    as_="span",
+                    color="#E2E8F0",
+                    transition="all 0.3s ease",
+                    font_weight="500",
                 ),
-                rx.text(subLabel, style={"font_size": "0.875rem"}),
-            ),
-            rx.flex(
-                rx.icon(
-                    tag="chevron_right",
-                    style={"color": "#f68b23", "width": "1.25rem", "height": "1.25rem"},
+                rx.text(
+                    subLabel,
+                    font_size="0.875rem",
+                    color="#E2E8F0",
                 ),
-                style={
-                    "transition": "all 0.3s ease",
-                    "transform": "translateX(-10px)",
-                    "opacity": "0",
-                    "_group_hover": {"opacity": "1", "transform": "translateX(0)"},
-                    "justify_content": "flex-end",
-                    "align_items": "center",
-                    "flex": "1",
-                },
+                align_items="start",
+                spacing="0",
             ),
-            style={"display": "flex", "flex_direction": "row", "align_items": "center"},
+            rx.icon(
+                tag="chevron_right",
+                color="#f68b23",
+                width="1.25rem",
+                height="1.25rem",
+                opacity="0",
+                transition="all 0.3s ease",
+                transform="translateX(-10px)",  # Posição inicial à esquerda
+            ),
+            width="100%",
+            spacing="2",
+            align_items="center",
         ),
         href=href,
-        role="group",
-        style={
-            "display": "block",
-            "padding": "0.5rem",
-            "border_radius": "0.375rem",
-            "_hover": {
-                "background": rx.color_mode_cond(light="#f7e2dc", dark="gray.900")
+        display="block",
+        padding="0.5rem",
+        border_radius="0.375rem",
+        text_decoration="none",
+        _hover={
+            "background": rx.color_mode_cond(light="#f7e2dc", dark="#171923"),
+            "text_decoration": "none",
+            "& span": {"color": "#f68b23"},
+            "& svg": {
+                "opacity": "1",
+                "transform": "translateX(0)",  # Move para a posição original no hover
             },
         },
     )
