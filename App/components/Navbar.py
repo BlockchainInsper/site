@@ -114,20 +114,22 @@ def desktop_nav():
     nav_items = []
     for navItem in NAV_ITEMS:
         link_component = rx.link(
-            navItem["label"],
-            href=navItem.get("href", "#"),
-            style={
-                "padding": "0.5rem",
-                "font_size": "0.875rem",
-                "font_weight": "500",
-                "color": rx.color_mode_cond(
-                    light="rgb(75, 85, 99)", dark="rgb(229, 231, 235)"
-                ),
-                "_hover": {
+            rx.box(
+                navItem["label"],
+                style={
+                    "padding": "0.5rem",
+                    "font_size": "0.875rem",
+                    "font_weight": "500",
                     "text_decoration": "none",
-                    "color": rx.color_mode_cond(light="rgb(31, 41, 55)", dark="white"),
+                    "color": rx.color_mode_cond(light="#4A5568", dark="#E2E8F0"),
+                    "_hover": {
+                        "text-decoration": "none",
+                        "color": rx.color_mode_cond(light="black", dark="white"),
+                    },
                 },
-            },
+            ),
+            href=navItem.get("href", "#"),
+            style={"text_decoration": "none"},
         )
 
         if navItem.get("children"):

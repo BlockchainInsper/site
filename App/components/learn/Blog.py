@@ -71,8 +71,8 @@ def blog():
                             style={
                                 "background": "radial-gradient("
                                 + rx.color_mode_cond(
-                                    light="rgba(237, 137, 54, 0.6) 1px, transparent 1px",
-                                    dark="rgba(237, 137, 54, 0.3) 1px, transparent 1px",
+                                    light="#C05621 1px, transparent 1px",
+                                    dark="#F6AD55 1px, transparent 1px",
                                 )
                                 + ")",
                                 "background_size": "20px 20px",
@@ -229,8 +229,8 @@ def blog():
                             style={
                                 "background": "radial-gradient("
                                 + rx.color_mode_cond(
-                                    light="rgba(237, 137, 54, 0.6) 1px, transparent 1px",
-                                    dark="rgba(237, 137, 54, 0.3) 1px, transparent 1px",
+                                    light="#C05621 1px, transparent 1px",
+                                    dark="#F6AD55 1px, transparent 1px",
                                 )
                                 + ")",
                                 "background_size": "20px 20px",

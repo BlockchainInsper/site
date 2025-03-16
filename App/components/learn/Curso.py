@@ -65,7 +65,6 @@ def curso():
                     "justify_content": "center",
                     "text_align": "center",
                     "gap": rx.breakpoints(initial="2rem", md="3.5rem"),
-                    "padding_y": rx.breakpoints(initial="5rem", md="7.5rem"),
                 },
             ),
             style={

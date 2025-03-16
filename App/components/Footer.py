@@ -4,6 +4,8 @@ from components.icons.icons import discord_icon
 
 
 def footer() -> rx.Component:
+    accent_color = "#F68B23"
+
     return rx.box(
         rx.box(
             rx.flex(
@@ -35,7 +37,24 @@ def footer() -> rx.Component:
                 ),
                 rx.flex(
                     rx.link(
-                        discord_icon(20, 20),
+                        rx.box(
+                            discord_icon(20, 20),
+                            style={
+                                "width": "40px",
+                                "height": "40px",
+                                "display": "flex",
+                                "align_items": "center",
+                                "justify_content": "center",
+                                "border_radius": "50%",
+                                "min_width": "2.5rem",
+                                "color": "rgba(255, 255, 255, 0.92)",
+                                "transition": "all 0.3s ease",
+                                "_hover": {
+                                    "background": accent_color,
+                                    "transform": "translateY(-3px)",
+                                },
+                            },
+                        ),
                         href="https://discord.gg/jdK5yB48Mm",
                         is_external=True,
                         style={
@@ -53,73 +72,109 @@ def footer() -> rx.Component:
                     ),
                     # LinkedIn
                     rx.link(
-                        rx.icon(tag="linkedin", size=20, style={"color": "white"}),
+                        rx.box(
+                            rx.icon(
+                                "linkedin",
+                                size=20,
+                            ),
+                            style={
+                                "width": "40px",
+                                "height": "40px",
+                                "display": "flex",
+                                "align_items": "center",
+                                "justify_content": "center",
+                                "border_radius": "50%",
+                                "margin_left": "0.5rem",
+                                "min_width": "2.5rem",
+                                "color": "rgba(255, 255, 255, 0.92)",
+                                "transition": "all 0.3s ease",
+                                "_hover": {
+                                    "background": accent_color,
+                                    "transform": "translateY(-3px)",
+                                },
+                            },
+                        ),
                         href="https://www.linkedin.com/company/blockchain-insper",
                         is_external=True,
-                        style={
-                            "color": rx.color_mode_cond(
-                                light="#4A5568",  # gray-600
-                                dark="rgba(255, 255, 255, 0.92)",  # gray-400
-                            ),
-                            "_hover": {
-                                "background": "rgba(255, 255, 255, 0.1)",
-                                "border_radius": "0.375rem",
-                            },
-                            "margin_left": "0.5rem",
-                            "display": "flex",
-                            "align_items": "center",
-                            "justify_content": "center",
-                            "min_width": "2.5rem",
-                            "height": "2.5rem",
-                        },
                     ),
                     # Instagram
                     rx.link(
-                        rx.icon(tag="instagram", size=20, style={"color": "white"}),
+                        rx.box(
+                            rx.icon(
+                                "instagram",
+                                size=20,
+                            ),
+                            style={
+                                "width": "40px",
+                                "height": "40px",
+                                "display": "flex",
+                                "align_items": "center",
+                                "justify_content": "center",
+                                "border_radius": "50%",
+                                "margin_left": "0.5rem",
+                                "min_width": "2.5rem",
+                                "color": "rgba(255, 255, 255, 0.92)",
+                                "transition": "all 0.3s ease",
+                                "_hover": {
+                                    "background": accent_color,
+                                    "transform": "translateY(-3px)",
+                                },
+                            },
+                        ),
                         href="https://www.instagram.com/blockchainsper/",
                         is_external=True,
-                        style={
-                            "color": rx.color_mode_cond(
-                                light="#4A5568",  # gray-600
-                                dark="rgba(255, 255, 255, 0.92)",  # gray-400
-                            ),
-                            "_hover": {
-                                "background": "rgba(255, 255, 255, 0.1)",
-                                "border_radius": "0.375rem",
-                            },
-                            "margin_left": "0.5rem",
-                            "display": "flex",
-                            "align_items": "center",
-                            "justify_content": "center",
-                            "min_width": "2.5rem",
-                            "height": "2.5rem",
-                        },
                     ),
                     # GitHub
                     rx.link(
-                        rx.icon(tag="github", size=20, style={"color": "white"}),
+                        rx.box(
+                            rx.icon(
+                                "github",
+                                size=20,
+                            ),
+                            style={
+                                "width": "40px",
+                                "height": "40px",
+                                "display": "flex",
+                                "align_items": "center",
+                                "justify_content": "center",
+                                "border_radius": "50%",
+                                "margin_left": "0.5rem",
+                                "min_width": "2.5rem",
+                                "color": "rgba(255, 255, 255, 0.92)",
+                                "transition": "all 0.3s ease",
+                                "_hover": {
+                                    "background": accent_color,
+                                    "transform": "translateY(-3px)",
+                                },
+                            },
+                        ),
                         href="https://github.com/BlockchainInsper",
                         is_external=True,
-                        style={
-                            "color": rx.color_mode_cond(
-                                light="#4A5568",  # gray-600
-                                dark="rgba(255, 255, 255, 0.92)",  # gray-400
-                            ),
-                            "_hover": {
-                                "background": "rgba(255, 255, 255, 0.1)",
-                                "border_radius": "0.375rem",
-                            },
-                            "margin_left": "0.5rem",
-                            "display": "flex",
-                            "align_items": "center",
-                            "justify_content": "center",
-                            "min_width": "2.5rem",
-                            "height": "2.5rem",
-                        },
                     ),
                     # Email
                     rx.link(
-                        rx.icon(tag="mail", size=20, style={"color": "white"}),
+                        rx.box(
+                            rx.icon(
+                                "mail",
+                                size=20,
+                            ),
+                            style={
+                                "width": "40px",
+                                "height": "40px",
+                                "display": "flex",
+                                "align_items": "center",
+                                "justify_content": "center",
+                                "border_radius": "50%",
+                                "margin_left": "0.5rem",
+                                "min_width": "2.5rem",
+                                "color": "rgba(255, 255, 255, 0.92)",
+                                "transition": "all 0.3s ease",
+                                "_hover": {
+                                    "background": accent_color,
+                                    "transform": "translateY(-3px)",
+                                },
+                            },
+                        ),
                         href="mailto:blockchainsper@gmail.com",
                         is_external=True,
                         style={

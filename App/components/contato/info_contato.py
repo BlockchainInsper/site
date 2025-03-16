@@ -105,6 +105,7 @@ def contato_info():
                                             "align_items": "center",
                                             "justify_content": "center",
                                             "border_radius": "50%",
+                                            "color": "rgba(255, 255, 255, 0.92)",
                                             "background": rx.color_mode_cond(
                                                 light="#F7FAFC", dark="#2D3748"
                                             ),
@@ -112,7 +113,6 @@ def contato_info():
                                             "_hover": {
                                                 "background": accent_color,
                                                 "transform": "translateY(-3px)",
-                                                "color": "white",
                                             },
                                         },
                                     ),
@@ -132,6 +132,7 @@ def contato_info():
                                             "align_items": "center",
                                             "justify_content": "center",
                                             "border_radius": "50%",
+                                            "color": "rgba(255, 255, 255, 0.92)",
                                             "background": rx.color_mode_cond(
                                                 light="#F7FAFC", dark="#2D3748"
                                             ),
@@ -139,7 +140,6 @@ def contato_info():
                                             "_hover": {
                                                 "background": accent_color,
                                                 "transform": "translateY(-3px)",
-                                                "color": "white",
                                             },
                                         },
                                     ),
@@ -159,6 +159,7 @@ def contato_info():
                                             "align_items": "center",
                                             "justify_content": "center",
                                             "border_radius": "50%",
+                                            "color": "rgba(255, 255, 255, 0.92)",
                                             "background": rx.color_mode_cond(
                                                 light="#F7FAFC", dark="#2D3748"
                                             ),
@@ -166,7 +167,6 @@ def contato_info():
                                             "_hover": {
                                                 "background": accent_color,
                                                 "transform": "translateY(-3px)",
-                                                "color": "white",
                                             },
                                         },
                                     ),
@@ -186,6 +186,7 @@ def contato_info():
                                             "align_items": "center",
                                             "justify_content": "center",
                                             "border_radius": "50%",
+                                            "color": "rgba(255, 255, 255, 0.92)",
                                             "background": rx.color_mode_cond(
                                                 light="#F7FAFC", dark="#2D3748"
                                             ),
@@ -193,7 +194,6 @@ def contato_info():
                                             "_hover": {
                                                 "background": accent_color,
                                                 "transform": "translateY(-3px)",
-                                                "color": "white",
                                             },
                                         },
                                     ),
