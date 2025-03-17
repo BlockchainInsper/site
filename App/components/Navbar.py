@@ -190,93 +190,130 @@ def desktop_nav():
 
 
 def mobile_nav_item(label, children, href):
-    flex_children = [
-        rx.text(
-            label,
-            style={
-                "font_weight": "600",
-                "color": rx.color_mode_cond(
-                    light="rgb(75, 85, 99)", dark="rgb(229, 231, 235)"
-                ),
-            },
-        )
-    ]
+    has_children = children is not None and len(children) > 0
 
-    if children:
-        flex_children.append(
-            rx.icon(
-                tag="chevron_down",
-                style={
-                    "transition": "all 0.25s ease-in-out",
-                    "transform": rx.cond(
-                        NavItemState.is_item_open(label), "rotate(180deg)", "none"
+    if has_children:
+        return rx.accordion.root(
+            rx.accordion.item(
+                header=rx.link(
+                    rx.text(
+                        label,
+                        style={
+                            "font_weight": "600",
+                            "color": "rgb(229, 231, 235)",
+                            "text_align": "left",  # Alinha o texto à esquerda
+                        },
                     ),
+                    href=href,
+                    style={
+                        "text_decoration": "none",
+                        "flex": "1",
+                        "text_align": "left",  # Alinha o link à esquerda
+                    },
+                ),
+                content=rx.stack(
+                    *[
+                        rx.link(
+                            child["label"],
+                            href=child["href"],
+                            style={
+                                "padding": "0.75rem 0",
+                                "color": "rgb(138, 180, 248)",
+                                "font_weight": "500",
+                                "text_decoration": "none",
+                                "text_align": "left",  # Alinha os links filhos à esquerda
+                            },
+                        )
+                        for child in children
+                    ],
+                    style={
+                        "padding_left": "1.5rem",
+                        "align_items": "flex-start",  # Alinha os itens do stack à esquerda
+                    },
+                ),
+                value=label,
+                style={
+                    "border_bottom": "1px solid rgb(50, 50, 70)"
+                    if label != "Contato"
+                    else "none",
+                    "width": "100%",
+                    "text_align": "left",  # Alinha o conteúdo do item à esquerda
+                },
+            ),
+            collapsible=True,
+            width="100%",
+            variant="ghost",
+            style={
+                "background": "#1A202C",
+                "border": "none",
+                "box_shadow": "none",
+                "& .AccordionTrigger": {
+                    "padding": "0.5rem 0",
+                    "background": "none",
+                    "text_align": "left",  # Alinha o trigger à esquerda
+                    "&:hover": {
+                        "background": "none",
+                    },
+                    "font_size": "1rem",
+                },
+                "& .AccordionContent": {
+                    "background": "#1A202C",
+                    "padding": "0",
+                    "text_align": "left",  # Alinha o conteúdo à esquerda
+                },
+                "& .AccordionChevron": {
+                    "color": "rgb(229, 231, 235)",
                     "width": "1.5rem",
                     "height": "1.5rem",
                 },
-            )
-        )
-
-    submenu = None
-    if children:
-        submenu = rx.cond(
-            NavItemState.is_item_open(label),
-            rx.stack(
-                *[
-                    rx.link(
-                        child["label"],
-                        key=child["label"],
-                        style={"padding": "0.5rem 0"},
-                        href=child["href"],
-                    )
-                    for child in children
-                ],
-                style={
-                    "margin_top": "0.5rem",
-                    "padding_left": "1rem",
-                    "border_left": "1px solid",
-                    "border_color": rx.color_mode_cond(
-                        light="rgb(229, 231, 235)", dark="rgb(75, 85, 99)"
-                    ),
-                    "align_items": "flex-start",
-                },
-            ),
-            rx.box(),
+            },
         )
     else:
-        submenu = rx.box()
-
-    return rx.stack(
-        rx.flex(
-            *flex_children,
-            style={
-                "padding": "0.5rem 0",
-                "justify_content": "space-between",
-                "align_items": "center",
-                "_hover": {"text_decoration": "none"},
-            },
-            as_="a",
-            href="#" if children else href,
-            on_click=NavItemState.toggle_item(label) if children else None,
-        ),
-        submenu,
-        style={"gap": "0.5rem"},
-    )
+        return rx.link(
+            rx.flex(
+                rx.text(
+                    label,
+                    style={
+                        "font_weight": "600",
+                        "color": "rgb(229, 231, 235)",
+                        "text_align": "left",  # Alinha o texto à esquerda
+                    },
+                ),
+                style={
+                    "padding": "0.5rem 0",
+                    "justify_content": "space_between",
+                    "align_items": "center",
+                    "width": "100%",
+                    "text_align": "left",  # Alinha o flex à esquerda
+                },
+            ),
+            href=href,
+            style={"text_decoration": "none", "width": "100%"},
+        )
 
 
 def mobile_nav():
-    return rx.stack(
-        *[
-            mobile_nav_item(
-                navItem["label"], navItem.get("children"), navItem.get("href")
-            )
-            for navItem in NAV_ITEMS
-        ],
+    return rx.box(
+        rx.vstack(
+            *[
+                mobile_nav_item(
+                    navItem["label"], navItem.get("children"), navItem.get("href")
+                )
+                for navItem in NAV_ITEMS
+            ],
+            align_items="stretch",
+            width="100%",
+            spacing="0",
+        ),
         style={
-            "background": rx.color_mode_cond(light="white", dark="#1A202C"),
-            "padding": "1rem",
+            "background": "#1A202C",
+            "color": "white",
+            "width": "100%",
+            "height": "fit-content",  # Alterado de 100vh para fit-content
+            "min-height": "fit-content",  # Adicionado min-height
+            "overflow_y": "auto",
+            "padding": "0.5rem 1rem",
             "@media (min-width: 768px)": {"display": "none"},
-            "display": "block",
         },
     )
 
@@ -291,13 +328,18 @@ def navbar():
                         rx.icon(
                             tag="x",
                             style={
-                                "width": "0.75rem",
-                                "height": "0.75rem",
+                                "width": "1rem",
+                                "height": "1rem",
                                 "color": "rgba(255, 255, 255, 0.92)",
                             },
                         ),
                         rx.icon(
-                            tag="menu", style={"width": "1.25rem", "height": "1.25rem"}
+                            tag="menu",
+                            style={
+                                "width": "1.25rem",
+                                "height": "1.25rem",
+                                "color": "rgba(255, 255, 255, 0.92)",
+                            },
                         ),
                     ),
                     variant="ghost",
@@ -369,6 +411,8 @@ def navbar():
                     light="rgb(229, 231, 235)", dark="rgb(17, 24, 39)"
                 ),
                 "width": "100%",
+                "position": "relative",
+                "z-index": "10",
             },
         ),
         rx.cond(
@@ -379,5 +423,6 @@ def navbar():
         style={
             "width": "100%",
             "box_shadow": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+            "position": "relative",
         },
     )
