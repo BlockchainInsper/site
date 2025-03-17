@@ -115,10 +115,10 @@ def area_box(icon, title, description):
                 title,
                 as_="h2",
                 style={
-                    "font_size": "2.25rem",  # Tamanho ajustado para evitar overflow
+                    "font_size": "2rem",
                     "font_weight": "bold",
-                    "margin_top": "0.75rem",  # Reduzido para economizar espaço vertical
-                    "margin_bottom": "0.5rem",  # Reduzido para economizar espaço
+                    "margin_top": "0.75rem",
+                    "margin_bottom": "0.5rem",
                     "color": rx.color_mode_cond(
                         light="#1A202C", dark="rgba(255, 255, 255, 0.92)"
                     ),
@@ -132,8 +132,9 @@ def area_box(icon, title, description):
                     "color": "#718096",
                     "text_align": "center",
                     "max_width": "500px",
-                    "line_height": "1.4",  # Reduzido para economizar espaço vertical
-                    "font_size": "0.95rem",  # Tamanho levemente reduzido
+                    "line_height": "1.4",
+                    "font_size": "0.95rem",
+                    "padding_x": "1rem",  # Adicionar padding horizontal para evitar texto cortado
                 },
             ),
             # Configuração do vstack
@@ -141,15 +142,15 @@ def area_box(icon, title, description):
                 "align_items": "center",
                 "width": "100%",
                 "justify_content": "center",
-                "padding": "1rem",  # Reduzido para economizar espaço
-                "gap": "0.5rem",  # Espaço reduzido entre elementos
+                "padding": "1.5rem",  # Aumentado para dar mais espaço ao conteúdo
+                "gap": "0.75rem",  # Aumentado para melhor legibilidade
             },
         ),
         # Configuração do flex container
         style={
             "width": "100%",
-            # Ajustado para garantir que caiba com a navbar e footer
-            "height": "calc((100vh - 220px) / 3)",  # Considera espaço para navbar e footer
+            "min_height": "33.3%",  # Em vez de altura fixa, use porcentagem
+            "flex": "1",  # Permite que o componente cresça igualmente
             "justify_content": "center",
             "align_items": "center",
             "border_bottom": rx.color_mode_cond(
@@ -189,21 +190,24 @@ def nucleos():
             ),
             style={
                 "width": "100%",
-                "height": "calc(100vh - 220px)",  # Altura exata considerando navbar e footer
+                "min_height": "100%",  # Altura mínima em vez de altura fixa
                 "align_items": "stretch",
+                "justify_content": "stretch",  # Faz com que os elementos preencham o espaço igualmente
                 "spacing": "0",
                 "padding": "0",
                 "margin": "0",
-                "overflow_y": "hidden",  # Impede scroll vertical
+                "flex": "1",  # Permite que cresça para preencher o espaço disponível
+                "overflow_y": "auto",  # Permite rolagem quando necessário
             },
         ),
         style={
             "width": "100%",
             "max_width": "100%",
-            "overflow": "hidden",  # Impede qualquer scroll
+            "min_height": "calc(100vh - 220px)",  # Altura mínima em vez de altura fixa
             "background": rx.color_mode_cond(light="white", dark="#1A202C"),
             "padding": "0",
             "margin": "0",
-            "height": "calc(100vh - 220px)",  # Altura exata considerando navbar e footer
+            "flex": "1",  # Permite que cresça para preencher o espaço disponível
+            "overflow_y": "auto",  # Permite rolagem quando necessário
         },
     )
