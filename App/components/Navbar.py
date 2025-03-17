@@ -214,15 +214,19 @@ def mobile_nav_item(label, children, href):
                 content=rx.stack(
                     *[
                         rx.link(
-                            child["label"],
-                            href=child["href"],
-                            style={
-                                "padding": "0.75rem 0",
-                                "color": "rgb(138, 180, 248)",
-                                "font_weight": "500",
-                                "text_decoration": "none",
-                                "text_align": "left",  # Alinha os links filhos à esquerda
-                            },
+                            rx.box(
+                                child["label"],
+                                href=child["href"],
+                                style={
+                                    "padding": "0.75rem 0",
+                                    "color": "rgb(229, 231, 235)",
+                                    "font_weight": "500",
+                                    "text_decoration": "none",
+                                    "text_align": "left",  # Alinha os links filhos à esquerda
+                                },
+                            ),
+                            underline="hover",
+                            color_scheme="gray",
                         )
                         for child in children
                     ],
