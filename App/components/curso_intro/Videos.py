@@ -14,7 +14,7 @@ def videos(videos_list: list, titulo: str):
             ),
             rx.vstack(
                 *[
-                    rx.aspect_ratio(
+                    rx.box(
                         rx.el.iframe(
                             title=f"Video {i + 1}",
                             alt="Bitcoin Video",
@@ -26,7 +26,6 @@ def videos(videos_list: list, titulo: str):
                                 "height": "100%",
                             },
                         ),
-                        ratio=16 / 9,
                         style={
                             "position": "relative",
                             "height": "300px",
@@ -41,7 +40,7 @@ def videos(videos_list: list, titulo: str):
                     )
                     for i, video in enumerate(videos_list)
                 ],
-                spacing="3",
+                spacing="6",
                 style={
                     "width": "100%",
                     "align_items": "stretch",

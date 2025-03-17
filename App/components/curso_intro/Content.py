@@ -53,20 +53,23 @@ def content():
                                 rx.table.cell("Introdução"),
                                 rx.table.cell(
                                     rx.link(
-                                        "Acesse ",
-                                        external_link_icon(),
-                                        href="/learn/curso-intro/introducao",
-                                        style={
-                                            "display": "flex",
-                                            "align_items": "center",
-                                            "color": rx.color_mode_cond(
-                                                light="#3182CE", dark="#63B3ED"
-                                            ),
-                                            "text_decoration": "none",
-                                            "_hover": {
-                                                "text_decoration": "underline",
+                                        rx.box(
+                                            "Acesse ",
+                                            external_link_icon(),
+                                            style={
+                                                "display": "flex",  # Alinhamento horizontal
+                                                "align_items": "center",  # Centraliza itens verticalmente
+                                                "color": rx.color_mode_cond(
+                                                    light="#1A202C",
+                                                    dark="rgba(255, 255, 255, 0.92)",
+                                                ),
+                                                "text-decoration": "none",
                                             },
-                                        },
+                                        ),
+                                        href="/learn/curso-intro/introducao",
+                                        color_scheme="gray",
+                                        underline="hover",
+                                        high_contrast=True,
                                     )
                                 ),
                             ),
@@ -74,104 +77,119 @@ def content():
                                 rx.table.cell("Bitcoin"),
                                 rx.table.cell(
                                     rx.link(
-                                        "Acesse ",
-                                        external_link_icon(),
-                                        href="/learn/curso-intro/bitcoin",
-                                        style={
-                                            "display": "flex",
-                                            "align_items": "center",
-                                            "color": rx.color_mode_cond(
-                                                light="#3182CE", dark="#63B3ED"
-                                            ),
-                                            "text_decoration": "none",
-                                            "_hover": {
-                                                "text_decoration": "underline",
+                                        rx.box(
+                                            "Acesse ",
+                                            external_link_icon(),
+                                            style={
+                                                "display": "flex",  # Alinhamento horizontal
+                                                "align_items": "center",  # Centraliza itens verticalmente
+                                                "color": rx.color_mode_cond(
+                                                    light="#1A202C",
+                                                    dark="rgba(255, 255, 255, 0.92)",
+                                                ),
+                                                "text-decoration": "none",
                                             },
-                                        },
-                                    )
+                                        ),
+                                        href="/learn/curso-intro/bitcoin",
+                                        color_scheme="gray",
+                                        underline="hover",
+                                        high_contrast=True,
+                                    ),
                                 ),
                             ),
                             rx.table.row(
                                 rx.table.cell("Blockchain"),
                                 rx.table.cell(
                                     rx.link(
-                                        "Acesse ",
-                                        external_link_icon(),
-                                        href="/learn/curso-intro/blockchain",
-                                        style={
-                                            "display": "flex",
-                                            "align_items": "center",
-                                            "color": rx.color_mode_cond(
-                                                light="#3182CE", dark="#63B3ED"
-                                            ),
-                                            "text_decoration": "none",
-                                            "_hover": {
-                                                "text_decoration": "underline",
+                                        rx.box(
+                                            "Acesse ",
+                                            external_link_icon(),
+                                            style={
+                                                "display": "flex",  # Alinhamento horizontal
+                                                "align_items": "center",  # Centraliza itens verticalmente
+                                                "color": rx.color_mode_cond(
+                                                    light="#1A202C",
+                                                    dark="rgba(255, 255, 255, 0.92)",
+                                                ),
+                                                "text-decoration": "none",
                                             },
-                                        },
-                                    )
+                                        ),
+                                        href="/learn/curso-intro/blockchain",
+                                        color_scheme="gray",
+                                        underline="hover",
+                                        high_contrast=True,
+                                    ),
                                 ),
                             ),
                             rx.table.row(
                                 rx.table.cell("CryptoAssets"),
                                 rx.table.cell(
                                     rx.link(
-                                        "Acesse ",
-                                        external_link_icon(),
-                                        href="/learn/curso-intro/crypto-assets",
-                                        style={
-                                            "display": "flex",
-                                            "align_items": "center",
-                                            "color": rx.color_mode_cond(
-                                                light="#3182CE", dark="#63B3ED"
-                                            ),
-                                            "text_decoration": "none",
-                                            "_hover": {
-                                                "text_decoration": "underline",
+                                        rx.box(
+                                            "Acesse ",
+                                            external_link_icon(),
+                                            style={
+                                                "display": "flex",  # Alinhamento horizontal
+                                                "align_items": "center",  # Centraliza itens verticalmente
+                                                "color": rx.color_mode_cond(
+                                                    light="#1A202C",
+                                                    dark="rgba(255, 255, 255, 0.92)",
+                                                ),
+                                                "text-decoration": "none",
                                             },
-                                        },
-                                    )
+                                        ),
+                                        href="/learn/curso-intro/crypto-assets",
+                                        color_scheme="gray",
+                                        underline="hover",
+                                        high_contrast=True,
+                                    ),
                                 ),
                             ),
                             rx.table.row(
                                 rx.table.cell("Chains"),
                                 rx.table.cell(
                                     rx.link(
-                                        "Acesse ",
-                                        external_link_icon(),
-                                        href="/learn/curso-intro/chains",
-                                        style={
-                                            "display": "flex",
-                                            "align_items": "center",
-                                            "color": rx.color_mode_cond(
-                                                light="#3182CE", dark="#63B3ED"
-                                            ),
-                                            "text_decoration": "none",
-                                            "_hover": {
-                                                "text_decoration": "underline",
+                                        rx.box(
+                                            "Acesse ",
+                                            external_link_icon(),
+                                            style={
+                                                "display": "flex",  # Alinhamento horizontal
+                                                "align_items": "center",  # Centraliza itens verticalmente
+                                                "color": rx.color_mode_cond(
+                                                    light="#1A202C",
+                                                    dark="rgba(255, 255, 255, 0.92)",
+                                                ),
+                                                "text-decoration": "none",
                                             },
-                                        },
-                                    )
+                                        ),
+                                        href="/learn/curso-intro/chains",
+                                        color_scheme="gray",
+                                        underline="hover",
+                                        high_contrast=True,
+                                    ),
                                 ),
                             ),
                             rx.table.row(
                                 rx.table.cell("Tecnologia"),
                                 rx.table.cell(
                                     rx.link(
-                                        "Acesse ",
-                                        external_link_icon(),
-                                        href="/learn/curso-intro/tecnologia",
-                                        style={
-                                            "display": "flex",
-                                            "align_items": "center",
-                                            "color": rx.color_mode_cond(
-                                                light="#3182CE", dark="#63B3ED"
-                                            ),
-                                            "text_decoration": "none",
-                                            "_hover": {
-                                                "text_decoration": "underline",
+                                        rx.box(
+                                            "Acesse ",
+                                            external_link_icon(),
+                                            style={
+                                                "display": "flex",  # Alinhamento horizontal
+                                                "align_items": "center",  # Centraliza itens verticalmente
+                                                "color": rx.color_mode_cond(
+                                                    light="#1A202C",
+                                                    dark="rgba(255, 255, 255, 0.92)",
+                                                ),
+                                                "text-decoration": "none",
                                             },
-                                        },
+                                        ),
+                                        href="/learn/curso-intro/tecnologia",
+                                        color_scheme="gray",
+                                        underline="hover",
+                                        high_contrast=True,
                                     ),
                                 ),
                             ),

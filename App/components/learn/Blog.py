@@ -102,16 +102,18 @@ def blog():
                     blog_tags(["Agropecuária", "Report"]),
                     rx.heading(
                         rx.link(
-                            "Report do setor Agropecuário",
+                            rx.box(
+                                "Report do setor Agropecuário",
+                                style={
+                                    "color": rx.color_mode_cond(
+                                        light="#1A202C",
+                                        dark="rgba(255, 255, 255, 0.92)",
+                                    ),
+                                },
+                            ),
                             href="https://drive.google.com/file/d/1zlmy-Juu6i6HVZw7WCYQs_rC4CEDZSFy/view",
                             is_external=True,
-                            style={
-                                "text_decoration": "none",
-                                "_hover": {"text_decoration": "none"},
-                                "color": rx.color_mode_cond(
-                                    light="#2D3748", dark="#F7FAFC"
-                                ),
-                            },
+                            underline="none",
                         ),
                         style={
                             "margin_top": "0.25rem",
@@ -158,16 +160,18 @@ def blog():
                     blog_tags(["Saúde", "Report"]),
                     rx.heading(
                         rx.link(
-                            "Report do setor da Saúde",
+                            rx.box(
+                                "Report do setor da Saúde",
+                                style={
+                                    "color": rx.color_mode_cond(
+                                        light="#1A202C",
+                                        dark="rgba(255, 255, 255, 0.92)",
+                                    ),
+                                },
+                            ),
                             href="https://drive.google.com/file/d/1KzcVDm7Ipq4yGfkN1DBzlBwWOwS-DfYz/view",
                             is_external=True,
-                            style={
-                                "text_decoration": "none",
-                                "_hover": {"text_decoration": "none"},
-                                "color": rx.color_mode_cond(
-                                    light="#2D3748", dark="#F7FAFC"
-                                ),
-                            },
+                            underline="none",
                         ),
                         style={
                             "margin_top": "0.25rem",

@@ -289,7 +289,12 @@ def navbar():
                     rx.cond(
                         MobileNavState.is_open,
                         rx.icon(
-                            tag="x", style={"width": "0.75rem", "height": "0.75rem"}
+                            tag="x",
+                            style={
+                                "width": "0.75rem",
+                                "height": "0.75rem",
+                                "color": "rgba(255, 255, 255, 0.92)",
+                            },
                         ),
                         rx.icon(
                             tag="menu", style={"width": "1.25rem", "height": "1.25rem"}

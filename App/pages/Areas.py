@@ -30,7 +30,9 @@ def business_icon():
         style={
             "width": "50px",
             "height": "50px",
-            "color": rx.color_mode_cond(light="#0B69FF", dark="#63B3ED"),
+            "color": rx.color_mode_cond(
+                light="#0B69FF", dark="rgba(255, 255, 255, 0.92)"
+            ),
         },
     )
 
@@ -70,7 +72,9 @@ def finance_icon():
         style={
             "width": "50px",
             "height": "50px",
-            "color": rx.color_mode_cond(light="#0B69FF", dark="#63B3ED"),
+            "color": rx.color_mode_cond(
+                light="#0B69FF", dark="rgba(255, 255, 255, 0.92)"
+            ),
         },
     )
 
@@ -115,7 +119,9 @@ def area_box(icon, title, description):
                     "font_weight": "bold",
                     "margin_top": "0.75rem",  # Reduzido para economizar espaço vertical
                     "margin_bottom": "0.5rem",  # Reduzido para economizar espaço
-                    "color": rx.color_mode_cond(light="#1A202C", dark="rgba(255, 255, 255, 0.92)"),
+                    "color": rx.color_mode_cond(
+                        light="#1A202C", dark="rgba(255, 255, 255, 0.92)"
+                    ),
                     "text_align": "center",
                 },
             ),

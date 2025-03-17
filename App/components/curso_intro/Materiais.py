@@ -4,6 +4,7 @@ import reflex as rx
 def external_link_icon():
     return rx.icon(
         "external_link",
+        size=16,
         style={
             "margin_left": "2px",
             "margin_right": "2px",
@@ -36,21 +37,24 @@ def materiais(materiais: list, titulo: str):
                                 rx.table.cell(material.get("nome", "")),
                                 rx.table.cell(
                                     rx.link(
-                                        "Acesse ",
-                                        external_link_icon(),
+                                        rx.box(
+                                            "Acesse ",
+                                            external_link_icon(),
+                                            style={
+                                                "display": "flex",  # Alinhamento horizontal
+                                                "align_items": "center",  # Centraliza itens verticalmente
+                                                "color": rx.color_mode_cond(
+                                                    light="#1A202C",
+                                                    dark="rgba(255, 255, 255, 0.92)",
+                                                ),
+                                                "text-decoration": "none",
+                                            },
+                                        ),
                                         href=material.get("link", "#"),
                                         is_external=True,
-                                        style={
-                                            "display": "flex",  # Alinhamento horizontal
-                                            "align_items": "center",  # Centraliza itens verticalmente
-                                            "color": rx.color_mode_cond(
-                                                light="#3182CE", dark="#63B3ED"
-                                            ),
-                                            "text_decoration": "none",
-                                            "_hover": {
-                                                "text_decoration": "underline",
-                                            },
-                                        },
+                                        color_scheme="gray",
+                                        underline="hover",
+                                        high_contrast=True,
                                     )
                                 ),
                                 key=f"material-{i}",
