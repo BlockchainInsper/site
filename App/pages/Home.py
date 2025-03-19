@@ -74,4 +74,5 @@ def home():
         features(),
         testimonials(),
         with_background_image(),
+        style={"overflow_x": "hidden"},  # Tirar barra de rolagem horizontal
     )
