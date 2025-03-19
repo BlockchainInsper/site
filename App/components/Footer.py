@@ -47,7 +47,10 @@ def footer() -> rx.Component:
                                 "justify_content": "center",
                                 "border_radius": "50%",
                                 "min_width": "2.5rem",
-                                "color": "rgba(255, 255, 255, 0.92)",
+                                "color": rx.color_mode_cond(
+                                    "#4A5568",
+                                    "rgba(255, 255, 255, 0.92)",
+                                ),
                                 "transition": "all 0.3s ease",
                                 "_hover": {
                                     "background": accent_color,
@@ -86,7 +89,9 @@ def footer() -> rx.Component:
                                 "border_radius": "50%",
                                 "margin_left": "0.5rem",
                                 "min_width": "2.5rem",
-                                "color": "rgba(255, 255, 255, 0.92)",
+                                "color": rx.color_mode_cond(
+                                    "#4A5568", "rgba(255, 255, 255, 0.92)"
+                                ),
                                 "transition": "all 0.3s ease",
                                 "_hover": {
                                     "background": accent_color,
@@ -113,7 +118,9 @@ def footer() -> rx.Component:
                                 "border_radius": "50%",
                                 "margin_left": "0.5rem",
                                 "min_width": "2.5rem",
-                                "color": "rgba(255, 255, 255, 0.92)",
+                                "color": rx.color_mode_cond(
+                                    "#4A5568", "rgba(255, 255, 255, 0.92)"
+                                ),
                                 "transition": "all 0.3s ease",
                                 "_hover": {
                                     "background": accent_color,
@@ -140,7 +147,9 @@ def footer() -> rx.Component:
                                 "border_radius": "50%",
                                 "margin_left": "0.5rem",
                                 "min_width": "2.5rem",
-                                "color": "rgba(255, 255, 255, 0.92)",
+                                "color": rx.color_mode_cond(
+                                    "#4A5568", "rgba(255, 255, 255, 0.92)"
+                                ),
                                 "transition": "all 0.3s ease",
                                 "_hover": {
                                     "background": accent_color,
@@ -167,7 +176,9 @@ def footer() -> rx.Component:
                                 "border_radius": "50%",
                                 "margin_left": "0.5rem",
                                 "min_width": "2.5rem",
-                                "color": "rgba(255, 255, 255, 0.92)",
+                                "color": rx.color_mode_cond(
+                                    "#4A5568", "rgba(255, 255, 255, 0.92)"
+                                ),
                                 "transition": "all 0.3s ease",
                                 "_hover": {
                                     "background": accent_color,

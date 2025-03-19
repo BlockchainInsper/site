@@ -97,7 +97,7 @@ def contato_info():
                             rx.flex(
                                 rx.link(
                                     rx.box(
-                                        discord_icon(20, "20px"),
+                                        discord_icon(20, 20),
                                         style={
                                             "width": "40px",
                                             "height": "40px",
@@ -105,7 +105,10 @@ def contato_info():
                                             "align_items": "center",
                                             "justify_content": "center",
                                             "border_radius": "50%",
-                                            "color": "rgba(255, 255, 255, 0.92)",
+                                            "color": rx.color_mode_cond(
+                                                "#4A5568",
+                                                "rgba(255, 255, 255, 0.92)",
+                                            ),
                                             "background": rx.color_mode_cond(
                                                 light="#F7FAFC", dark="#2D3748"
                                             ),
@@ -132,7 +135,10 @@ def contato_info():
                                             "align_items": "center",
                                             "justify_content": "center",
                                             "border_radius": "50%",
-                                            "color": "rgba(255, 255, 255, 0.92)",
+                                            "color": rx.color_mode_cond(
+                                                "#4A5568",
+                                                "rgba(255, 255, 255, 0.92)",
+                                            ),
                                             "background": rx.color_mode_cond(
                                                 light="#F7FAFC", dark="#2D3748"
                                             ),
@@ -159,7 +165,10 @@ def contato_info():
                                             "align_items": "center",
                                             "justify_content": "center",
                                             "border_radius": "50%",
-                                            "color": "rgba(255, 255, 255, 0.92)",
+                                            "color": rx.color_mode_cond(
+                                                "#4A5568",
+                                                "rgba(255, 255, 255, 0.92)",
+                                            ),
                                             "background": rx.color_mode_cond(
                                                 light="#F7FAFC", dark="#2D3748"
                                             ),
@@ -186,7 +195,10 @@ def contato_info():
                                             "align_items": "center",
                                             "justify_content": "center",
                                             "border_radius": "50%",
-                                            "color": "rgba(255, 255, 255, 0.92)",
+                                            "color": rx.color_mode_cond(
+                                                "#4A5568",
+                                                "rgba(255, 255, 255, 0.92)",
+                                            ),
                                             "background": rx.color_mode_cond(
                                                 light="#F7FAFC", dark="#2D3748"
                                             ),
