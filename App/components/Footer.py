@@ -197,7 +197,6 @@ def footer() -> rx.Component:
                                 "background": "rgba(255, 255, 255, 0.1)",
                                 "border_radius": "0.375rem",
                             },
-                            "margin_left": "0.5rem",
                             "display": "flex",
                             "align_items": "center",
                             "justify_content": "center",
