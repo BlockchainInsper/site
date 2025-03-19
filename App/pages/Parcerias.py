@@ -4,7 +4,7 @@ from components.parcerias.partnerships_intro import intro_partnerships
 from App.Template import template
 
 
-@rx.page(route="/partnerships")
+@rx.page(route="/partnerships", title="Blockchain Insper")
 @template
 def parceiros():
     return rx.box(

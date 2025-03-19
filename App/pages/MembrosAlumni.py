@@ -93,7 +93,7 @@ TECH = [
 ]
 
 
-@rx.page(route="/members/alumni")
+@rx.page(route="/members/alumni", title="Blockchain Insper")
 @template
 def membros_alumni():
     # Mock do loading state - você pode substituir por um state real do Reflex

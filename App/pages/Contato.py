@@ -4,7 +4,7 @@ from components.contato.location import location_info
 from App.Template import template
 
 
-@rx.page(route="/contact")
+@rx.page(route="/contact", title="Blockchain Insper")
 @template
 def contato():
     return rx.box(

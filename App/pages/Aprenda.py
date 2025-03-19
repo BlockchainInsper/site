@@ -5,7 +5,7 @@ from components.learn.Pilares import pilares
 from App.Template import template
 
 
-@rx.page(route="/learn")
+@rx.page(route="/learn", title="Blockchain Insper")
 @template
 def aprenda():
     return rx.box(

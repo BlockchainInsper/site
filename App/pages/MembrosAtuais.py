@@ -86,7 +86,7 @@ TECH = [
 ]
 
 
-@rx.page(route="/members/actual")
+@rx.page(route="/members/actual", title="Blockchain Insper")
 @template
 def membros_atuais():
     return rx.box(
