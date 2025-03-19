@@ -58,7 +58,7 @@ dependencies = [
 requires-dist = [
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "plotly", specifier = ">=6.0.0" },
-    { name = "reflex", specifier = ">=0.7.1" },
+    { name = "reflex", specifier = ">=0.7.3" },
     { name = "requests", specifier = ">=2.32.3" },
     { name = "yfinance", specifier = ">=0.2.54" },
 ]
@@ -1016,7 +1016,7 @@ wheels = [
 
 [[package]]
 name = "reflex"
-version = "0.7.1"
+version = "0.7.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "alembic" },
@@ -1049,9 +1049,9 @@ dependencies = [
     { name = "wheel" },
     { name = "wrapt" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/2a/8e/1e78b4652223838f76c73f3e9c34c4cd5e8f8d7b331a491f80fc1d20a29a/reflex-0.7.1.tar.gz", hash = "sha256:adf2579ce4c907d8ef747ffdfeddb0da0b924aa4387bb99cf43f71f4d3501927", size = 571034 }
+sdist = { url = "https://files.pythonhosted.org/packages/5d/b8/1710cda0e72f3b0ce2a15167de3275216bc7d3fe96cb545c572927787f6e/reflex-0.7.3.tar.gz", hash = "sha256:98e57b950ca4b6855e1c0a3325215eb1b9da93427e7add6c03293d03dd91529f", size = 550826 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b4/51/fd342c1020f8ff0828f52d4c7d37d9897a621634b4fce711538d3c192034/reflex-0.7.1-py3-none-any.whl", hash = "sha256:0756a36a058f6c5572ea169765e1e0b0dcbc5481d6b1fa6bcdb0e89a8e8d60db", size = 847161 },
+    { url = "https://files.pythonhosted.org/packages/e2/de/7a611cb971699ae2ef415e43f1da0b01cc7899aec8cb3139701614ae66a0/reflex-0.7.3-py3-none-any.whl", hash = "sha256:28f92e9699db2450081a5e3055446e3d3373129b18407820f677b9f611e0d818", size = 838852 },
 ]
 
 [[package]]
