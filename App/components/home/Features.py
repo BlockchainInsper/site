@@ -185,7 +185,7 @@ def features() -> rx.Component:
                         initial="1fr", md="repeat(2, 1fr)"
                     ),
                     "gap": "2.5rem",
-                    "padding": "3rem 0",
+                    "padding": "3rem 1rem",
                     "align_items": "start",
                 },
             ),
