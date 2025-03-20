@@ -1,6 +1,5 @@
-"pandas>=2.2.3",
-"plotly>=6.0.0",
-"reflex>=0.7.3",
-"requests>=2.32.3",
-"yfinance>=0.2.54",
-reflex==0.7.3
+pandas>=2.2.3
+plotly>=6.0.0
+reflex>=0.7.3
+requests>=2.32.3
+yfinance>=0.2.54
