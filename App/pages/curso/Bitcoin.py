@@ -153,7 +153,6 @@ materiais7 = [
 ]
 
 
-@rx.page(route="/learn/curso-intro/bitcoin", title="Blockchain Insper")
 @template
 def bitcoin():
     return rx.box(

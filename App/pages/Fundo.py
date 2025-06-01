@@ -5,7 +5,6 @@ from components.fundo.fundo_graph import graph_fundo
 from App.Template import template
 
 
-@rx.page(route="/fund", title="Blockchain Insper")
 @template
 def fundo():
     return rx.box(

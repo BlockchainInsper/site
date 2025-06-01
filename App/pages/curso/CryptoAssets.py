@@ -121,7 +121,6 @@ materiais6 = [
 ]
 
 
-@rx.page(route="/learn/curso-intro/crypto-assets", title="Blockchain Insper")
 @template
 def crypto_assets():
     return rx.box(

@@ -122,7 +122,6 @@ videos12 = [
 ]
 
 
-@rx.page(route="/learn/curso-intro/tecnologia", title="Blockchain Insper")
 @template
 def tecnologia():
     return rx.box(

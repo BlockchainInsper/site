@@ -19,7 +19,6 @@ videos_list = [
 ]
 
 
-@rx.page(route="/learn/curso-intro/introducao", title="Blockchain Insper")
 @template
 def introducao():
     return rx.box(

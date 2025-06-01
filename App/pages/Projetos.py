@@ -256,7 +256,6 @@ def card2(data):
     )
 
 
-@rx.page(route="/projects", title="Blockchain Insper")
 @template
 def projetos_page():
     return rx.box(

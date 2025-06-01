@@ -66,7 +66,6 @@ def with_background_image():
     )
 
 
-@rx.page(route="/", title="Blockchain Insper")
 @template
 def home():
     return rx.box(

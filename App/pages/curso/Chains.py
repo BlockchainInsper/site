@@ -60,7 +60,6 @@ videos7 = [
 ]
 
 
-@rx.page(route="/learn/curso-intro/chains", title="Blockchain Insper")
 @template
 def chains():
     return rx.box(

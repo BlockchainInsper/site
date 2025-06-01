@@ -4,7 +4,6 @@ from components.curso_intro.Content import content
 from components.curso_intro.Presentation import presentation
 
 
-@rx.page(route="/learn/curso-intro", title="Blockchain Insper")
 @template
 def curso_intro():
     return rx.box(

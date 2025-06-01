@@ -167,7 +167,6 @@ def area_box(icon, title, description):
     )
 
 
-@rx.page(route="/areas", title="Blockchain Insper")
 @template
 def nucleos():
     return rx.box(

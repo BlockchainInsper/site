@@ -34,20 +34,28 @@ app = rx.App(
         },
     },
 )
-app.add_page(home, route="/")
-app.add_page(processo_seletivo, route="/ps")
-app.add_page(membros_atuais, route="/members/actual")
-app.add_page(membros_alumni, route="/members/alumni")
-app.add_page(nucleos, route="/areas")
-app.add_page(projetos_page, route="/projects")
-app.add_page(fundo, route="/fund")
-app.add_page(parceiros, route="/partnerships")
-app.add_page(aprenda, route="/learn")
-app.add_page(contato, route="/contact")
-app.add_page(curso_intro, route="/learn/curso-intro")
-app.add_page(introducao, route="/learn/curso-intro/introducao")
-app.add_page(bitcoin, route="/learn/curso-intro/bitcoin")
-app.add_page(blockchain, route="/learn/curso-intro/blockchain")
-app.add_page(crypto_assets, route="/learn/curso-intro/crypto-assets")
-app.add_page(chains, route="/learn/curso-intro/chains")
-app.add_page(tecnologia, route="/learn/curso-intro/tecnologia")
+app.add_page(home, route="/", title="Blockchain Insper")
+app.add_page(processo_seletivo, route="/ps", title="Blockchain Insper")
+app.add_page(membros_atuais, route="/members/actual", title="Blockchain Insper")
+app.add_page(membros_alumni, route="/members/alumni", title="Blockchain Insper")
+app.add_page(nucleos, route="/areas", title="Blockchain Insper")
+app.add_page(projetos_page, route="/projects", title="Blockchain Insper")
+app.add_page(fundo, route="/fund", title="Blockchain Insper")
+app.add_page(parceiros, route="/partnerships", title="Blockchain Insper")
+app.add_page(aprenda, route="/learn", title="Blockchain Insper")
+app.add_page(contato, route="/contact", title="Blockchain Insper")
+app.add_page(curso_intro, route="/learn/curso-intro", title="Blockchain Insper")
+app.add_page(
+    introducao, route="/learn/curso-intro/introducao", title="Blockchain Insper"
+)
+app.add_page(bitcoin, route="/learn/curso-intro/bitcoin", title="Blockchain Insper")
+app.add_page(
+    blockchain, route="/learn/curso-intro/blockchain", title="Blockchain Insper"
+)
+app.add_page(
+    crypto_assets, route="/learn/curso-intro/crypto-assets", title="Blockchain Insper"
+)
+app.add_page(chains, route="/learn/curso-intro/chains", title="Blockchain Insper")
+app.add_page(
+    tecnologia, route="/learn/curso-intro/tecnologia", title="Blockchain Insper"
+)
