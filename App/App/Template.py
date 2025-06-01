@@ -11,13 +11,13 @@ def template(page: Callable[[], rx.Component]) -> rx.Component:
             page(),
             style={
                 "width": "100%",
-                "flex": "1",  # Esta é a chave - faz o conteúdo crescer para preencher o espaço
-                "min_height": "100%",  # Garante altura mínima
+                "flex": "1",
+                "min_height": "100%",
             },
         ),
         footer(),
         direction="column",
-        min_height="100vh",  # Altura mínima de 100% da viewport
+        min_height="100vh",
         style={
             "background": rx.color_mode_cond(light="white", dark="#1A202C"),
         },
