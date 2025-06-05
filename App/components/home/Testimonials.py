@@ -8,7 +8,10 @@ def testimonial_content(text: str) -> rx.Component:
             text,
             style={
                 "text_align": "center",
-                "color": "#A0AEC0", 
+                "color": rx.color_mode_cond(
+                    light="#4A5568",
+                    dark="#A0AEC0",
+                ),
                 "font_size": "0.875rem",
                 "line_height": "1.5rem",
             },
@@ -49,7 +52,11 @@ def testimonial_avatar(src: str, name: str, title: str) -> rx.Component:
     """Avatar com nome e título do depoente."""
     return rx.box(
         rx.box(
-            rx.avatar(src=src, alt=name, style={"width": "3rem", "height": "3rem", "border_radius": "9999px"}),
+            rx.avatar(
+                src=src,
+                alt=name,
+                style={"width": "3rem", "height": "3rem", "border_radius": "9999px"},
+            ),
             style={"display": "flex", "justify_content": "center", "width": "100%"},
         ),
         rx.box(
@@ -82,9 +89,9 @@ def testimonial(content: str, src: str, name: str, title: str) -> rx.Component:
             "width": "100%",
             "display": "flex",
             "flex_direction": "column",
-            "align_items": "center",  # Centraliza em telas pequenas
-            "max_width": "400px",  # Limita a largura máxima
-            "margin_left": "auto",  # Auto margins para centralização
+            "align_items": "center",
+            "max_width": "400px",
+            "margin_left": "auto",
             "margin_right": "auto",
         },
     )
@@ -94,8 +101,8 @@ def testimonials() -> rx.Component:
     """Componente principal de depoimentos."""
     return rx.box(
         rx.box(
-            rx.vstack(  # Usando vstack para organizar verticalmente
-                rx.vstack(  # Stack para o título
+            rx.vstack(
+                rx.vstack(
                     rx.heading(
                         "Depoimentos de nossos membros",
                         style={
@@ -111,9 +118,9 @@ def testimonials() -> rx.Component:
                         "spacing": "0",
                         "align_items": "center",
                         "margin_bottom": "3rem",
-                        "width": "100%",  # Garante que o vstack ocupe toda a largura
+                        "width": "100%",
                         "display": "flex",
-                        "justify_content": "center",  # Centraliza horizontalmente
+                        "justify_content": "center",
                     },
                 ),
                 rx.stack(
@@ -153,8 +160,8 @@ def testimonials() -> rx.Component:
                     ),
                     style={
                         "flex_direction": rx.breakpoints(
-                            initial="column",  # mobile (base)
-                            md="row",  # médias telas e acima
+                            initial="column",
+                            md="row",
                         ),
                         "gap": rx.breakpoints(
                             initial="2.5rem",  # mobile (base)
