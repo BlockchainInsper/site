@@ -73,14 +73,14 @@ def desktop_sub_nav(label, href, subLabel):
                 rx.text(
                     label,
                     as_="span",
-                    color="#E2E8F0",
+                    color=rx.color_mode_cond(light="#4A5568", dark="#E2E8F0"),
                     transition="all 0.3s ease",
                     font_weight="500",
                 ),
                 rx.text(
                     subLabel,
                     font_size="0.875rem",
-                    color="#E2E8F0",
+                    color=rx.color_mode_cond(light="#4A5568", dark="#E2E8F0"),
                 ),
                 align_items="start",
                 spacing="0",
